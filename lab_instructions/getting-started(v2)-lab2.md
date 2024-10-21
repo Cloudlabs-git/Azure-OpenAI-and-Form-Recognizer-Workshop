@@ -6,7 +6,7 @@ Welcome to your Azure-OpenAI-and-Form-Recognizer-Workshop! We've prepared a seam
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-  ![](images/form(1).png)
+  ![](images/lab-start.png)
 
 ### **Virtual Machine & Lab Guide**
  
@@ -29,12 +29,24 @@ For convenience, you can open the lab guide in a separate window by selecting th
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
   ![](images/res.png)
+
+## Lab Validation
+
+1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+
+   ![Inline Validation](images/inline-validation.png)
+
+1. You can also validate the task by navigating to the **Lab Validation** tab, from the upper right corner in the lab guide section.
+
+   ![Lab Validation](images/lab-validation.png)
+
+1. If you need any assistance, please contact us at labs-support@spektrasystems.com.
  
 ## **Let's Get Started with Azure Portal**
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](images/form(2).png)
+    ![](images/lab-start-2.png)
 
 1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next**. 
 
