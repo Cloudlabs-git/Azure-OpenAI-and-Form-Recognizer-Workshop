@@ -26,17 +26,17 @@ Access the Azure OpenAI Studio and navigate to the "Bring your own data" section
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-   ![OpenAI Studio](images/03-07-2024(1).png)
+   ![OpenAI Studio](images/open-studiolink.png)
 
 4. On the **Azure OpenAI Studio**, scroll down click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/02-05-2024(4).png)
+   ![Azure OpenAI Studio](images/byod.png)
 
 ### Task 2: Upload your own data
 
 In this task, we will be using Porche's owner manual for the Taycan, Panamera, and Cayenne models.
 
-1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
+1. Fill the following details in **Add a data source** under **Add your data** tab and click on **Next** **(6)**.
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -47,6 +47,8 @@ In this task, we will be using Porche's owner manual for the Taycan, Panamera, a
     - Select Azure Cognitive Search resource: Select the search service from the drop-down **acs-<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
 
     - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
+  
+      ![add-data source](images/add-datasrc.png)
 
       ![add-data](images/bring-your-owndata-datasource.png) 
 
@@ -78,21 +80,21 @@ Test and interact with the ChatGPT model using your uploaded data to generate re
 
 1. Under the **Assistant Setup** pane, wait until your data upload is finished.
 
-   ![upload-data](images/upload-data.png)
+   ![upload-data](images/ingestion-progress.png)
 
-   ![upload-data](images/BPA3.png)
+   ![upload-data](images/data-ingested.png)
 
-2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
+2. In the chat pane, you can start testing out your prompts by entering the query like this.
 
     ```
     how to operate Android Auto in Porche Taycan? give step-by-step instructions
     ```
 
-      ![chat-session-one](images/newfor2.png)
+      ![chat-session-one](images/first-chay.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Setup**, and clicking on **Prompt** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **System Message**, and clicking on the field to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information and click on **Save**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/newfor3.png)
+   ![assistant-setup-system-message](images/model-setup.png)
 
 4. On **Update system message?** pop-up, click on **Continue**.
 
@@ -104,11 +106,11 @@ Test and interact with the ChatGPT model using your uploaded data to generate re
      What is your name
     ```
    
-   ![chat-session-two](images/chat-session-two.png)
+   ![chat-session-two](images/model-chat2.png)
 
 6. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
-    ![Alt text](images/BPA2.png)
+    ![Alt text](images/chat-parameters.png)
 
 ## Review
 
