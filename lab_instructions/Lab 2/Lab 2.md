@@ -92,7 +92,7 @@ Test and interact with the ChatGPT model using your uploaded data to generate re
 
       ![chat-session-one](images/first-chay.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **System Message**, and clicking on the field to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information and click on **Save**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **System Message**, and clicking on the field to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars.` Your responses should not contain any harmful information and click on **Save**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/model-setup.png)
 
