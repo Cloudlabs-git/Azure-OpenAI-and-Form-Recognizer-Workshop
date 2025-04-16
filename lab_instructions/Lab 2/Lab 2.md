@@ -18,22 +18,22 @@ In this lab, you will complete the following tasks:
 
 2. On the Resource group, search, and select the **Azure OpenAI** resource type with the name similar to **oaibpa{suffix}**.
 
-   ![OpenAI](images/openai.png)
+   ![OpenAI](images/pg3-task1-2.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-   ![OpenAI Studio](images/OpenAI-Studio.png)
+   ![OpenAI Studio](images/pg3-task1-3.png)
 
-4. On the **Azure OpenAI Studio-Home**, scroll down click on **Bring your own data**.
+4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/bringdata.png)
+   ![Azure OpenAI Studio](images/pg3-task1-4.png)
 
 ### Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
 1. You will be redirected **Chat** under **Playgrounds**. Click on **Add a data source** and fill the following details: 
-
+   ![Azure OpenAI Studio](images/pg3-task2-1.png)
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -77,9 +77,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Under the **Setup** pane, wait until your data upload is finished.
 
-   ![upload-data](images/setup.png)
+   ![upload-data](images/pg3-task3-1.png)
 
-   ![upload-data](images/setup1.png)
+   ![upload-data](images/pg3-task3-1.1.png)
 
 2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -87,15 +87,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     how to operate Android Auto in Porche Taycan? give step-by-step instructions
     ```
 
-      ![chat-session-one](images/screen.png)
+      ![chat-session-one](images/pg3-task3-2.png)
 
 3. You can also configure the responses of your bot by selecting the system message under **Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/applychnages.png)
+   ![assistant-setup-system-message](images/pg3-task3-3.png)
 
 4. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/continue.png)
+   ![Alt text](images/pg3-task3-4.png)
 
 5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -103,7 +103,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      What is your name
     ```
    
-   ![chat-session-two](images/recogniserlab1-2.png)
+   ![chat-session-two](images/pg3-task3-5.png)
 
 6. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
