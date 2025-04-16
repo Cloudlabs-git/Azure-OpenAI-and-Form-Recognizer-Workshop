@@ -89,7 +89,8 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/pg3-task3-2.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **Setup**, replace the value under the **Give the model instructions and context**
+ with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/pg3-task3-3.png)
 
