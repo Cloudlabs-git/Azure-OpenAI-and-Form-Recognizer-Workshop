@@ -29,7 +29,7 @@ In this lab, you will complete the following tasks:
 
 5. Under My Project, click on **+ Create a project**.
 
-   ![Alt text](images/create-a-project.png)
+   ![Alt text](images/pg1-task1-4.png)
 
 6. Enter the following details and click on **Continue**  **(3)**.
     
