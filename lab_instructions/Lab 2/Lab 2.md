@@ -24,7 +24,7 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI Studio](images/OpenAI-Studio.png)
 
-4. On the **Azure OpenAI Studio**, scroll down click on **Bring your own data**.
+4. On the **Azure OpenAI Studio-Home**, scroll down click on **Bring your own data**.
 
    ![Azure OpenAI Studio](images/bringdata.png)
 
@@ -32,7 +32,8 @@ In this lab, you will complete the following tasks:
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
+1. You will be redirected **Chat** under **Playgrounds**. Click on **Add a data source** and fill the following details: 
+
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -47,6 +48,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     - Select Azure AI Search  resource: Select the search service used in the previous lab from the drop-down **(4)**.
 
     - Enter the index name: Give an index name as **aoaiworkshop** **(5)**.
+    - Click on **Next** **(6).**
 
       ![add-data](images/uploadfiles.png) 
 
