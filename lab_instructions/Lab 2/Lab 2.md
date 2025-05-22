@@ -20,9 +20,9 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI](images/pg3-task1-2.png)
 
-3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
+3. On the **Azure OpenAI Overview** page, click on **Go to Azure AI Foundry portal**.
 
-   ![OpenAI Studio](images/pg3-task1-3.png)
+   ![OpenAI Studio](images/E2-T1-S3.png)
 
 4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
 
@@ -32,7 +32,7 @@ In this lab, you will complete the following tasks:
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. You will be redirected **Chat** under **Playgrounds**. Click on **Add a data source** and fill the following details: 
+1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **Add a data source** and fill the following details: 
    ![Azure OpenAI Studio](images/pg3-task2-1.png)
     
     - Select data source: **Upload files (preview)** **(1)**
@@ -52,11 +52,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![add-data](images/uploadfiles.png) 
 
-2. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
+2. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
    ![data-management](images/data-management.png)
 
-3. It will redirect to **Data management**, click on **Upload files** **(1)**, and click on **Next** **(2)**.
+3. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
    ![data-management](images/data-management-upload.png)
 
@@ -104,7 +104,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      What is your name
     ```
    
-   ![chat-session-two](images/pg3-task3-5.png)
+    ![chat-session-two](images/pg3-task3-5.png)
+
+    - **Note:** It might take some time to process the model instructions provided. If you receive prompts like "The requested information is not available in the retrieved data.", please try your query multiple times and refresh the page.
 
 6. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
