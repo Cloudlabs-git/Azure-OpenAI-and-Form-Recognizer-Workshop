@@ -13,19 +13,16 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Creating an Azure AI Document Intelligence Resource
 
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
+1. Open a new tab and navigate to Document Intelligence Studio using `https://documentintelligence.ai.azure.com/studio`. 
 
-   ![Alt text](images/select-multi-service.png)
+2. When prompted, enter the following Email ID and Password.
 
-2. Click on the Document Intelligence tab and select **Go to studio**.
-
-   ![Alt text](images/select-document-intelligence.png)
+    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    - **Password**: <inject key="AzureAdUserPassword"></inject>
 
 3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model** choose **Get started**.
 
    ![Alt text](images/getstarted.png)
-
-   **Note** - If you get pop up Pick an account select your account that is signed in.
 
 5. Under My Project, click on **+ Create a project**.
 
@@ -121,7 +118,7 @@ In this step, you will upload 6 training documents to train the model.
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. On the Azure Portal, Navigate to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
 
     ![Alt text](images/rgg.png)
 
@@ -147,7 +144,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
 
-   ![workshop](images/form-recognizer-custom-model.png)
+   ![workshop](images/E1-T3-S7.png)
 
 8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
