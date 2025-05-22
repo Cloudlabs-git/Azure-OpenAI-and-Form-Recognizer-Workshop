@@ -144,7 +144,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
 
-   ![workshop](images/form-recognizer-custom-model.png)
+   ![workshop](images/E1-T3-S7.png)
 
 8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
