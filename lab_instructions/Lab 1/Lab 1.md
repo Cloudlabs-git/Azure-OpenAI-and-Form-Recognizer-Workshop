@@ -13,19 +13,16 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Creating an Azure AI Document Intelligence Resource
 
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
+1. Open a new tab and navigate to Document Intelligence Studio using `https://documentintelligence.ai.azure.com/studio`. 
 
-   ![Alt text](images/select-multi-service.png)
+2. When prompted, enter the following Email ID and Password.
 
-2. Click on the Document Intelligence tab and select **Go to studio**.
-
-   ![Alt text](images/select-document-intelligence.png)
+    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+    - **Password**: <inject key="AzureAdUserPassword"></inject>
 
 3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model** choose **Get started**.
 
    ![Alt text](images/getstarted.png)
-
-   **Note** - If you get pop up Pick an account select your account that is signed in.
 
 5. Under My Project, click on **+ Create a project**.
 
