@@ -64,7 +64,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![keyword](images/uploadfiles1.png)
 
-5. On the **Data Connection** page, Under Azure resorce authentication type, select **API Key**.
+5. On the **Data Connection** page, Under Azure resorce authentication type, select **API Key** and click on **Next**.
 
    ![keyword](images/E2-T2-S5.png)
 
