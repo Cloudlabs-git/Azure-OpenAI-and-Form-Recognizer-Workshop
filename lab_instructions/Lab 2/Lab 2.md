@@ -108,9 +108,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - **Note:** It might take some time to process the model instructions provided. If you receive prompts like "The requested information is not available in the retrieved data.", please try your query multiple times and refresh the page.
 
-6.Expand **> Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
+6. Expand **> Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
 
-   ![Alt text](images/E2-T2-S6.png)
+    ![Alt text](images/E2-T2-S6.png)
 
 ## Summary 
 
