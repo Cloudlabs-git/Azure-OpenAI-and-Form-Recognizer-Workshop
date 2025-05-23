@@ -1,4 +1,4 @@
-# Azure OpenAI and Azure AI Document Intelligence BPA accelerator to improve Document Analysis
+# Business Automation using Azure OpenAI and Document Intelligence
  
 ## Overall Estimated Duration: 2 Hours
 
