@@ -2,6 +2,8 @@
 
 In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search . You will be using the Porche Owner's Manual pdf provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
+## Estimated Duration: 60 minutes
+
 ### Lab Objectives
 
 In this lab, you will complete the following tasks:
