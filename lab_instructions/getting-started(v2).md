@@ -1,6 +1,6 @@
 # Business Automation using Azure OpenAI and Document Intelligence
  
-## Overall Estimated Duration: 2 Hours
+## Overall Estimated Duration: 4 Hours
 
 ## Overview
 
