@@ -220,6 +220,6 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 ## Summary
 
-In this hands-on lab, you will create a custom model with Azure AI Document Intelligence using a sample training dataset.
+In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
 
 ## You have successfully completed this lab.
