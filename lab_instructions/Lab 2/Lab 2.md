@@ -103,20 +103,30 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
-     What is your name
+    What are the available functions in the Discover menu item?
     ```
    
-    ![chat-session-two](images/pg3-task3-5.png)
-
-    - **Note:** It might take some time to process the model instructions provided. If you receive prompts like "The requested information is not available in the retrieved data.", please try your query multiple times and refresh the page.
+    ![chat-session-two](images/pg3-task3-5new.png)
 
 6. Expand **> Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
 
     ![Alt text](images/E2-T2-S6.png)
 
+7. You can try the following questions after adjusting the parameters session
+
+   - How can one navigate lists via voice control?
+   - What are the settings that can be adjusted under the Settings menu item?
+   - How can one report a theft using the Theft Reporting function?
+   - What information can be viewed or edited in the My Garage section?
+   -What does the Real-time Traffic service provide in the Navigation Plus feature?
+   - How can real-time traffic messages be accessed and viewed?
+   - What are the general guidelines for using voice control effectively?
+   - How can the Charging Planner route be created and customized?
+   - What are the available options for interacting with the multimodal map feature during navigation?
+
 ## Summary 
 
-In this hands-on lab, you will use your own data with Azure OpenAI Large Language Models (LLM) and make it searchable using Azure AI Search. The steps involve configuring and integrating these services to enhance data accessibility and searchability.
+This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
 
 ## You have successfully completed this lab.
 
