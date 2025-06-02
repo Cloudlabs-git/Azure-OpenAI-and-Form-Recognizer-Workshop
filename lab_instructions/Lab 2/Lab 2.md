@@ -52,19 +52,19 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     - Enter the index name: Give an index name as **aoaiworkshop** **(5)**.
     - Click on **Next** **(6).**
 
-      ![add-data](images/uploadfiles.png) 
+      ![add-data](images/uploadfilesnew.png) 
 
 2. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
-   ![data-management](images/data-management.png)
+   ![data-management](images/data-managementnew.png)
 
 3. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
-   ![data-management](images/data-management-upload.png)
+   ![data-management](images/data-management-uploadnew.png)
 
 4. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
 
-   ![keyword](images/uploadfiles1.png)
+   ![keyword](images/uploadfiles1new.png)
 
 5. On the **Data Connection** page, Under Azure resorce authentication type, select **API Key** and click on **Next**.
 
