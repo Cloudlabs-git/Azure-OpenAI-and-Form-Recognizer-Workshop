@@ -112,7 +112,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/E2-T2-S6.png)
 
-7. You can try the following questions after adjusting the parameters session
+7. You can try the following query after adjusting the parameters session
 
    - How can one navigate lists via voice control?
    - What are the settings that can be adjusted under the Settings menu item?
