@@ -218,6 +218,17 @@ After you are satisfied with the custom model performance, you can retrieve the 
    
    ![Create an indexer](images/create-an-indexer.png)
 
+### Task 5: Use Sample Search Application [Read Only]
+
+1. Navigate back to the **Business Process Automation Accelerator** home page and click on **Sample Search Application**.
+
+   ![Sample Search Applicationt](images/sample-search-application.png)
+
+2. On the **Sample Search Application** page, in the search bar, enter **invoice1** **(1)** and click on **Search** **(2)**.
+
+   ![output](images/output.png)
+
+
 ## Summary
 
 In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
