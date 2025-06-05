@@ -25,17 +25,17 @@ This architecture flow demonstrates how various Azure components work together t
 
 ## Architecture Diagram
 
- ![](../images/ArchDia.png)
+ ![](../images/arch_diagram1.png)
 
 ### Explanation of Components
 
-- **Azure OpenAI**: This component provides access to advanced AI models from OpenAI, enabling natural language processing and other AI capabilities in applications.
-- **Business Process Automation Accellarator (BPA)**: This component automates business processes by integrating various Azure services, streamlining tasks, and enhancing efficiency.
-- **Azure Storage**: The collected data is stored in a scalable storage solution. This component ensures that the ingested data is securely saved and can be accessed by other services when needed.
-- **Trigger**: This component monitors the storage and triggers actions when new data is available. It uses a message queue to manage the data processing workflow efficiently.
-- **Pipeline Executor**: The pipeline executor, often powered by Azure Functions, runs the necessary code in response to the trigger events. It processes the data and passes it to the cognitive services for further analysis.
-- **Azure AI Services**: This stage involves multiple cognitive services, which can include natural language processing, image recognition, and other AI-powered features. These services analyze the data and extract meaningful insights.
-
+- **Data Sources** – Raw input files like PDFs, images, and text documents.
+- **Azure Blob Storage** – Central storage for training data and uploaded content.
+- **Azure Function App** – Event-driven trigger for processing or pipeline automation.
+- **Azure Form Recognizer** – Custom model to extract structured data from documents (Lab 1).
+- **Azure AI Search** – Indexes processed documents for retrieval (Lab 2).
+- **Azure OpenAI** – Processes user queries using LLMs with indexed data (Lab 2).
+- **Azure AI foundry Chat Playground** – End-user interface to interact with AI-driven search results.
 ## **Getting Started with the Lab**
  
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
