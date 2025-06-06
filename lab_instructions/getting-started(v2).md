@@ -29,13 +29,13 @@ This architecture flow demonstrates how various Azure components work together t
 
 ### Explanation of Components
 
-- **Data Sources** – Raw input files like PDFs, images, and text documents.
-- **Azure Blob Storage** – Central storage for training data and uploaded content.
-- **Azure Function App** – Event-driven trigger for processing or pipeline automation.
-- **Azure Form Recognizer** – Custom model to extract structured data from documents (Lab 1).
-- **Azure AI Search** – Indexes processed documents for retrieval (Lab 2).
-- **Azure OpenAI** – Processes user queries using LLMs with indexed data (Lab 2).
-- **Azure AI foundry Chat Playground** – End-user interface to interact with AI-driven search results.
+- **Ingest (Text):** Accepts and processes raw text or documents through a Document Intelligence service like Form Recognizer for extraction.
+- **User Query:** A natural language question or request submitted by the user to retrieve or analyze information.
+- **Function App:** Event-driven trigger for processing or pipeline automation.
+- **Chunk Docs:** Splits extracted text or documents into manageable, semantically meaningful sections for effective embedding and retrieval.
+- **Create Embeddings:** Converts text chunks into vector representations using OpenAI, enabling similarity-based document retrieval and answering user queries from the top-ranked results.
+- **Vector Store:** A specialized database or index that stores text embeddings and supports fast, similarity-based search operations.
+
 ## **Getting Started with the Lab**
  
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
