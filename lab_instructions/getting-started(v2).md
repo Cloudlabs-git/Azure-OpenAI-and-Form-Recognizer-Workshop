@@ -25,7 +25,7 @@ This architecture flow demonstrates how various Azure components work together t
 
 ## Architecture Diagram
 
- ![](../images/arch_diagram1.png)
+ ![](../images/image23.png)
 
 ### Explanation of Components
 
