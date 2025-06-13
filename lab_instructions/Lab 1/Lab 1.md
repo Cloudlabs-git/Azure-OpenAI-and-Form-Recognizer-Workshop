@@ -25,7 +25,7 @@ In this lab, you will complete the following tasks:
 
 3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model**, choose **Get started**.
 
-   ![Alt text](images/getstarted.png)
+   ![Alt text](../images/13062025(6).png)
 
 5. Under My Projects, click on **+ Create a project**.
 
@@ -47,9 +47,9 @@ In this lab, you will complete the following tasks:
 
    - Document Intelligence or Cognitive Service Resource: Select the available Azure AI Search (Cognitive Service) **cogservicesbpass{suffix}** **(3)**.
 
-   - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
+   - API version: **2024-11-30 (4.0 General Availability)** **(4)**.
 
-        ![storage account](images/Formai1.png)
+        ![Alt text](../images/13062025(7).png)
 
 10. Enter the following details for **Connect training data source** and click on **Continue** **(8)**.
 
