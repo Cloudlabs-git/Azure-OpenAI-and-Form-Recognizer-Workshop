@@ -10,9 +10,9 @@ In this lab, you will gain a comprehensive understanding of Azure's advanced dat
 
 Understand how to create and deploy an Azure AI Document Intelligence custom model in Azure, train data, and configure Azure AI Search. Gain skills in building custom model pipelines and streamlining document data extraction. By the end of this lab, you will be able to:
 
-- **Create and Deploy an Azure AI Document Intelligence Custom Model**: Understand how to streamline document data extraction and enhance efficient information retrieval by creating an Azure AI Document Intelligence resource, training data, building a custom model pipeline in BPA, and configuring Azure AI Search. 
+- **Create and Deploy an Azure AI Document Intelligence Custom Model:** Understand how to streamline document data extraction and enhance efficient information retrieval by creating an Azure AI Document Intelligence resource, training data, building a custom model pipeline in BPA, and configuring Azure AI Search. 
 
-- **Use Azure OpenAI with your own data**: Understand how to navigate the Azure OpenAI Playground, upload your own data, and interact with ChatGPT LLM to customize responses and gain insights from your data.
+- **Use Azure OpenAI with your own data:** Understand how to navigate the Azure OpenAI Playground, upload your own data, and interact with ChatGPT LLM to customize responses and gain insights from your data.
 
 ## Pre-requisites
 
@@ -29,16 +29,17 @@ This architecture flow demonstrates how various Azure components work together t
 
 ### Explanation of Components
 
-- **Data Sources** – Raw input files like PDFs, images, and text documents.
-- **Azure Blob Storage** – Central storage for training data and uploaded content.
-- **Azure Function App** – Event-driven trigger for processing or pipeline automation.
-- **Azure Form Recognizer** – Custom model to extract structured data from documents (Lab 1).
-- **Azure AI Search** – Indexes processed documents for retrieval (Lab 2).
-- **Azure OpenAI** – Processes user queries using LLMs with indexed data (Lab 2).
-- **Azure AI foundry Chat Playground** – End-user interface to interact with AI-driven search results.
+- **Data Sources:** Raw input files like PDFs, images, and text documents.
+- **Azure Blob Storage:** Central storage for training data and uploaded content.
+- **Azure Function App:** Event-driven trigger for processing or pipeline automation.
+- **Azure Form Recognizer:** Custom model to extract structured data from documents (Lab 1).
+- **Azure AI Search:** Indexes processed documents for retrieval (Lab 2).
+- **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
+- **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
+
 ## **Getting Started with the Lab**
  
-1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
+1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
    ![](../images/Intro.png)
  
@@ -64,15 +65,15 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![](images/form(2).png)
 
-1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next**. 
 
-   * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
       ![](images/signin-uname.png "Enter Email")
      
 1. Now enter the following password and click on **Sign in**.
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject>
+   * **Password:** <inject key="AzureAdUserPassword"></inject>
    
       ![](images/signin-pword.png "Enter Password")
 
@@ -86,7 +87,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
    
 1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
@@ -117,4 +118,3 @@ Learner Support Contacts:
 Now, click on **Next** from the lower right corner to move on to the next page.
 
 ### Happy Learning!!
-
