@@ -135,7 +135,7 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
     ![Alt text](images/rgg.png)
 
-2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+2. On the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 
    ![webappbpa](images/static-web-page.png)
 
