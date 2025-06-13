@@ -1,8 +1,8 @@
-# Lab 01: Create and Deploy a Azure AI Document Intelligence Custom Model
+# Lab 01: Create and Deploy an Azure AI Document Intelligence Custom Model
 
 In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/Custom%20Model%20Sample/).
 
-## Estimated Duration: 90 minutes
+### Estimated Duration: 90 Minutes
 
 ## Lab Objectives
 
@@ -13,16 +13,17 @@ In this lab, you will complete the following tasks:
 * Task 3: Build a new pipeline with the custom model module in BPA
 * Task 4: Configure Azure AI Search 
 
-### Task 1: Creating an Azure AI Document Intelligence Resource
+## Task 1: Creating an Azure AI Document Intelligence Resource
 
 1. Open a new tab and navigate to Document Intelligence Studio using `https://documentintelligence.ai.azure.com/studio`. 
 
 2. When prompted, enter the following Email ID and Password.
 
     - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+
     - **Password**: <inject key="AzureAdUserPassword"></inject>
 
-3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model** choose **Get started**.
+3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model**, choose **Get started**.
 
    ![Alt text](images/getstarted.png)
 
@@ -33,36 +34,46 @@ In this lab, you will complete the following tasks:
 6. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
+
    - Description: **Custom model project** **(2)**.
 
      ![Alt text](images/enter-project-details.png)
 
-7. Enter the following details **Configure service resource** and click on **Continue**.
+8. Enter the following details **Configure service resource** and click on **Continue**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
+
    - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+
    - Document Intelligence or Cognitive Service Resource: Select the available Azure AI Search (Cognitive Service) **cogservicesbpass{suffix}** **(3)**.
+
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
         ![storage account](images/Formai1.png)
 
-8. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
+10. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
+   
    - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   
    - Check the box to **Create new storage account** **(3)**
+   
    - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
+   
    - Location: **East US** **(5)**.
+   
    - Pricing tier: **Standard_LRS Standard** **(6)**.
+   
    - Blob container name: **custommoduletext** **(7)**.
    
      ![](images/connect-training-data-source.png)
 
-9. Validate the information and choose **Create project**.
+11. Validate the information and choose **Create project**.
 
      ![Alt text](images/create-project.png)
 
-### Task 2: Train and Label data
+## Task 2: Train and Label data
 
 In this step, you will upload 6 training documents to train the model.
 
@@ -116,11 +127,11 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Alt text](images/result.png)
 
-### Task 3: Build a new pipeline with the custom model module in BPA
+## Task 3: Build a new pipeline with the custom model module in BPA
 
-After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
+After you are satisfied with the custom model's performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. On the Azure Portal, Navigate to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
 
     ![Alt text](images/rgg.png)
 
@@ -158,21 +169,21 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 10. On the **Piplelines workshop** page, click on **Home**. 
 
-      ![home-pipeline](images/home-pipeline.png)
+     ![home-pipeline](images/home-pipeline.png)
 
 11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
-      ![ingest-documents](images/ingest-documents.png)
+     ![ingest-documents](images/ingest-documents.png)
 
 12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
-      ![Upload a document](images/recogniserlab1-1.png)
+     ![Upload a document](images/recogniserlab1-1.png)
 
 13. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. You can upload multiple invoices one by one.
 
-      ![Upload a document](images/pipeline-folder.png)
+     ![Upload a document](images/pipeline-folder.png)
 
-### Task 4: Configure Azure AI Search 
+## Task 4: Configure Azure AI Search 
 
 1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
 
@@ -185,32 +196,36 @@ After you are satisfied with the custom model performance, you can retrieve the 
 3. Enter the following details for **Connect to your data**.
 
    - Data Source: Select **Azure Blob Storage** **(1)**
+
    - Data Source Name: Enter **workshop** **(2)**.
+
    - Parsing mode: Select **JSON** **(3)**.
+
    - Subscription: Select the default Subscription. **(4)**
+
    - Click on **Choose an existing connection** **(5)** under Connection string.
   
      ![Connection to your data](images/fill-details.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+5. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
 
      ![Storage account](images/stoarge-account.png)
 
-5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
+6. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to the **Connection to your data** page.
 
      ![Storage account](images/continers.png)   
   
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
+7. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
 
    ![Connection](images/fill-details1.png)
 
-7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
+8. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
 
-8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+9. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
       ![Connection](images/retrievable-searchable.png)
 
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+10. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
       ![import-data](images/BPA5.png)
 
@@ -218,7 +233,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
    
    ![Create an indexer](images/create-an-indexer.png)
 
-### Task 5: Use Sample Search Application [Read Only]
+## Task 5: Use Sample Search Application [Read Only]
 
 1. Navigate back to the **Business Process Automation Accelerator** home page and click on **Sample Search Application**.
 
@@ -228,9 +243,10 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
    ![output](images/output.png)
 
-
 ## Summary
 
 In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
 
-## You have successfully completed this lab.
+Now, click on Next from the lower right corner to move on to the next lab.
+
+![image](https://github.com/user-attachments/assets/310bb80b-357b-4730-831a-661430ac6c3e)
