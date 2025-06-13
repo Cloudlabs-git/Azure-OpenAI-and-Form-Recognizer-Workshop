@@ -1,6 +1,6 @@
 # Business Automation using Azure OpenAI and Document Intelligence
  
-## Overall Estimated Duration: 4 Hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -27,7 +27,7 @@ This architecture flow demonstrates how various Azure components work together t
 
  ![](../images/arch_diagram1.png)
 
-### Explanation of Components
+## Explanation of Components
 
 - **Data Sources:** Raw input files like PDFs, images, and text documents.
 - **Azure Blob Storage:** Central storage for training data and uploaded content.
@@ -37,33 +37,33 @@ This architecture flow demonstrates how various Azure components work together t
 - **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
 - **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
 
-## **Getting Started with the Lab**
+## Getting Started with the Lab
  
-1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
+1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Guide** to switch to different exercises in the lab guide.
 
-   ![](../images/Intro.png)
+   ![](./images/13062025(1).png)
  
-2. To get the lab environment details, you can select the Environment tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the Split Window from the lower right corner. Also, you can start, stop, and restart virtual machines from the Resources tab.
+2. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the Split Window from the lower right corner. Also, you can start, stop, and restart virtual machines from the Resources tab.
  
-   ![](images/miw(3).png)
+   ![](./images/13062025(2).png)
  
-## **Utilizing the Split Window Feature**
+## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](images/POWER(1).png)
+   ![](./images/13062025(3).png)
  
-## **Managing Your Virtual Machine**
+## Managing Your Virtual Machine
  
-Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
-   ![](images/res.png)
+   ![](./images/13062025(4).png)
  
-## **Let's Get Started with Azure Portal**
+## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![](images/form(2).png)
+   ![](./images/13062025(5).png)
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next**. 
 
@@ -77,15 +77,13 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
       ![](images/signin-pword.png "Enter Password")
 
-1. If you see the pop-up Action Required, click Ask Later.
+1. If you see the pop-up Action Required, click **Ask Later**.
 
    ![](../images/asklater.png)
 
    >**NOTE:** Do not enable MFA, select **Ask Later**.
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
    
