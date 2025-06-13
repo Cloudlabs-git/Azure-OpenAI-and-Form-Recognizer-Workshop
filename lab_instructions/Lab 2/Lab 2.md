@@ -1,10 +1,10 @@
 # Lab 02: Use Azure OpenAI with your own data
 
-In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search . You will be using the Porche Owner's Manual pdf provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
+In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
-## Estimated Duration: 60 minutes
+### Estimated Duration: 60 Minutes
 
-### Lab Objectives
+## Lab Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -12,7 +12,7 @@ In this lab, you will complete the following tasks:
 * Task 2: Upload your own data
 * Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-### Task 1: Navigate to Azure OpenAI Playground
+## Task 1: Navigate to Azure OpenAI Playground
 
 1. Navigate back to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -30,11 +30,12 @@ In this lab, you will complete the following tasks:
 
    ![Azure OpenAI Studio](images/pg3-task1-4.png)
 
-### Task 2: Upload your own data
+## Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **Add a data source** and fill the following details: 
+1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **+ Add a data source** and fill the following details: 
+
    ![Azure OpenAI Studio](images/pg3-task2-1.png)
     
     - Select data source: **Upload files (preview)** **(1)**
@@ -74,8 +75,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![image](https://github.com/user-attachments/assets/57bfec0e-a3e6-4791-af51-cceb44003c51)
 
-
-### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
+## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 1. Under the **Setup** pane, wait until your data upload is finished.
 
@@ -91,8 +91,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/pg3-task3-2.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Setup**, replace the value under the **Give the model instructions and context**
- with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/pg3-task3-3.png)
 
@@ -118,7 +117,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - What are the settings that can be adjusted under the Settings menu item?
    - How can one report a theft using the Theft Reporting function?
    - What information can be viewed or edited in the My Garage section?
-   -What does the Real-time Traffic service provide in the Navigation Plus feature?
+   - What does the Real-time Traffic service provide in the Navigation Plus feature?
    - How can real-time traffic messages be accessed and viewed?
    - What are the general guidelines for using voice control effectively?
    - How can the Charging Planner route be created and customized?
@@ -129,4 +128,3 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
 
 ## You have successfully completed this lab.
-
