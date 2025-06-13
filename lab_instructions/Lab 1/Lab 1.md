@@ -27,7 +27,7 @@ In this lab, you will complete the following tasks:
 
    ![Alt text](images/getstarted.png)
 
-5. Under My Project, click on **+ Create a project**.
+5. Under My Projects, click on **+ Create a project**.
 
    ![Alt text](images/pg1-task1-4.png)
 
@@ -39,7 +39,7 @@ In this lab, you will complete the following tasks:
 
      ![Alt text](images/enter-project-details.png)
 
-8. Enter the following details **Configure service resource** and click on **Continue**.
+8. Enter the following details for **Configure service resource** and click on **Continue**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
 
@@ -51,23 +51,23 @@ In this lab, you will complete the following tasks:
 
         ![storage account](images/Formai1.png)
 
-10. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
+10. Enter the following details for **Connect training data source** and click on **Continue** **(8)**.
 
-   - Subscription: Select your **Default Subscription** **(1)**.
+    - Subscription: Select your **Default Subscription** **(1)**.
    
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+    - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    
-   - Check the box to **Create new storage account** **(3)**
+    - Check the box to **Create new storage account** **(3)**
    
-   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
+    - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
    
-   - Location: **East US** **(5)**.
+    - Location: **East US** **(5)**.
    
-   - Pricing tier: **Standard_LRS Standard** **(6)**.
+    - Pricing tier: **Standard_LRS Standard** **(6)**.
    
-   - Blob container name: **custommoduletext** **(7)**.
+    - Blob container name: **custommoduletext** **(7)**.
    
-     ![](images/connect-training-data-source.png)
+      ![](images/connect-training-data-source.png)
 
 11. Validate the information and choose **Create project**.
 
@@ -131,7 +131,7 @@ In this step, you will upload 6 training documents to train the model.
 
 After you are satisfied with the custom model's performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
     ![Alt text](images/rgg.png)
 
@@ -147,7 +147,7 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
    ![Web APP](images/select-create-pipeline.png)
 
-5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+5. On the **Create Or Select A Pipeline** page, Enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
    ![workshop](images/create-pipeline.png)
 
