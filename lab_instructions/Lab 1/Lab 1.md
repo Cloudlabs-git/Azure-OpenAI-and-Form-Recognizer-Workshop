@@ -215,7 +215,7 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
      ![Storage account](images/continers.png)   
   
-7. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
+7. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
 
    ![Connection](images/fill-details1.png)
 

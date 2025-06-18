@@ -1,6 +1,6 @@
 # Lab 02: Use Azure OpenAI with your own data
 
-In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
+In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
 ### Estimated Duration: 60 Minutes
 
@@ -22,9 +22,9 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI](images/pg3-task1-2.png)
 
-3. On the **Azure OpenAI Overview** page, click on **Go to Azure AI Foundry portal**.
+3. On the **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
 
-   ![OpenAI Studio](images/E2-T1-S3.png)
+   ![OpenAI Studio](images/L2T1S3-1806.png)
 
 4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
 
@@ -32,7 +32,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
+In this step, we will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
 
 1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **+ Add a data source** and fill the following details: 
 
@@ -86,12 +86,12 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
-    how to operate Android Auto in Porche Taycan? give step-by-step instructions
+    How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
       ![chat-session-one](images/pg3-task3-2.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/pg3-task3-3.png)
 
