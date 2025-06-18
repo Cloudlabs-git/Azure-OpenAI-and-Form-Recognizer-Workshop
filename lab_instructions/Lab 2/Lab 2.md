@@ -22,9 +22,9 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI](images/pg3-task1-2.png)
 
-3. On the **Azure OpenAI Overview** page, click on **Go to Azure AI Foundry portal**.
+3. On the **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
 
-   ![OpenAI Studio](images/E2-T1-S3.png)
+   ![OpenAI Studio](images/L2T1S3-1806.png)
 
 4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
 
