@@ -22,6 +22,8 @@ In this task, we will create and configure a Document Intelligence resource in A
 
 1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with a name similar to **cogservicesbpa{suffix}**.
 
+   ![](../Lab%201/images/230625(06).png)
+
    ![Alt text](images/select-multi-service.png)
 
 2. Click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
@@ -40,7 +42,7 @@ In this task, we will create and configure a Document Intelligence resource in A
 
 5. Under My Project, click on **+ Create a project**.
 
-   ![Alt text](images/create-a-project.png)
+   ![Alt text](../Lab%201/images/230625(07).png)
 
 6. Enter the following details and click on **Continue**  **(3)**.
     
