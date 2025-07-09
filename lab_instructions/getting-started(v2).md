@@ -41,7 +41,7 @@ This architecture flow demonstrates how various Azure components work together t
  
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Guide** to switch to different exercises in the lab guide.
 
-   ![](./images/13062025(1).png)
+   ![](./images/(9-7-25-g1.png)
  
 2. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the Split Window from the lower right corner. Also, you can start, stop, and restart virtual machines from the Resources tab.
  
@@ -65,17 +65,17 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
    ![](./images/13062025(5).png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
-      ![](images/signin-uname.png "Enter Email")
+      ![](images/9-7-25-g2.png)
      
-1. Now enter the following password and click on **Sign in**.
+1. Now enter the following password **(1)** and click on **Sign in (2)**.
    
    * **Password:** <inject key="AzureAdUserPassword"></inject>
    
-      ![](images/signin-pword.png "Enter Password")
+      ![](images/9-7-25-g3.png "Enter Password")
 
 1. If you see the pop-up Action Required, click **Ask Later**.
 
@@ -83,19 +83,21 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
+   ![](../images/9-7-25-g4.png)
+
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
    
 1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](images/select-rg.png "Resource groups")
+   ![](images/9-7-25-g5.png "Resource groups")
    
 1. Confirm that you have all resource groups present as shown below.
 
-   ![](images/rg.png "Resource groups")
+   ![](images/9-7-25-g7.png "Resource groups")
    
 1. Verify the resources deployed in the resource group.
 
-   ![](images/resources.png "Resource groups")
+   ![](images/9-7-25-g6.png "Resource groups")
    
 > [!IMPORTANT]
 *For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.*
