@@ -17,7 +17,7 @@ In this lab, you will complete the following tasks:
 
 1. Open a new tab and navigate to Document Intelligence Studio using `https://documentintelligence.ai.azure.com/studio`. 
 
-1. When prompted, enter the following Email ID and Password.
+1. When prompted, on the Microsoft Sign in page, enter the following Email ID **(1)** and click **Next (2)**.
 
     - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
 
@@ -31,11 +31,11 @@ In this lab, you will complete the following tasks:
 
    ![Alt text](../images/13062025(6).png)
 
-1. Under My Projects, click on **+ Create a project**.
+1. On the Custom extraction model page, under the **My Projects** section, click **+ Create a project**.
 
    ![Alt text](images/9-7-25-l1-1.png)
 
-1. Enter the following details and click on **Continue**  **(3)**.
+1. On the Custom extraction model pane, under Enter project details, enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
 
@@ -43,7 +43,8 @@ In this lab, you will complete the following tasks:
 
      ![Alt text](images/9-7-25-l1-2.png)
 
-1. Enter the following details for **Configure service resource** and click on **Continue**.
+1. On the **Custom extraction model > Configure service resource** screen, enter the following details:
+ and click on **Continue**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
 
@@ -55,7 +56,7 @@ In this lab, you will complete the following tasks:
 
         ![Alt text](images/9-7-25-l1-3.png)
 
-1. Enter the following details for **Connect training data source** and click on **Continue** **(8)**.
+1. On the **Connect training data source** screen, enter the following details and click on **Continue** **(8)**.
 
     - Subscription: Select your **Default Subscription** **(1)**.
    
@@ -73,7 +74,7 @@ In this lab, you will complete the following tasks:
    
       ![](images/9-7-25-l1-4.png)
 
-1. Validate the information and choose **Create project**.
+1. On the **Review and create** screen, validate the information and Click **Create project**.
 
      ![Alt text](images/9-7-25-l1-5.png)
 
@@ -81,41 +82,41 @@ In this lab, you will complete the following tasks:
 
 In this step, you will upload 6 training documents to train the model.
 
-1. Click on **Browse for files**.
+1. On the **Label data** screen of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
      ![Browse for files](images/browse-for-files.png)
 
-1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
      ![train-upload](images/train-upload.png)
 
-1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Once uploaded, in the **Start labeling now** pop-up, select **Run now** under the **Run layout** column.
 
      ![train-upload](images/run-now.png)
 
-1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
+1. On the **Label data** screen, click **+ Add a field** **(1)**, then select **Field** **(2)** from the dropdown. Enter the field name as `Organization_sample` **(3)** and press **Enter**.
 
      ![run-now](images/add-field.png)
 
      ![run-now](images/add-field-name.png)
 
-1. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+1. On the **Label data** screen, select the text **CONTOSO LTD.** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Do this for all six documents.
 
      ![train-module](images/9-7-25-l1-6.png)
 
-6. Once all the documents are labeled, click on **Train** in the top right corner.
+6. On the **Label data** screen, after labeling all six documents, click on **Train** in the top right corner.
 
      ![Train](images/9-7-25-l1-7.png)
 
-7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+7. On the **Train a new model** pane, specify the Model ID as **customfrs** **(1)**, Model description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
      ![Name](images/9-7-25-l1-8.png)
 
-8. Click on **Go to Models**. 
+8. On the "Training in progress" dialog. click on **Go to Models**
 
    ![Alt text](images/9-7-25-l1-9.png)
 
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+9. On the "Models" screen, wait until the **Status** of your model changes to **succeeded** **(1)**. Then, select the model **customfrs** **(2)** and click on **Test** **(3)** from the top menu.
 
      ![select-models](images/9-7-25-l1-10.png)
 
@@ -123,11 +124,11 @@ In this step, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+11. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
      ![test-file-upload](images/test-file-upload.png)
 
-12. Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score.
+12. On the "Test model" screen, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score.
 
      ![Alt text](images/result.png)
 
@@ -147,7 +148,7 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
       ![webappbpa](images/9-7-25-l1-12.png)
 
-4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
+4. Once the **Business Process Automation Accelerator** page loads successfully, scroll down to the section titled **"What would you like to do?"** Under this section, click on the **Create/Update/Delete Pipelines**. 
 
    ![Web APP](images/9-7-25-l1-13.png)
 
@@ -163,7 +164,8 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
    ![workshop](images/E1-T3-S7.png)
 
-8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+8. On the "Model ID" pop-up. Enter the Form Recognizer Custom Model ID as **customfrs** in the **Model ID** field **(1)**,  
+Then click on **Submit** **(2)**.
 
    ![Model ID](images/pipeline-model-id.png)
 
@@ -175,15 +177,16 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
      ![home-pipeline](images/9-7-25-l1-15.png)
 
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+11. On the **Business Process Automation Accelerator** page, scroll down to the **What would you like to do?** section,  
+then click on **Ingest Documents**.
 
      ![ingest-documents](images/9-7-25-l1-16.png)
 
-12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
+12. On the **Upload a document to Blob Storage** page, from the drop-down, Select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
      ![Upload a document](images/9-7-25-l1-17.png)
 
-13. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. You can upload multiple invoices one by one.
+13. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. Select the invoice files **(2)** and click **Open** **(3)** You can upload multiple invoices one by one.
 
      ![Upload a document](images/pipeline-folder.png)
 
