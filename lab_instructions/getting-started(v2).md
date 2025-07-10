@@ -1,4 +1,4 @@
-# Business Automation using Azure OpenAI and Document Intelligence
+![image](https://github.com/user-attachments/assets/3e89c3ed-9996-4434-9570-660f6a6ee4d0)# Business Automation using Azure OpenAI and Document Intelligence
  
 ### Overall Estimated Duration: 4 Hours
 
@@ -37,27 +37,39 @@ This architecture flow demonstrates how various Azure components work together t
 - **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
 - **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
 
-## Getting Started with the Lab
+## Accessing Your Lab Environment
  
-1. After the environment has been set up, your browser will load a virtual machine (JumpVM) and use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the **Guide** to switch to different exercises in the lab guide.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](./images/(9-7-25-g1.png)
+ ![](./images/9-7-25-g1.png)
+
+## Virtual Machine & Lab Guide
+
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+
+## Exploring Your Lab Resources
  
-2. To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the Split Window from the lower right corner. Also, you can start, stop, and restart virtual machines from the Resources tab.
- 
-   ![](./images/13062025(2).png)
+To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
+
+ ![](./images/13062025(2).png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](./images/13062025(3).png)
+ ![](./images/13062025(3).png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
 
    ![](./images/13062025(4).png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![Zoom In/Zoom Out](./images/size-new.png)  
  
 ## Let's Get Started with Azure Portal
  
@@ -69,13 +81,13 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
-      ![](images/9-7-25-g2.png)
+      ![](./images/9-7-25-g2.png)
      
 1. Now enter the following password **(1)** and click on **Sign in (2)**.
    
    * **Password:** <inject key="AzureAdUserPassword"></inject>
    
-      ![](images/9-7-25-g3.png "Enter Password")
+      ![](./images/9-7-25-g3.png "Enter Password")
 
 1. If you see the pop-up Action Required, click **Ask Later**.
 
@@ -83,21 +95,21 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](../images/9-7-25-g4.png)
+   ![](./images/9-7-25-g4.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
    
 1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](images/9-7-25-g5.png "Resource groups")
+   ![](./images/9-7-25-g5.png "Resource groups")
    
 1. Confirm that you have all resource groups present as shown below.
 
-   ![](images/9-7-25-g7.png "Resource groups")
+   ![](./images/9-7-25-g7.png "Resource groups")
    
 1. Verify the resources deployed in the resource group.
 
-   ![](images/9-7-25-g6.png "Resource groups")
+   ![](./images/9-7-25-g6.png "Resource groups")
    
 > [!IMPORTANT]
 *For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.*
@@ -141,4 +153,7 @@ Learner Support Contacts:
   
 Now, click on **Next** from the lower right corner to move on to the next page.
 
+![](./images/next-new.png)
+
 ### Happy Learning!!
+
