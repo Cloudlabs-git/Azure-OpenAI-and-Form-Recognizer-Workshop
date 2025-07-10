@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. Navigate back to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
+1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![OpenAI](images/rgg.png)
 
@@ -26,15 +26,15 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI Studio](images/9-7-25-l2-2.png)
 
-4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
+4. On the **Azure AI Foundry | Azure OpenAI Service** page, in the **Home** section, scroll down and click on **Bring your own data**.
 
    ![Azure OpenAI Studio](images/pg3-task1-4.png)
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
+In this step, we will be using Porsche's owner manual for the Taycan, Panamera, and Cayenne models.
 
-1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **+ Add a data source** and fill the following details: 
+1. On the **Chat playground** page, select **Chat** under **Playgrounds** **(1)**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)** and fill the following details:
 
    ![Azure OpenAI Studio](images/9-7-25-l2-3.png)
     
@@ -44,18 +44,18 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
     - Select Azure Blob storage resource: Choose the already created storage account **formrecognizer<inject key="Deployment ID">** **(3)**. 
       
-      - **Note**: If asked for turn on CORS, click on **Turn on CORS**.
+      - **Note**: If prompted with a CORS permission warning,, click on **Turn on CORS**.
 
          ![](images/cors.png)
 
     - Select Azure AI Search  resource: Select the search service used in the previous lab from the drop-down **(4)**.
 
-    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**.
+    - Enter the index name: Enter the index name as **aoaiworkshop** **(5)**.
     - Click on **Next** **(6).**
 
       ![add-data](images/uploadfilesnew.png) 
 
-2. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
+2. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)**.
 
    ![data-management](images/data-managementnew.png)
 
@@ -63,7 +63,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
    ![data-management](images/data-management-uploadnew.png)
 
-4. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
+4. On the **Data Management** page, select **Keyword** **(1)** from the **Search type** dropdown and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1new.png)
 
@@ -91,13 +91,13 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
       ![chat-session-one](images/pg3-task3-2.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
+3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/pg3-task3-3.png)
 
 4. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/9-7-25-l2-5.png)
+   ![Alt text](images/update-new.png)
 
 5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
