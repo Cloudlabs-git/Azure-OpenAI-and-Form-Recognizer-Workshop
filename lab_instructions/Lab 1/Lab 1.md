@@ -17,29 +17,34 @@ In this lab, you will complete the following tasks:
 
 1. Open a new tab and navigate to Document Intelligence Studio using `https://documentintelligence.ai.azure.com/studio`. 
 
-2. When prompted, enter the following Email ID and Password.
+1. When prompted, on the Microsoft Sign in page, enter the following Email ID **(1)** and click **Next (2)**.
 
     - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
 
+      ![Alt text](../images/9-7-25-g2.png)
+
     - **Password**: <inject key="AzureAdUserPassword"></inject>
 
-3. In Document Intelligence Studio, scroll down to Custom Models, under **Custom extraction model**, choose **Get started**.
+      ![Alt text](../images/9-7-25-g3.png)
+
+1. In Document Intelligence Studio, scroll down to **Custom Models**, under **Custom extraction model**, choose **Get started**.
 
    ![Alt text](../images/13062025(6).png)
 
-5. Under My Projects, click on **+ Create a project**.
+1. On the Custom extraction model page, under the **My Projects** section, click **+ Create a project**.
 
-   ![Alt text](images/pg1-task1-4.png)
+   ![Alt text](images/9-7-25-l1-1.png)
 
-6. Enter the following details and click on **Continue**  **(3)**.
+1. On the Custom extraction model pane, under Enter project details, enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
 
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/enter-project-details.png)
+     ![Alt text](images/9-7-25-l1-2.png)
 
-8. Enter the following details for **Configure service resource** and click on **Continue**.
+1. On the **Custom extraction model > Configure service resource** screen, enter the following details:
+ and click on **Continue**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
 
@@ -49,9 +54,9 @@ In this lab, you will complete the following tasks:
 
    - API version: **2024-11-30 (4.0 General Availability)** **(4)**.
 
-        ![Alt text](../images/13062025(7).png)
+        ![Alt text](images/9-7-25-l1-3.png)
 
-10. Enter the following details for **Connect training data source** and click on **Continue** **(8)**.
+1. On the **Connect training data source** screen, enter the following details and click on **Continue** **(8)**.
 
     - Subscription: Select your **Default Subscription** **(1)**.
    
@@ -67,63 +72,63 @@ In this lab, you will complete the following tasks:
    
     - Blob container name: **custommoduletext** **(7)**.
    
-      ![](images/connect-training-data-source.png)
+      ![](images/9-7-25-l1-4.png)
 
-11. Validate the information and choose **Create project**.
+1. On the **Review and create** screen, validate the information and Click **Create project**.
 
-     ![Alt text](images/create-project.png)
+     ![Alt text](images/9-7-25-l1-5.png)
 
 ## Task 2: Train and Label data
 
 In this step, you will upload 6 training documents to train the model.
 
-1. Click on **Browse for files**.
+1. On the **Label data** screen of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
      ![train-upload](images/train-upload.png)
 
-3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Once uploaded, in the **Start labeling now** pop-up, select **Run now** under the **Run layout** column.
 
      ![train-upload](images/run-now.png)
 
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
+1. On the **Label data** screen, click **+ Add a field** **(1)**, then select **Field** **(2)** from the dropdown. Enter the field name as `Organization_sample` **(3)** and press **Enter**.
 
      ![run-now](images/add-field.png)
 
      ![run-now](images/add-field-name.png)
 
-5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+1. On the **Label data** screen, select the text **CONTOSO LTD.** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Do this for all six documents.
 
-     ![train-module](images/train-module.png)
+     ![train-module](images/9-7-25-l1-6.png)
 
-6. Once all the documents are labeled, click on **Train** in the top right corner.
+1. On the **Label data** screen, after labeling all six documents, click on **Train** in the top right corner.
 
-     ![Train](images/train-module1.png)
+     ![Train](images/9-7-25-l1-7.png)
 
-7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+1. On the **Train a new model** pane, specify the Model ID as **customfrs** **(1)**, Model description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
-     ![Name](images/train-a-new-model.png)
+     ![Name](images/9-7-25-l1-8.png)
 
-8. Click on **Go to Models**. 
+1. On the "Training in progress" dialog. click on **Go to Models**
 
-   ![Alt text](images/training-in-progress.png)
+   ![Alt text](images/9-7-25-l1-9.png)
 
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+1. On the "Models" screen, wait until the **Status** of your model changes to **succeeded** **(1)**. Then, select the model **customfrs** **(2)** and click on **Test** **(3)** from the top menu.
 
-     ![select-models](images/select-models1.png)
+     ![select-models](images/9-7-25-l1-10.png)
 
-10. On the Test model window, click on **Browse for files**. 
+1. On the Test model window, click on **Browse for files**. 
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
      ![test-file-upload](images/test-file-upload.png)
 
-12. Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score.
+1. On the "Test model" screen, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score.
 
      ![Alt text](images/result.png)
 
@@ -135,65 +140,69 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
     ![Alt text](images/rgg.png)
 
-2. On the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+1. On the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 
-   ![webappbpa](images/static-web-page.png)
+   ![webappbpa](images/9-7-25-l1-11.png)
 
-3. On the **Static Web App** page, click on **View app in browser**.
+1. On the **Static Web App** page, click on **View app in browser**.
 
-      ![webappbpa](images/formm.png)
+      ![webappbpa](images/9-7-25-l1-12.png)
 
-4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
+1. Once the **Business Process Automation Accelerator** page loads successfully, scroll down to the section titled **"What would you like to do?"** Under this section, click on the **Create/Update/Delete Pipelines**. 
 
-   ![Web APP](images/select-create-pipeline.png)
+   ![Web APP](images/9-7-25-l1-13.png)
 
-5. On the **Create Or Select A Pipeline** page, Enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+1. On the **Create Or Select A Pipeline** page, Enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
-   ![workshop](images/create-pipeline.png)
+   ![workshop](images/9-7-25-l1-14.png)
 
-6. On the **Select a document type to get started** page, select **PDF Document**
+1. On the **Select a document type to get started** page, select **PDF Document**
 
    ![workshop](images/image-document.png)
 
-7. On the **Select a stage to add it to your pipeline configuration** page, click on **Form Recognizer Custom Model (Batch)**.
+1. On the **Select a stage to add it to your pipeline configuration** page, click on **Form Recognizer Custom Model (Batch)**.
 
    ![workshop](images/E1-T3-S7.png)
 
-8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+1. On the "Model ID" pop-up. Enter the Form Recognizer Custom Model ID as **customfrs** in the **Model ID** field **(1)**,  
+Then click on **Submit** **(2)**.
 
    ![Model ID](images/pipeline-model-id.png)
 
-9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
+1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
 
    ![Pipeline Preview](images/done-pipeline.png)
 
-10. On the **Piplelines workshop** page, click on **Home**. 
+1. On the **Piplelines workshop** page, click on **Home**. 
 
-     ![home-pipeline](images/home-pipeline.png)
+     ![home-pipeline](images/9-7-25-l1-15.png)
 
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+1. On the **Business Process Automation Accelerator** page, scroll down to the **What would you like to do?** section,  
+then click on **Ingest Documents**.
 
-     ![ingest-documents](images/ingest-documents.png)
+     ![ingest-documents](images/9-7-25-l1-16.png)
 
-12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
+1. On the **Upload a document to Blob Storage** page, from the drop-down, Select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
-     ![Upload a document](images/recogniserlab1-1.png)
+     ![Upload a document](images/9-7-25-l1-17.png)
 
-13. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. You can upload multiple invoices one by one.
+1. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. Select the invoice files **(2)** and click **Open** **(3)** You can upload multiple invoices one by one.
 
      ![Upload a document](images/pipeline-folder.png)
 
 ## Task 4: Configure Azure AI Search 
 
-1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
+1. Navigate back to the resource group window, search, and select **Search service** with a name similar to **bpa{suffix}**.
 
    ![search service](images/rg3.png)
 
-2. On the **Search service** page, click on **Import data**.
+1. On the **Search service** page, click on **Import data**. From the **Data Source** dropdown, select **Azure Blob Storage**.
 
    ![Data source](images/BPAA1.png)
 
-3. Enter the following details for **Connect to your data**.
+   ![Data source](images/9-7-25-l1-18.png)
+
+1. On the **Import data** page, under the **Connect to your data** section, enter the following details:
 
    - Data Source: Select **Azure Blob Storage** **(1)**
 
@@ -207,39 +216,41 @@ After you are satisfied with the custom model's performance, you can retrieve th
   
      ![Connection to your data](images/fill-details.png)
 
-5. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
 
      ![Storage account](images/stoarge-account.png)
 
-6. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to the **Connection to your data** page.
+1. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to the **Connect to your data** page.
 
      ![Storage account](images/continers.png)   
   
-7. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
+1. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
 
    ![Connection](images/fill-details1.png)
 
-8. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
+1. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
 
-9. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+    ![Data source](images/9-7-25-l1-19.png)
 
-      ![Connection](images/retrievable-searchable.png)
+1. On the **Import data** screen, enter Index name as **azureblob-index** **(1)**, select the check box of all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-10. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+      ![Connection](images/9-7-25-l1-20.png)
 
-      ![import-data](images/BPA5.png)
+1. Expand the **analyzeResult** **(1)** -> **documents** **(2)** > **fields** **(3)** under it, expand **Organization_sample (4)**. Make the three fields Facetable **(type, valueString & content)** **(5)** and click on **Next: Create an indexer** **(6)**.
 
-7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   ![import-data](images/9-7-25-l1-21.png)
+
+1. On the **Create an indexer** page, enter the Name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
    ![Create an indexer](images/create-an-indexer.png)
 
 ## Task 5: Use Sample Search Application [Read Only]
 
-1. Navigate back to the **Business Process Automation Accelerator** home page and click on **Sample Search Application**.
+1. Navigate back to the **Business Process Automation Accelerator** home page, under the section **What would you like to do?**, click on **Sample Search Application**.
 
-   ![Sample Search Applicationt](images/sample-search-application.png)
+   ![Sample Search Applicationt](images/9-7-25-l1-22.png)
 
-2. On the **Sample Search Application** page, in the search bar, enter **invoice1** **(1)** and click on **Search** **(2)**.
+1. On the **Sample Search Application** page, in the search bar, enter **invoice1** **(1)** and click on **Search** **(2)**.
 
    ![output](images/output.png)
 
@@ -247,6 +258,8 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
 In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
 
-Now, click on Next from the lower right corner to move on to the next lab.
+Now, click on **Next >>** from the lower right corner to move on to the next lab.
 
-![image](https://github.com/user-attachments/assets/310bb80b-357b-4730-831a-661430ac6c3e)
+![](../images/next-new.png)
+
+### Happy Learning!!
