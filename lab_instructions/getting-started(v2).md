@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/3e89c3ed-9996-4434-9570-660f6a6ee4d0)# Business Automation using Azure OpenAI and Document Intelligence
+# Business Automation using Azure OpenAI and Document Intelligence
  
 ### Overall Estimated Duration: 4 Hours
 
@@ -105,7 +105,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
 1. Confirm that you have all resource groups present as shown below.
 
-   ![](./images/9-7-25-g7.png "Resource groups")
+   ![](./images/rg-new.png "Resource groups")
    
 1. Verify the resources deployed in the resource group.
 
