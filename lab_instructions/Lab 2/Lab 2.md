@@ -30,7 +30,7 @@ Access the Azure OpenAI Studio and navigate to the "Bring your own data" section
 
 4. On the **Azure AI Foundry Portal**, you should be able to see the Chat Playground service.
 
-   ![Azure OpenAI Studio](images/L2T1S4.png)
+   ![Azure OpenAI Studio](../Lab%202/images/230625(12).png)
 
 5. On **Chat playground** pane, select **Add your data (1)** tab and click on **+ Add a data source (2)**.
 
