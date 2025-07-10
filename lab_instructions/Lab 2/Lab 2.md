@@ -20,11 +20,11 @@ In this lab, you will complete the following tasks:
 
 2. On the Resource group, search, and select the **Azure OpenAI** resource type with the name similar to **oaibpa{suffix}**.
 
-   ![OpenAI](images/pg3-task1-2.png)
+   ![OpenAI](images/9-7-25-l2-1.png)
 
 3. On the **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
 
-   ![OpenAI Studio](images/L2T1S3-1806.png)
+   ![OpenAI Studio](images/9-7-25-l2-2.png)
 
 4. On the **Azure OpenAI Studio**, In **Home** scroll down and click on **Bring your own data**.
 
@@ -36,7 +36,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 1. You will be redirected **Chat** under **Playgrounds**. Expand  **> Add your data**, click on **+ Add a data source** and fill the following details: 
 
-   ![Azure OpenAI Studio](images/pg3-task2-1.png)
+   ![Azure OpenAI Studio](images/9-7-25-l2-3.png)
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -73,7 +73,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 6. On the **Review and finish** page, click on **Save and close**.
 
-   ![image](https://github.com/user-attachments/assets/57bfec0e-a3e6-4791-af51-cceb44003c51)
+   ![image](images/9-7-25-l2-4.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
@@ -97,7 +97,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 4. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/pg3-task3-4.png)
+   ![Alt text](images/9-7-25-l2-5.png)
 
 5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
