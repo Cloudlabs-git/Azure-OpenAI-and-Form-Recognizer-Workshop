@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will gain a comprehensive understanding of Azure's advanced data handling and analysis tools. You'll explore how to utilize Azure OpenAI Large Language Models (LLM) and Azure AI Search to make your data searchable. Additionally, you'll delve into creating custom models with Azure AI Document Intelligence, learning how to extract and analyze specific data from business forms and documents. This lab will showcase the potential of these technologies to build intelligent systems tailored to your business needs, enhancing productivity and delivering hyper-personalized experiences.
+In this Hands-on lab, you will gain a comprehensive understanding of Azure's advanced data handling and analysis tools. You'll explore how to utilize Azure OpenAI Large Language Models (LLM) and Azure AI Search to make your data searchable. Additionally, you'll delve into creating custom models with Azure AI Document Intelligence, learning how to extract and analyze specific data from business forms and documents. This lab will showcase the potential of these technologies to build intelligent systems tailored to your business needs, enhancing productivity and delivering hyper-personalized experiences.
 
 ## Objective
 
@@ -32,7 +32,7 @@ This architecture flow demonstrates how various Azure components work together t
 - **Data Sources:** Raw input files like PDFs, images, and text documents.
 - **Azure Blob Storage:** Central storage for training data and uploaded content.
 - **Azure Function App:** Event-driven trigger for processing or pipeline automation.
-- **Azure Form Recognizer:** Custom model to extract structured data from documents (Lab 1).
+- **Document Intelligence:** Custom model to extract structured data from documents (Lab 1).
 - **Azure AI Search:** Indexes processed documents for retrieval (Lab 2).
 - **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
 - **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
@@ -93,7 +93,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](../images/asklater.png)
    
-1. If you see the pop-up **Stay Signed in?**, select **No**.
+1. If you see the pop-up **Stay signed in?**, select **No**.
 
    ![](./images/9-7-25-g4.png)
 
@@ -138,9 +138,9 @@ This hands-on lab will guide you in using Azure’s advanced tools, including Op
 
 1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
 
-1. If prompted to stay signed in, you can click "No."
+1. If you see the pop-up **Stay signed in?**, select **No**.
 
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 ## Support Contact
 
@@ -156,4 +156,3 @@ Now, click on **Next** from the lower right corner to move on to the next page.
 ![](./images/next-new.png)
 
 ### Happy Learning!!
-
