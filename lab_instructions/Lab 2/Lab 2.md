@@ -14,6 +14,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
+In this task, you will access the Azure AI Foundry portal through your Azure OpenAI resource. You’ll navigate to the Bring your own data section to prepare for integrating custom documents with a ChatGPT-based interface.
+
 1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![OpenAI](images/rgg.png)
@@ -32,7 +34,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Upload your own data
 
-In this task, we will be using Porsche's owner manual for the Taycan, Panamera, and Cayenne models.
+In this task, you will upload a Porsche owner's manual PDF to Azure OpenAI using the Bring your own data feature. You'll configure Azure Blob Storage and AI Search to make the document searchable and ready for integration with the LLM. 
 
 1. On the **Azure AI Foundry | Azure OpenAI** page, select **Chat** **(1)** under **Playgrounds**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)**.
 
@@ -58,27 +60,29 @@ In this task, we will be using Porsche's owner manual for the Taycan, Panamera, 
 
       ![add-data](images/uploadfilesnew.png) 
 
-2. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)**.
+1. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)**.
 
    ![data-management](images/data-managementnew.png)
 
-3. On the **Upload files** page, click **Upload files** **(1)** to add your documents, then click **Next** **(2)** to proceed.
+1. On the **Upload files** page, click **Upload files** **(1)** to add your documents, then click **Next** **(2)** to proceed.
 
    ![data-management](images/data-management-uploadnew.png)
 
-4. On the **Data management** page, select **Keyword** **(1)** from the **Search type** dropdown and click on **Next (2)**.
+1. On the **Data management** page, select **Keyword** **(1)** from the **Search type** dropdown and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1new.png)
 
-5. On the **Data Connection** page, select **API Key (1)** under **Azure resorce authentication type** and click on **Next (2)**.
+1. On the **Data Connection** page, select **API Key (1)** under **Azure resorce authentication type** and click on **Next (2)**.
 
    ![keyword](images/E2-T2-S5.png)
 
-6. On the **Review and finish** page, review the details and click on **Save and close**.
+1. On the **Review and finish** page, review the details and click on **Save and close**.
 
    ![image](images/9-7-25-l2-4.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
+
+In this task, you will interact with the Azure OpenAI ChatGPT model using your uploaded Porsche manual data. You’ll test natural language queries, customize the system message, and tweak parameters to observe how the model responds using your indexed content.
 
 1. In the **Setup** pane, wait for the data upload to complete.
 

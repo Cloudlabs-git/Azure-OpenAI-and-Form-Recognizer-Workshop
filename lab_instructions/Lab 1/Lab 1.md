@@ -15,6 +15,8 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Creating an Azure AI Document Intelligence Resource
 
+In this task, you will create an Azure AI Document Intelligence project using Document Intelligence Studio. You’ll configure the project by selecting a Cognitive Services resource and creating a Storage Account to prepare the environment for custom model training.
+
 1. Open a new tab and navigate to **Document Intelligence Studio** using [Document Intelligence](https://documentintelligence.ai.azure.com/studio). 
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
@@ -81,7 +83,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Train and Label data
 
-In this task, you will upload 6 training documents to train the model.
+In this task, you will upload and label six training documents to define a custom field for extraction. After labeling, you'll train the Document Intelligence model and validate its accuracy by testing it with sample documents.
 
 1. On the **Label data** page of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
@@ -135,7 +137,7 @@ In this task, you will upload 6 training documents to train the model.
 
 ## Task 3: Build a new pipeline with the custom model module in BPA
 
-After you are satisfied with the custom model's performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
+In this task, you will create a custom document processing pipeline using the Business Process Automation (BPA) Accelerator. You’ll integrate your trained custom model into the pipeline and upload documents for automated extraction and processing.
 
 1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -191,6 +193,8 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
 ## Task 4: Configure Azure AI Search 
 
+In this task, you will configure Azure AI Search to index the extracted document data stored in Azure Blob Storage. You'll define a data source, customize indexing settings, and create an indexer to make the custom model output searchable.
+
 1. Navigate back to the resource group page, select **Search service** with a name similar to **bpa{suffix}**.
 
    ![search service](images/rg3.png)
@@ -242,6 +246,8 @@ After you are satisfied with the custom model's performance, you can retrieve th
    ![Create an indexer](images/create-an-indexer.png)
 
 ## Task 5: Use Sample Search Application [Read Only]
+
+In this task, you will explore the Sample Search Application to verify the results indexed by Azure AI Search. This allows you to view and validate searchable content extracted by your custom model.
 
 1. Navigate back to the **Business Process Automation Accelerator** home page, under the section **What would you like to do?**, click on **Sample Search Application**.
 
