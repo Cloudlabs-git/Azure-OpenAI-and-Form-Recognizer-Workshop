@@ -18,11 +18,11 @@ In this lab, you will complete the following tasks:
 
    ![OpenAI](images/rgg.png)
 
-2. On the Resource group, search, and select the **Azure OpenAI** resource type with the name similar to **oaibpa{suffix}**.
+2. On the Resource group page, search, and select the **Azure OpenAI** resource type with the name similar to **oaibpa{suffix}**.
 
    ![OpenAI](images/9-7-25-l2-1.png)
 
-3. On the **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
+3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
 
    ![OpenAI Studio](images/9-7-25-l2-2.png)
 
@@ -32,11 +32,13 @@ In this lab, you will complete the following tasks:
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porsche's owner manual for the Taycan, Panamera, and Cayenne models.
+In this task, we will be using Porsche's owner manual for the Taycan, Panamera, and Cayenne models.
 
-1. On the **Chat playground** page, select **Chat** under **Playgrounds** **(1)**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)** and fill the following details:
+1. On the **Azure AI Foundry | Azure OpenAI** page, select **Chat** **(1)** under **Playgrounds**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)**.
 
    ![Azure OpenAI Studio](images/9-7-25-l2-3.png)
+
+1. Provide the following details to configure the data source.
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -48,7 +50,7 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
 
          ![](images/cors.png)
 
-    - Select Azure AI Search  resource: Select the search service used in the previous lab from the drop-down **(4)**.
+    - Select Azure AI Search resource: Select the search service used in the previous lab from the drop-down **bpa{suffix}** **(4)**.
 
     - Enter the index name: Enter the index name as **aoaiworkshop** **(5)**.
     
@@ -60,25 +62,25 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
 
    ![data-management](images/data-managementnew.png)
 
-3. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
+3. On the **Upload files** page, click **Upload files** **(1)** to add your documents, then click **Next** **(2)** to proceed.
 
    ![data-management](images/data-management-uploadnew.png)
 
-4. On the **Data Management** page, select **Keyword** **(1)** from the **Search type** dropdown and click on **Next (2)**.
+4. On the **Data management** page, select **Keyword** **(1)** from the **Search type** dropdown and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1new.png)
 
-5. On the **Data Connection** page, Under Azure resorce authentication type, select **API Key** and click on **Next**.
+5. On the **Data Connection** page, select **API Key (1)** under **Azure resorce authentication type** and click on **Next (2)**.
 
    ![keyword](images/E2-T2-S5.png)
 
-6. On the **Review and finish** page, click on **Save and close**.
+6. On the **Review and finish** page, review the details and click on **Save and close**.
 
    ![image](images/9-7-25-l2-4.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Setup** pane, wait until your data upload is finished.
+1. In the **Setup** pane, wait for the data upload to complete.
 
    ![upload-data](images/pg3-task3-1.png)
 
@@ -90,13 +92,13 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
     How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
-      ![chat-session-one](images/pg3-task3-2.png)
+   ![chat-session-one](images/pg3-task3-2.png)
 
 3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/pg3-task3-3.png)
 
-4. On **Update system message?** pop-up, click on **Continue**.
+4. In the **Update system message?** confirmation pop-up, click **Continue**.
 
    ![Alt text](images/update-new.png)
 
@@ -108,7 +110,7 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
    
     ![chat-session-two](images/pg3-task3-5new.png)
 
-6. Expand **> Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
+6. Expand **Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
 
     ![Alt text](images/E2-T2-S6.png)
 
