@@ -1,8 +1,8 @@
 # Lab 02: Use Azure OpenAI with your own data
 
-In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
-
 ### Estimated Duration: 60 Minutes
+
+In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
 ## Lab Objectives
 
@@ -44,14 +44,15 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
 
     - Select Azure Blob storage resource: Choose the already created storage account **formrecognizer<inject key="Deployment ID">** **(3)**. 
       
-      - **Note**: If prompted with a CORS permission warning,, click on **Turn on CORS**.
+      - **Note:** If prompted with a CORS permission warning,, click on **Turn on CORS**.
 
          ![](images/cors.png)
 
     - Select Azure AI Search  resource: Select the search service used in the previous lab from the drop-down **(4)**.
 
     - Enter the index name: Enter the index name as **aoaiworkshop** **(5)**.
-    - Click on **Next** **(6).**
+    
+    - Click on **Next** **(6)**.
 
       ![add-data](images/uploadfilesnew.png) 
 
@@ -127,4 +128,4 @@ In this step, we will be using Porsche's owner manual for the Taycan, Panamera, 
 
 This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
 
-## You have successfully completed this lab.
+## You have successfully completed this Hands-on lab.
