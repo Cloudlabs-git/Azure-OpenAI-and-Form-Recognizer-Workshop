@@ -1,8 +1,8 @@
 # Lab 01: Create and Deploy an Azure AI Document Intelligence Custom Model
 
-In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/Custom%20Model%20Sample/).
-
 ### Estimated Duration: 90 Minutes
+
+In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/Custom%20Model%20Sample/).
 
 ## Lab Objectives
 
@@ -43,8 +43,7 @@ In this lab, you will complete the following tasks:
 
      ![Alt text](images/9-7-25-l1-2.png)
 
-1. On the **Custom extraction model > Configure service resource** screen, enter the following details:
- and click on **Continue**.
+1. On the **Custom extraction model > Configure service resource** screen, enter the following details and click on **Continue**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
 
@@ -164,8 +163,7 @@ After you are satisfied with the custom model's performance, you can retrieve th
 
    ![workshop](images/E1-T3-S7.png)
 
-1. On the "Model ID" pop-up. Enter the Form Recognizer Custom Model ID as **customfrs** in the **Model ID** field **(1)**,  
-Then click on **Submit** **(2)**.
+1. On the "Model ID" pop-up. Enter the Form Recognizer Custom Model ID as **customfrs** in the **Model ID** field **(1)**, and then click on **Submit** **(2)**.
 
    ![Model ID](images/pipeline-model-id.png)
 
@@ -182,7 +180,7 @@ then click on **Ingest Documents**.
 
      ![ingest-documents](images/9-7-25-l1-16.png)
 
-1. On the **Upload a document to Blob Storage** page, from the drop-down, Select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
+1. On the **Upload a document to Blob Storage** page, from the drop-down, select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
      ![Upload a document](images/9-7-25-l1-17.png)
 
