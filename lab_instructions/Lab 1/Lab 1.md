@@ -15,7 +15,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Creating an Azure AI Document Intelligence Resource
 
-In this task, you will create a new Azure AI Document Intelligence project using Document Intelligence Studio. You’ll configure the required Azure resources, including a Cognitive Services resource and a Storage Account, to prepare the environment for custom model training.
+In this task, you will create an Azure AI Document Intelligence project using Document Intelligence Studio. You’ll configure the project by selecting a Cognitive Services resource and creating a Storage Account to prepare the environment for custom model training.
 
 1. Open a new tab and navigate to **Document Intelligence Studio** using [Document Intelligence](https://documentintelligence.ai.azure.com/studio). 
 
