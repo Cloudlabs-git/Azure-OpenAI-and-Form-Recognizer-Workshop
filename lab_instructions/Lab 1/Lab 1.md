@@ -264,15 +264,7 @@ In this lab, you’ll build a custom model with Azure AI Document Intelligence b
 
 ## Conclusion
 
-In this lab you have accomplished:
-
-- Created an Azure AI Document Intelligence resource to enable intelligent document processing capabilities.
-
-- Trained and labeled custom data to build a domain-specific model for accurate document analysis.
-
-- Developed a new BPA pipeline integrating the custom model for automated document workflows.
-
-- Configured Azure AI Search to make processed and extracted information easily searchable.
+In this lab by completing these tasks, you establish a complete intelligent document processing workflow in Azure. We start by provisioning the Azure AI Document Intelligence resource to enable advanced document understanding. Next, we train and label data to build a domain-specific custom model. We then integrate this model into a Business Process Automation (BPA) pipeline, enabling automated document processing. Finally, we configure Azure AI Search to make the extracted information easily discoverable and accessible, delivering an end-to-end AI-driven document management solution.
 
 
 Now, click on **Next >>** from the lower right corner to move on to the next lab.
