@@ -1,6 +1,6 @@
 # Lab 02: Use Azure OpenAI with your own data
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 120 Minutes
 
 In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
