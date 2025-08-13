@@ -264,6 +264,8 @@ In this lab, you’ll build a custom model with Azure AI Document Intelligence b
 
 ## Conclusion
 
+In this lab you have accomplished:
+
 - Created an Azure AI Document Intelligence resource to enable intelligent document processing capabilities.
 
 - Trained and labeled custom data to build a domain-specific model for accurate document analysis.
