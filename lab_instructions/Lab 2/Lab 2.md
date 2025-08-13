@@ -136,12 +136,6 @@ This hands-on lab demonstrates how to use your own data with Azure OpenAI’s La
 
 ## Conclusion
 
-In this lab you have accomplished:
-
-- Accessed the Azure OpenAI Playground to work with the ChatGPT LLM.
-
-- Uploaded your own data for model context and fine-tuned responses.
-
-- Interacted with the ChatGPT LLM to query and analyze information based on the uploaded data.
+In this lab by completing these tasks, you have learnt to enable a customized AI interaction experience where the Azure OpenAI ChatGPT LLM leverages our own data, allowing for more relevant, accurate, and context-specific responses tailored to our unique requirements.
 
 ## You have successfully completed this Hands-on lab.
