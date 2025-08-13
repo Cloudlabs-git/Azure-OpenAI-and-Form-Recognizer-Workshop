@@ -261,6 +261,18 @@ In this task, you will explore the Sample Search Application to verify the resul
 
 In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
 
+
+## Conclusion
+
+- Created an Azure AI Document Intelligence resource to enable intelligent document processing capabilities.
+
+- Trained and labeled custom data to build a domain-specific model for accurate document analysis.
+
+- Developed a new BPA pipeline integrating the custom model for automated document workflows.
+
+- Configured Azure AI Search to make processed and extracted information easily searchable.
+
+
 Now, click on **Next >>** from the lower right corner to move on to the next lab.
 
 ![](../images/next-new.png)
