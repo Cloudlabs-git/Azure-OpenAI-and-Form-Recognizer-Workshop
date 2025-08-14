@@ -136,6 +136,6 @@ This hands-on lab demonstrates how to use your own data with Azure OpenAI’s La
 
 ## Conclusion
 
-In this lab by completing these tasks, you have learnt to enable a customized AI interaction experience where the Azure OpenAI ChatGPT LLM leverages our own data, allowing for more relevant, accurate, and context-specific responses tailored to our unique requirements.
+In this lab, you built a complete intelligent, AI-driven document processing and interaction workflow in Azure. You began by provisioning the Azure AI Document Intelligence resource to enable advanced document understanding, followed by training and labeling data to create a domain specific custom model. This model was then integrated into a Business Process Automation (BPA) pipeline for automated document processing, and Azure AI Search was configured to make the extracted information easily discoverable and accessible. Additionally, you enabled a customized AI interaction experience where the Azure OpenAI ChatGPT LLM leverages your own data, ensuring more relevant, accurate, and context specific responses tailored to your unique requirements.
 
 ## You have successfully completed this Hands-on lab.
