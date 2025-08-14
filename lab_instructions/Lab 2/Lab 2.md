@@ -134,7 +134,7 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
 
 This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
 
-## You have successfully completed this Hands-on lab.
+You have successfully completed this Hands-on lab.
 
 ## Conclusion
 
