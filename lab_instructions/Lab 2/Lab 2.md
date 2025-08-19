@@ -1,6 +1,6 @@
 # Lab 02: Use Azure OpenAI with your own data
 
-### Estimated Duration: 60 Minutes
+### Estimated Duration: 120 Minutes
 
 In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
@@ -135,3 +135,5 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
 This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
 
 ## You have successfully completed this Hands-on lab.
+
+By completing this lab **Business Automation using Azure OpenAI and Document Intelligence**, you built a complete intelligent, AI-driven document processing and interaction workflow in Azure. You began by provisioning the Azure AI Document Intelligence resource to enable advanced document understanding, followed by training and labeling data to create a domain specific custom model. This model was then integrated into a Business Process Automation (BPA) pipeline for automated document processing, and Azure AI Search was configured to make the extracted information easily discoverable and accessible. Additionally, you enabled a customized AI interaction experience where the Azure OpenAI ChatGPT LLM leverages your own data, ensuring more relevant, accurate, and context specific responses tailored to your unique requirements.
