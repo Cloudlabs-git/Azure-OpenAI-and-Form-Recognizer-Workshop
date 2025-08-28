@@ -31,6 +31,10 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
       ![Alt text](../images/9-7-25-g3.png)
 
+      >**Note:** If the sign in pop up does not come up, from the top right corner click on **SignIn** and then sign in.
+
+      ![accounts](../images/1login.png)
+
 1. In Document Intelligence Studio, scroll down to **Custom Models**, under **Custom extraction model**, choose **Get started**.
 
    ![Alt text](../images/13062025(6).png)
@@ -39,7 +43,7 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
    ![Alt text](images/9-7-25-l1-1.png)
 
-1. On the **Custom extraction model** tab, under **Enter project details**, enter the following details and click on **Continue** **(3)**.
+1. On the **Custom extraction models** tab, under **Enter project details**, enter the following details and click on **Continue** **(3)**.
     
    - Project name: **testproject** **(1)**.
 
@@ -87,7 +91,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Label data** page of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
-     ![Browse for files](images/browse-for-files.png)
+     ![Browse for files](../images/browsefile.png)
 
 1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
@@ -103,7 +107,7 @@ In this task, you will upload and label six training documents to define a custo
 
      ![run-now](images/add-field-name.png)
 
-1. On the **Label data** page, select the text **CONTOSO LTD.** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all six documents.
+1. On the **Label data** page, select the text **CONTOSO** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all six documents.
 
      ![train-module](images/9-7-25-l1-6.png)
 
@@ -129,11 +133,11 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
-     ![test-file-upload](images/test-file-upload.png)
+   ![test-file-upload](./images/test-file-upload.png)
 
-1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score.
+1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
-     ![Alt text](images/result.png)
+     ![Alt text](../images/test.png)
 
 ## Task 3: Build a new pipeline with the custom model module in BPA
 
@@ -237,9 +241,9 @@ In this task, you will configure Azure AI Search to index the extracted document
 
       ![Connection](images/9-7-25-l1-20.png)
 
-1. Expand the **analyzeResult** **(1)** -> **documents** **(2)** -> **fields** **(3)** under it, expand **Organization_sample (4)**. Make the three fields Facetable **(type, valueString & content)** **(5)** and click on **Next: Create an indexer** **(6)**.
+1. Expand the **aggregatedResult** **(1)** -> **customFormRec (2)** -> **documents** **(3)** -> **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-   ![import-data](images/9-7-25-l1-21.png)
+   ![import-data](../images/aggregatedresult.png)
 
 1. On the **Create an indexer** page, enter the Name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    

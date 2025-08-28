@@ -96,11 +96,11 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
     How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
-   ![chat-session-one](images/pg3-task3-2.png)
+   ![chat-session-one](images/modelquery.png)
 
 3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/pg3-task3-3.png)
+   ![assistant-setup-system-message](images/setup.png)
 
 4. In the **Update system message?** confirmation pop-up, click **Continue**.
 

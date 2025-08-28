@@ -51,13 +51,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
- ![](./images/13062025(2).png)
+ ![](../images/updtenv.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![](./images/13062025(3).png)
+ ![](../images/updatedsplit.png)
  
 ## Managing Your Virtual Machine
  
