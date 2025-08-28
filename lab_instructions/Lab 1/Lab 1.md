@@ -133,7 +133,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
-     ![test-file-upload]..(images/test-file-upload.png)
+     ![test-file-upload](../images/test-file-upload.png)
 
 1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
