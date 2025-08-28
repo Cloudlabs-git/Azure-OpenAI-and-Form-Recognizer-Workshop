@@ -31,7 +31,7 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
       ![Alt text](../images/9-7-25-g3.png)
 
-      >**Note:** If the sign in pop up does not come up, from the top right corner click on **SignIn** and then sign in 
+      >**Note:** If the sign in pop up does not come up, from the top right corner click on **SignIn** and then sign in.
 
       ![accounts](../images/1login.png)
 
@@ -91,7 +91,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Label data** page of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
-     ![Browse for files](images/browsefile.png)
+     ![Browse for files](../images/browsefile.png)
 
 1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
@@ -133,11 +133,11 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
-     ![test-file-upload](images/test-file-upload.png)
+     ![test-file-upload]..(images/test-file-upload.png)
 
 1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
-     ![Alt text](images/test.png)
+     ![Alt text](../images/test.png)
 
 ## Task 3: Build a new pipeline with the custom model module in BPA
 
@@ -241,9 +241,9 @@ In this task, you will configure Azure AI Search to index the extracted document
 
       ![Connection](images/9-7-25-l1-20.png)
 
-1. Expand the **analyzeResult** **(1)** -> **documents** **(2)** -> **fields** **(3)** under it, expand **Organization_sample (4)**. Make the three fields Facetable **(type, valueString & content)** **(5)** and click on **Next: Create an indexer** **(6)**.
+1. Expand the **aggregatedResult** **(1)** -> **customFormRec (2)** -> **documents** **(3)** -> **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-   ![import-data](images/aggregatedresult.png)
+   ![import-data](../images/aggregatedresult.png)
 
 1. On the **Create an indexer** page, enter the Name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
