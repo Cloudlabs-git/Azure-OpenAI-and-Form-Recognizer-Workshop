@@ -84,6 +84,12 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 1. On the **Review and create** tab, validate the information and click **Create project**.
 
      ![Alt text](images/9-7-25-l1-5.png)
+> **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+  <validation step="60c13090-77ec-4831-9df3-a8cf1c72a307" />
 
 ## Task 2: Train and Label data
 
@@ -248,6 +254,13 @@ In this task, you will configure Azure AI Search to index the extracted document
 1. On the **Create an indexer** page, enter the Name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
    ![Create an indexer](images/create-an-indexer.png)
+
+> **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+  <validation step="52b89379-3a35-4829-b65b-466fadb99e86" />
 
 ## Task 5: Use Sample Search Application [Read Only]
 
