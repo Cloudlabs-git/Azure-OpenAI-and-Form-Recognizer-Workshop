@@ -72,7 +72,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 ![Zoom In/Zoom Out](./images/size-new.png)  
  
 ## Let's Get Started with Azure Portal
- 
+
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
    ![](./images/13062025(5).png)
@@ -81,24 +81,22 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
-      ![](./images/9-7-25-g2.png)
+      ![](../images/sign-in-page.png)
      
 1. Now enter the following password **(1)** and click on **Sign in (2)**.
    
    * **Password:** <inject key="AzureAdUserPassword"></inject>
    
-      ![](./images/9-7-25-g3.png "Enter Password")
-
-1. If you see the pop-up Action Required, click **Ask Later**.
-
-   ![](../images/asklater.png)
+      ![](../images/tap-password.png "Enter Password")
    
 1. If you see the pop-up **Stay signed in?**, select **No**.
 
-   ![](./images/9-7-25-g4.png)
+   ![](../images/Sign-in-no.png)
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
-   
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe later** to skip the tour.
+
+   ![](../images/cancel-tour.png)
+
 1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
    ![](./images/9-7-25-g5.png "Resource groups")
@@ -116,43 +114,19 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 This hands-on lab will guide you in using Azure’s advanced tools, including OpenAI LLM, Azure AI Search, and Azure AI Document Intelligence, to create intelligent systems that enhance productivity and deliver personalized experiences.
 
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
-
-1. At the **"More information required"** prompt, select **Next**.
-
-1. On the **"Keep your account secure"** page, select **Next** twice.
-
-1. **Note**: If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open Google Play Store (Android) or App Store (iOS).
-
-   - Search for Microsoft Authenticator and tap Install.
-       
-   - Open the Microsoft Authenticator app, select Add account, then choose Work or school account.
-
-1. A **QR code** will be displayed on your computer screen.
-
-1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
-
-1. After scanning, click **Next** to proceed.
-
-1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
-
-1. If you see the pop-up **Stay signed in?**, select **No**.
-
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
-
 ## Support Contact
-
+ 
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
-
-- Email Support: cloudlabs-support@spektrasystems.com
+ 
+- Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
 - Live Chat Support: https://cloudlabs.ai/labs-support
-  
-Now, click on **Next** from the lower right corner to move on to the next page.
 
-![](./images/next-new.png)
+Click **Next** from the bottom right corner to embark on your Lab journey!
+ 
+![Start Your Azure Journey](../images/next-page.png)
+
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
 
 ### Happy Learning!!
