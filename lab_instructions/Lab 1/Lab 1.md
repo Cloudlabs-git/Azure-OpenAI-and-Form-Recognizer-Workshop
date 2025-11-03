@@ -28,13 +28,13 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-      ![Alt text](../images/9-7-25-g2.png)
+      ![Alt text](./images/sign-in-page.png)
 
 1. Now enter the following password **(1)** and click on **Sign in (2)**.
    
    * **Password:** <inject key="AzureAdUserPassword"></inject>
 
-      ![Alt text](../images/9-7-25-g3.png)
+      ![Alt text](./images/tap-password.png)
 
       >**Note:** If the sign in pop up does not come up, from the top right corner, click on **SignIn** and then sign in.
 
@@ -89,6 +89,13 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 1. On the **Review and create** tab, validate the information and click **Create project**.
 
      ![Alt text](images/9-7-25-l1-5.png)
+
+> **Congratulations** on completing the lab! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
+  <validation step="60c13090-77ec-4831-9df3-a8cf1c72a307" />
 
 ## Task 2: Train and Label data
 
