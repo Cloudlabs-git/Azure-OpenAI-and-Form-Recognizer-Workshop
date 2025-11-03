@@ -17,7 +17,12 @@ In this lab, you will complete the following tasks:
 
 In this task, you will create an Azure AI Document Intelligence project using Document Intelligence Studio. You’ll configure the project by selecting a Cognitive Services resource and creating a Storage Account to prepare the environment for custom model training.
 
-1. Open a new tab and navigate to **Document Intelligence Studio** using [Document Intelligence](https://documentintelligence.ai.azure.com/studio). 
+1. Open a new tab and navigate to **Document Intelligence Studio** using the provided link.
+
+   ```
+   https://documentintelligence.ai.azure.com/studio
+   ```
+
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
 
@@ -31,7 +36,7 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
       ![Alt text](../images/9-7-25-g3.png)
 
-      >**Note:** If the sign in pop up does not come up, from the top right corner click on **SignIn** and then sign in.
+      >**Note:** If the sign in pop up does not come up, from the top right corner, click on **SignIn** and then sign in.
 
       ![accounts](../images/1login.png)
 
@@ -191,7 +196,7 @@ In this task, you will create a custom document processing pipeline using the Bu
 
      ![Upload a document](images/9-7-25-l1-17.png)
 
-1. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. Select the invoice files **(2)** and click **Open** **(3)** You can upload multiple invoices one by one.
+1. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. Select the invoice files one by one **(2)** and click **Open** **(3)**. You can upload multiple invoices one by one.
 
      ![Upload a document](images/pipeline-folder.png)
 
@@ -274,4 +279,4 @@ In this lab, you’ll build a custom model with Azure AI Document Intelligence b
 
 Now, click on **Next >>** from the lower right corner to move on to the next lab.
 
-![](../images/next-new.png)
+![](./images/next-page.png)

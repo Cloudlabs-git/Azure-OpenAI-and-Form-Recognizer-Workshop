@@ -28,9 +28,9 @@ In this task, you will access the Azure AI Foundry portal through your Azure Ope
 
    ![OpenAI Studio](images/9-7-25-l2-2.png)
 
-4. On the **Azure AI Foundry | Azure OpenAI Service** page, in the **Home** section, scroll down and click on **Bring your own data**.
+4. On the **Azure AI Foundry | Azure OpenAI** page, in the **Home** section, scroll down and click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/pg3-task1-4.png)
+   ![Azure OpenAI Studio](images/pg3-task1-4.1.png)
 
 ## Task 2: Upload your own data
 
