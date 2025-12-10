@@ -24,9 +24,9 @@ In this task, you will access the Azure AI Foundry portal through your Azure Ope
 
    ![OpenAI](images/9-7-25-l2-1.png)
 
-3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
+3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Go to Foundry portal**.
 
-   ![OpenAI Studio](images/9-7-25-l2-2.png)
+   ![OpenAI Studio](images/dec25-business-lab1-4.png)
 
 4. On the **Azure AI Foundry | Azure OpenAI** page, in the **Home** section, scroll down and click on **Bring your own data**.
 

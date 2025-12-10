@@ -44,6 +44,8 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
    ![Alt text](../images/13062025(6).png)
 
+1. If asks to sign in, use the same ODL user to login used to login Azure.
+
 1. On the **Custom extraction model** page, click **+ Create a project** under **My Projects**.
 
    ![Alt text](images/9-7-25-l1-1.png)
