@@ -101,7 +101,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](./images/9-7-25-g5.png "Resource groups")
    
-1. Confirm that you have all resource groups present as shown below.
+1. Confirm that you have the resource group present as shown below.
 
    ![](./images/rg-new.png "Resource groups")
    

@@ -24,9 +24,9 @@ In this task, you will access the Azure AI Foundry portal through your Azure Ope
 
    ![OpenAI](images/9-7-25-l2-1.png)
 
-3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Explore Azure AI Foundry portal**.
+3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Go to Foundry portal**.
 
-   ![OpenAI Studio](images/9-7-25-l2-2.png)
+   ![OpenAI Studio](images/dec25-business-lab1-4.png)
 
 4. On the **Azure AI Foundry | Azure OpenAI** page, in the **Home** section, scroll down and click on **Bring your own data**.
 
@@ -96,15 +96,15 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
     How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
-   ![chat-session-one](images/t2s2.png)
+   ![chat-session-one](images/dec25-business-lab1-7.png)
 
 3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/t3s3.png)
+   ![assistant-setup-system-message](images/dec25-business-lab1-5.png)
 
 4. In the **Update system message?** confirmation pop-up, click **Continue**.
 
-   ![Alt text](images/update-new.png)
+   ![Alt text](images/dec25-business-lab1-6.png)
 
 5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
