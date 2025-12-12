@@ -23,6 +23,9 @@ In this task, you will create an Azure AI Document Intelligence project using Do
    https://documentintelligence.ai.azure.com/studio
    ```
 
+1. You will be navigated to **Content Understanding Studio** page, select **Sign In** option from the top right corner.
+
+   ![Alt text](../images/dec25-business-lab1-1.png)
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
 
@@ -36,15 +39,18 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
       ![Alt text](./images/tap-password.png)
 
-      >**Note:** If the sign in pop up does not come up, from the top right corner, click on **SignIn** and then sign in.
+1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence**
+section choose **Start with Document Intelligence**.
 
-      ![accounts](../images/1login.png)
+   ![Alt text](../images/dec25-business-lab1-2.png)
 
 1. In Document Intelligence Studio, scroll down to **Custom Models**, under **Custom extraction model**, choose **Get started**.
 
    ![Alt text](../images/13062025(6).png)
 
-1. If asks to sign in, use the same ODL user to login used to login Azure.
+1. If asks to Sign in, use the same ODL user to login used to login Azure.
+
+   ![Alt text](../images/dec25-business-lab1-3.png)
 
 1. On the **Custom extraction model** page, click **+ Create a project** under **My Projects**.
 
