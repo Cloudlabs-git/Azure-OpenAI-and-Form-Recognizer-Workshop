@@ -99,7 +99,7 @@ section choose **Start with Document Intelligence**.
      ![Alt text](images/9-7-25-l1-5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
+> - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
 
@@ -199,7 +199,7 @@ In this task, you will create a custom document processing pipeline using the Bu
 
    ![Pipeline Preview](images/done-pipeline.png)
 
-1. On the **Piplelines workshop** page, click on **Home**. 
+1. On the **Pipelines workshop** page, click on **Home**. 
 
      ![home-pipeline](images/9-7-25-l1-15.png)
 
