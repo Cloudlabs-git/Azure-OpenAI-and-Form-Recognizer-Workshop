@@ -11,7 +11,8 @@ In this lab, you will complete the following tasks:
 * Task 1: Creating an Azure AI Document Intelligence Resource
 * Task 2: Train and Label data
 * Task 3: Build a new pipeline with the custom model module in BPA
-* Task 4: Configure Azure AI Search 
+* Task 4: Configure Azure AI Search
+* Task 5: Use Sample Search Application [Read Only]
 
 ## Task 1: Creating an Azure AI Document Intelligence Resource
 
@@ -294,8 +295,16 @@ In this task, you will explore the Sample Search Application to verify the resul
 
 ## Summary
 
-In this lab, you’ll build a custom model with Azure AI Document Intelligence by training it on a sample dataset, enabling automated document processing tailored to your data.
+In this lab, you have completed the following:
 
-Now, click on **Next >>** from the lower right corner to move on to the next lab.
+- Created an Azure AI Document Intelligence resource.
 
-![](./images/next-page.png)
+- Trained and labeled data for a custom model.
+
+- Built a new pipeline using the custom model module in BPA.
+
+- Configured Azure AI Search.
+
+### Now, click on **Next >>** from the lower right corner to move on to the next lab.
+
+![](../images/new/next.png)
