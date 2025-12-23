@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-In this task, you will access the Azure AI Foundry portal through your Azure OpenAI resource. You’ll navigate to the Bring your own data section to prepare for integrating custom documents with a ChatGPT-based interface.
+In this task, you will access the Microsoft Foundry portal through your Azure OpenAI resource. You’ll navigate to the Bring your own data section to prepare for integrating custom documents with a ChatGPT-based interface.
 
 1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -28,37 +28,37 @@ In this task, you will access the Azure AI Foundry portal through your Azure Ope
 
    ![OpenAI Studio](images/dec25-business-lab1-4.png)
 
-4. On the **Azure AI Foundry | Azure OpenAI** page, in the **Home** section, scroll down and click on **Bring your own data**.
+4. On the **Microsoft Foundry | Azure OpenAI** page, from the left navigation, go to **Home (1)** section, scroll down and click on **Bring your own data (2)**.
 
-   ![Azure OpenAI Studio](images/pg3-task1-4.1.png)
+   ![Azure OpenAI Studio](images/new/1.png)
 
 ## Task 2: Upload your own data
 
 In this task, you will upload a Porsche owner's manual PDF to Azure OpenAI using the Bring your own data feature. You'll configure Azure Blob Storage and AI Search to make the document searchable and ready for integration with the LLM. 
 
-1. On the **Azure AI Foundry | Azure OpenAI** page, select **Chat** **(1)** under **Playgrounds**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)**.
+1. On the **Microsoft Foundry | Azure OpenAI** page, select **Chat** **(1)** under **Playgrounds**. Expand **Add your data** **(2)**, then click on **+ Add a data source** **(3)**.
 
-   ![Azure OpenAI Studio](images/9-7-25-l2-3.png)
+   ![Azure OpenAI Studio](images/new/2.png)
 
 1. Provide the following details to configure the data source.
     
-    - Select data source: **Upload files (preview)** **(1)**
+    - **Select data source:** Select **Upload files (preview)** **(1)**
 
-    - Subscription: Select your subscription from the drop-down section **(2)**
+    - **Subscription:** Select the Defaul subscription from the drop-down **(2)**
 
-    - Select Azure Blob storage resource: Choose the already created storage account **formrecognizer<inject key="Deployment ID">** **(3)**. 
+    - **Select Azure Blob storage resource:** Choose the already created storage account **formrecognizer<inject key="Deployment ID">** **(3)**. 
       
-      - **Note:** If prompted with a CORS permission warning,, click on **Turn on CORS**.
+    - If prompted with a CORS permission warning, click on **Turn on CORS (4)**.
 
-         ![](images/cors.png)
+      ![](images/new/3.png)
 
-    - Select Azure AI Search resource: Select the search service used in the previous lab from the drop-down **bpa{suffix}** **(4)**.
+    - **Select Azure AI Search resource:** Select the search service used in the previous lab from the drop-down **bpa{suffix}** **(5)**.
 
-    - Enter the index name: Enter the index name as **aoaiworkshop** **(5)**.
+    - **Enter the index name:** Enter the index name as **aoaiworkshop** **(6)**.
     
-    - Click on **Next** **(6)**.
+    - Click on **Next** **(7)**.
 
-      ![add-data](images/uploadfilesnew.png) 
+      ![add-data](images/new/4.png) 
 
 1. On the **Upload files** page, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)**.
 
@@ -78,7 +78,7 @@ In this task, you will upload a Porsche owner's manual PDF to Azure OpenAI using
 
 1. On the **Review and finish** page, review the details and click on **Save and close**.
 
-   ![image](images/9-7-25-l2-4.png)
+   ![image](images/new/5.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
@@ -88,7 +88,7 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
 
    ![upload-data](images/pg3-task3-1.png)
 
-   ![upload-data](images/pg3-task3-1.1.png)
+   ![upload-data](images/new/6.png)
 
 2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -96,11 +96,11 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
     How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
-   ![chat-session-one](images/dec25-business-lab1-7.png)
+   ![chat-session-one](images/new/7.png)
 
 3. You can also configure the responses of your bot by selecting the system message under **Setup**, replacing the value under the **Give the model instructions and context** with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** and click on **Apply changes** **(2)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/dec25-business-lab1-5.png)
+   ![assistant-setup-system-message](images/new/8.png)
 
 4. In the **Update system message?** confirmation pop-up, click **Continue**.
 
@@ -112,11 +112,11 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
     What are the available functions in the Discover menu item?
     ```
    
-    ![chat-session-two](images/pg3-task3-5new.png)
+    ![chat-session-two](images/new/9.png)
 
 6. Expand **Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
 
-    ![Alt text](images/E2-T2-S6.png)
+    ![Alt text](images/new/10.png)
 
 7. You can try the following query after adjusting the parameters session
 
@@ -132,7 +132,13 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
 
 ## Summary 
 
-This hands-on lab demonstrates how to use your own data with Azure OpenAI’s Large Language Models (LLMs) and make it searchable using Azure AI Search. You’ll configure and integrate these services to improve data accessibility and enable intelligent search capabilities.
+In this lab, you have completed the following:
+
+- Navigated to the Azure OpenAI Playground.
+
+- Uploaded custom data.
+
+- Interacted with the Azure OpenAI ChatGPT LLM using your own data.
 
 ## You have successfully completed this Hands-on lab.
 

@@ -25,7 +25,7 @@ This architecture flow demonstrates how various Azure components work together t
 
 ## Architecture Diagram
 
- ![](./images/arch-diagram-bpa.png)
+ ![](./images/new/arch.png)
 
 ## Explanation of Components
 
@@ -35,13 +35,13 @@ This architecture flow demonstrates how various Azure components work together t
 - **Document Intelligence:** Custom model to extract structured data from documents (Lab 1).
 - **Azure AI Search:** Indexes processed documents for retrieval (Lab 2).
 - **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
-- **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
+- **Microsoft Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
 
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
- ![](./images/9-7-25-g1.png)
+ ![](./images/new/vm2.png)
 
 ## Virtual Machine & Lab Guide
 
@@ -75,17 +75,17 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-   ![](./images/13062025(5).png)
+   ![](./images/new/vm.png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next (2)**. 
 
-   * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
    
       ![](../images/sign-in-page.png)
      
-1. Now enter the following password **(1)** and click on **Sign in (2)**.
+1. Now enter the following temporary password and click on **Sign in (2)**.
    
-   * **Password:** <inject key="AzureAdUserPassword"></inject>
+   * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
    
       ![](../images/tap-password.png "Enter Password")
    
@@ -107,7 +107,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
 1. Verify the resources deployed in the resource group.
 
-   ![](./images/9-7-25-g6.png "Resource groups")
+   ![](./images/new/rg.png)
    
 > [!IMPORTANT]
 *For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.*
@@ -123,10 +123,8 @@ Learner Support Contacts:
 - Email Support: [cloudlabs-support@spektrasystems.com](mailto:cloudlabs-support@spektrasystems.com)
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Click **Next** from the bottom right corner to embark on your Lab journey!
+Now, click on **Next >>** from the lower right corner to move on to the next page.
  
-![Start Your Azure Journey](../images/next-page.png)
-
-Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
-
+   ![](./images/new/next.png)
+   
 ### Happy Learning!!
