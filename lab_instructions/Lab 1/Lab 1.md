@@ -27,15 +27,19 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
    ![Alt text](../images/dec25-business-lab1-1.png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username **(1)**, and click on **Next (2)**. 
+1. Select your already signed in **ODL_User <inject key="Deployment ID" enableCopy="false"/>** account.
 
-   * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   ![Alt text](./images/new/1.png)
+
+1. If you see **Sign in to Microsoft Azure** tab, Enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
       ![Alt text](./images/sign-in-page.png)
 
-1. Now enter the following password **(1)** and click on **Sign in (2)**.
+1. Now enter the following temporary password and click on **Sign in (2)**.
    
-   * **Password:** <inject key="AzureAdUserPassword"></inject>
+   * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
       ![Alt text](./images/tap-password.png)
 
@@ -48,9 +52,9 @@ section choose **Start with Document Intelligence**.
 
    ![Alt text](../images/13062025(6).png)
 
-1. If asks to Sign in, use the same ODL user to login used to login Azure.
+1. If asks to Sign in, use the same **ODL_User <inject key="Deployment ID" enableCopy="false"/>** to login used to login Azure.
 
-   ![Alt text](../images/dec25-business-lab1-3.png)
+   ![Alt text](./images/new/1.png)
 
 1. On the **Custom extraction model** page, click **+ Create a project** under **My Projects**.
 
@@ -119,7 +123,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. Once uploaded, in the **Start labeling now** pop-up, select **Run now** under the **Run layout** column.
 
-     ![train-upload](images/run-now.png)
+     ![train-upload](images/new/2.png)
 
 1. On the **Label data** page, click **+ Add a field** **(1)**, then select **Field** **(2)** from the dropdown. Enter the field name as `Organization_sample` **(3)** and press **Enter**.
 
@@ -127,7 +131,7 @@ In this task, you will upload and label six training documents to define a custo
 
      ![run-now](images/add-field-name.png)
 
-1. On the **Label data** page, select the text **CONTOSO** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all six documents.
+1. On the **Label data** page, select the text **CONTOSO** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all **6** documents.
 
      ![train-module](images/9-7-25-l1-6.png)
 
@@ -157,7 +161,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
-     ![Alt text](../images/test.png)
+     ![Alt text](./images/new/3.png)
 
 ## Task 3: Build a new pipeline with the custom model module in BPA
 
@@ -197,7 +201,7 @@ In this task, you will create a custom document processing pipeline using the Bu
 
 1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
 
-   ![Pipeline Preview](images/done-pipeline.png)
+   ![Pipeline Preview](images/new/4.png)
 
 1. On the **Pipelines workshop** page, click on **Home**. 
 
@@ -225,7 +229,7 @@ In this task, you will configure Azure AI Search to index the extracted document
 
 1. On the **Search service** page, click on **Import data**. From the **Data Source** dropdown, select **Azure Blob Storage**.
 
-   ![Data source](images/BPAA1.png)
+   ![Data source](images/new/5.png)
 
 1. On the **Import data** page, under the **Connect to your data** tab, enter the following details:
 
