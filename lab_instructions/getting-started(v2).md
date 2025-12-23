@@ -25,7 +25,7 @@ This architecture flow demonstrates how various Azure components work together t
 
 ## Architecture Diagram
 
- ![](./images/arch-diagram-bpa.png)
+ ![](./images/new/arch.png)
 
 ## Explanation of Components
 
@@ -35,7 +35,7 @@ This architecture flow demonstrates how various Azure components work together t
 - **Document Intelligence:** Custom model to extract structured data from documents (Lab 1).
 - **Azure AI Search:** Indexes processed documents for retrieval (Lab 2).
 - **Azure OpenAI:** Processes user queries using LLMs with indexed data (Lab 2).
-- **Azure AI Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
+- **Microsoft Foundry Chat Playground:** End-user interface to interact with AI-driven search results.
 
 ## Accessing Your Lab Environment
  

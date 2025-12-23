@@ -14,7 +14,7 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-In this task, you will access the Azure AI Foundry portal through your Azure OpenAI resource. You’ll navigate to the Bring your own data section to prepare for integrating custom documents with a ChatGPT-based interface.
+In this task, you will access the Microsoft Foundry portal through your Azure OpenAI resource. You’ll navigate to the Bring your own data section to prepare for integrating custom documents with a ChatGPT-based interface.
 
 1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
