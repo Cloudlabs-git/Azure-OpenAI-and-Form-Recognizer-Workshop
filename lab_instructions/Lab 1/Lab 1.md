@@ -26,23 +26,23 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
 1. You will be navigated to **Content Understanding Studio** page, select **Sign In** option from the top right corner.
 
-   ![Alt text](../images/dec25-business-lab1-1.png)
+   ![Alt text](./images/L1T1S2.png)
 
 1. Select your already signed in **ODL_User <inject key="Deployment ID" enableCopy="false"/>** account.
 
-   ![Alt text](./images/new/1.png)
+   ![Alt text](./images/L1T1S3.png)
 
 1. If you see **Sign in to Microsoft Azure** tab, Enter the following email/username, and click on **Next (2)**. 
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
-      ![Alt text](./images/sign-in-page.png)
+      ![Alt text](./images/GS3.png)
 
 1. Now enter the following temporary password and click on **Sign in (2)**.
    
    * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-      ![Alt text](./images/tap-password.png)
+      ![Alt text](./images/GS4.png)
 
 1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence**
 section choose **Start with Document Intelligence**.
@@ -55,11 +55,11 @@ section choose **Start with Document Intelligence**.
 
 1. If asks to Sign in, use the same **ODL_User <inject key="Deployment ID" enableCopy="false"/>** to login used to login Azure.
 
-   ![Alt text](./images/new/1.png)
+   ![Alt text](./images/new/L1T1S3.png)
 
 1. On the **Custom extraction model** page, click **+ Create a project** under **My Projects**.
 
-   ![Alt text](images/9-7-25-l1-1.png)
+   ![Alt text](images/L1T1S9.png)
 
 1. On the **Custom extraction models** tab, under **Enter project details**, enter the following details and click on **Continue** **(3)**.
     
@@ -120,7 +120,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
-     ![train-upload](images/train-upload.png)
+     ![train-upload](./images/L1T2S2.png)
 
 1. Once uploaded, in the **Start labeling now** pop-up, select **Run now** under the **Run layout** column.
 
@@ -128,9 +128,9 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Label data** page, click **+ Add a field** **(1)**, then select **Field** **(2)** from the dropdown. Enter the field name as `Organization_sample` **(3)** and press **Enter**.
 
-     ![run-now](images/add-field.png)
+     ![run-now](images/L1T2S4.png)
 
-     ![run-now](images/add-field-name.png)
+     ![run-now](images/L1T2S4i.png)
 
 1. On the **Label data** page, select the text **CONTOSO** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all **6** documents.
 
@@ -158,7 +158,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
-   ![test-file-upload](./images/test-file-upload.png)
+   ![test-file-upload](./images/L1T2S11.png)
 
 1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
@@ -170,7 +170,7 @@ In this task, you will create a custom document processing pipeline using the Bu
 
 1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
-    ![Alt text](images/rgg.png)
+    ![Alt text](images/L1T3S1.png)
 
 1. On the **Resource group** page, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
 

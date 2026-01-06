@@ -51,13 +51,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
- ![](../images/updtenv.png)
+ ![](./images/GS7.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![](../images/updatedsplit.png)
+ ![](./images/GS7i.png)
  
 ## Managing Your Virtual Machine
  
@@ -81,21 +81,21 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
    
-      ![](../images/sign-in-page.png)
+      ![](./images/GS3.png)
      
 1. Now enter the following temporary password and click on **Sign in (2)**.
    
    * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
    
-      ![](../images/tap-password.png "Enter Password")
+      ![](./images/GS4.png "Enter Password")
    
 1. If you see the pop-up **Stay signed in?**, select **No**.
 
-   ![](../images/Sign-in-no.png)
+   ![](./images/GS5.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe later** to skip the tour.
 
-   ![](../images/cancel-tour.png)
+   ![](./images/maybelater.png)
 
 1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
@@ -103,7 +103,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
 1. Confirm that you have the resource group present as shown below.
 
-   ![](./images/rg-new.png "Resource groups")
+   ![](./images/L1T3S1.png "Resource groups")
    
 1. Verify the resources deployed in the resource group.
 
