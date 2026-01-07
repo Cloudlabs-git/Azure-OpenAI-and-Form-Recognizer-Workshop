@@ -18,7 +18,7 @@ In this task, you will access the Microsoft Foundry portal through your Azure Op
 
 1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images/rgg.png)
+   ![OpenAI](images/L1T3S1.png)
 
 2. On the Resource group page, search, and select the **Azure OpenAI** resource type with the name similar to **oaibpa{suffix}**.
 
@@ -26,7 +26,7 @@ In this task, you will access the Microsoft Foundry portal through your Azure Op
 
 3. On the **Overview** tab of **Azure OpenAI Overview** page, click on **Go to Foundry portal**.
 
-   ![OpenAI Studio](images/dec25-business-lab1-4.png)
+   ![OpenAI Studio](images/L2T1S3.png)
 
 4. On the **Microsoft Foundry | Azure OpenAI** page, from the left navigation, go to **Home (1)** section, scroll down and click on **Bring your own data (2)**.
 
