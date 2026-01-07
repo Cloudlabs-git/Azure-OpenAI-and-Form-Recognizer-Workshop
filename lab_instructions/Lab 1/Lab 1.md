@@ -55,11 +55,11 @@ section choose **Start with Document Intelligence**.
 
 1. If asks to Sign in, use the same **ODL_User <inject key="Deployment ID" enableCopy="false"/>** to login used to login Azure.
 
-   ![Alt text](./images/new/L1T1S3.png)
+   ![Alt text](./images/L1T1S3.png)
 
 1. On the **Custom extraction model** page, click **+ Create a project** under **My Projects**.
 
-   ![Alt text](images/L1T1S9.png)
+   ![Alt text](./images/L1T1S9.png)
 
 1. On the **Custom extraction models** tab, under **Enter project details**, enter the following details and click on **Continue** **(3)**.
     
