@@ -2,6 +2,8 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/tree/main/SampleInvoices/Custom%20Model%20Sample).
 
 ## Lab Objectives
@@ -44,8 +46,7 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
       ![Alt text](./images/GS4.png)
 
-1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence**
-section choose **Start with Document Intelligence**.
+1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence** section choose **Start with Document Intelligence**.
 
    ![Alt text](../images/dec25-business-lab1-2.png)
 
@@ -79,7 +80,7 @@ section choose **Start with Document Intelligence**.
 
    - API version: **2024-11-30 (4.0 General Availability)** **(4)**.
 
-        ![Alt text](images/9-7-25-l1-3.png)
+      ![Alt text](images/9-7-25-l1-3.png)
 
 1. On the **Connect training data source** tab, enter the following details and click on **Continue** **(8)**.
 
@@ -101,7 +102,7 @@ section choose **Start with Document Intelligence**.
 
 1. On the **Review and create** tab, validate the information and click **Create project**.
 
-     ![Alt text](images/9-7-25-l1-5.png)
+   ![Alt text](images/9-7-25-l1-5.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -116,33 +117,33 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Label data** page of your custom extraction model project, click **Browse for files** to upload your sample documents.
 
-     ![Browse for files](../images/browsefile.png)
+   ![Browse for files](../images/browsefile.png)
 
-1.  On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
+1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and click **Open** **(3)**.
 
-     ![train-upload](./images/L1T2S2.png)
+   ![train-upload](./images/L1T2S2.png)
 
 1. Once uploaded, in the **Start labeling now** pop-up, select **Run now** under the **Run layout** column.
 
-     ![train-upload](images/new/2.png)
+   ![train-upload](images/new/2.png)
 
 1. On the **Label data** page, click **+ Add a field** **(1)**, then select **Field** **(2)** from the dropdown. Enter the field name as `Organization_sample` **(3)** and press **Enter**.
 
-     ![run-now](images/L1T2S4.png)
+   ![run-now](images/L1T2S4.png)
 
-     ![run-now](images/L1T2S4i.png)
+   ![run-now](images/L1T2S4i.png)
 
 1. On the **Label data** page, select the text **CONTOSO** **(1)** from the document preview. From the label dropdown, choose **Organization_sample** **(2)**. Repeat for all **6** documents.
 
-     ![train-module](images/9-7-25-l1-6.png)
+   ![train-module](images/9-7-25-l1-6.png)
 
 1. On the **Label data** page, after labeling all six documents, click on **Train** in the top right corner.
 
-     ![Train](images/9-7-25-l1-7.png)
+   ![Train](images/9-7-25-l1-7.png)
 
 1. On the **Train a new model** page, specify the Model ID as **customfrs** **(1)**, Model description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
-     ![Name](images/9-7-25-l1-8.png)
+   ![Name](images/9-7-25-l1-8.png)
 
 1. On the **Training in progress** dialog opens. click on **Go to Models**
 
@@ -150,11 +151,11 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Models** page, wait until the **Status** of your model changes to **succeeded** **(1)**. Then, select the model **customfrs** **(2)** and click on **Test** **(3)** from the top menu.
 
-     ![select-models](images/9-7-25-l1-10.png)
+   ![select-models](images/9-7-25-l1-10.png)
 
 1. From the left-side menu, navigate to the **Test model** page and click **Browse for files**.
 
-     ![select-models](images/test-upload.png)
+   ![select-models](images/test-upload.png)
 
 1. On the file explorer, paste the following path `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and click **Open** **(3)**.
 
@@ -162,7 +163,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Test model** page, Once uploaded, select **test2.jpeg (1)** model, and click on **Run analysis** **(2)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(3)** we created in the last step along with its confidence score(*may vary from screenshot)*.
 
-     ![Alt text](./images/new/3.png)
+   ![Alt text](./images/new/3.png)
 
 ## Task 3: Build a new pipeline with the custom model module in BPA
 
@@ -170,11 +171,11 @@ In this task, you will create a custom document processing pipeline using the Bu
 
 1. On the Azure Portal, navigate to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
-    ![Alt text](images/L1T3S1.png)
+   ![Alt text](images/L1T3S1.png)
 
-1. On the **Resource group** page, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+1. On the **Resource group** page, search **webappbpa (1)**, and then select  **webappbpa{suffix} (2)** from the results, ensuring the Resource type **Static Web App (3)**.
 
-   ![webappbpa](images/9-7-25-l1-11.png)
+   ![webappbpa](images/L1T3S2.png)
 
 1. On the **Overview** page of **Static Web App** page, click on **View app in browser**.
 
@@ -206,19 +207,19 @@ In this task, you will create a custom document processing pipeline using the Bu
 
 1. On the **Pipelines workshop** page, click on **Home**. 
 
-     ![home-pipeline](images/9-7-25-l1-15.png)
+   ![home-pipeline](images/9-7-25-l1-15.png)
 
 1. On the **Business Process Automation Accelerator** page, scroll down to the **What would you like to do?** section, then click on **Ingest Documents**.
 
-     ![ingest-documents](images/9-7-25-l1-16.png)
+   ![ingest-documents](images/9-7-25-l1-16.png)
 
 1. On the **Upload a document to Blob Storage** page, from the drop-down, **Select a Pipeline** with the name **workshop** **(1)**, and click on **Upload or drop a file right here (2)**.
 
-     ![Upload a document](images/9-7-25-l1-17.png)
+   ![Upload a document](images/9-7-25-l1-17.png)
 
 1. For documents, paste the following path `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** and hit enter. Select the invoice files one by one **(2)** and click **Open** **(3)**. You can upload multiple invoices one by one.
 
-     ![Upload a document](images/pipeline-folder.png)
+   ![Upload a document](images/pipeline-folder.png)
 
 ## Task 4: Configure Azure AI Search 
 
@@ -246,13 +247,13 @@ In this task, you will configure Azure AI Search to index the extracted document
   
      ![Connection to your data](images/fill-details.png)
 
-1. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+1. On the **Storage accounts** page, select the storage account named similar to **bpa{suffix}**. 
 
-     ![Storage account](images/stoarge-account.png)
+   ![Storage account](images/stoarge-account.png)
 
 1. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to the **Connect to your data** page.
 
-     ![Storage account](images/continers.png)   
+   ![Storage account](images/continers.png)   
   
 1. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
 
@@ -260,11 +261,11 @@ In this task, you will configure Azure AI Search to index the extracted document
 
 1. On the **Add cognitive skills (Optional)** page, leave all settings as default and click **Skip to: Customize target index**.
 
-    ![Data source](images/9-7-25-l1-19.png)
+   ![Data source](images/9-7-25-l1-19.png)
 
 1. On the **Import data** page, enter **Index name** as **azureblob-index** **(1)**, select the check box of all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-      ![Connection](images/9-7-25-l1-20.png)
+   ![Connection](images/9-7-25-l1-20.png)
 
 1. Expand the **aggregatedResult** **(1)** -> **customFormRec (2)** -> **documents** **(3)** -> **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 

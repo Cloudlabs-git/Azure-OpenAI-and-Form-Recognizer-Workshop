@@ -2,6 +2,8 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Overview
+
 In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
 ## Lab Objectives
@@ -31,6 +33,8 @@ In this task, you will access the Microsoft Foundry portal through your Azure Op
 4. On the **Microsoft Foundry | Azure OpenAI** page, from the left navigation, go to **Home (1)** section, scroll down and click on **Bring your own data (2)**.
 
    ![Azure OpenAI Studio](images/new/1.png)
+
+    > **Note:** If any pop up window appears, click on cancel
 
 ## Task 2: Upload your own data
 
@@ -116,7 +120,7 @@ In this task, you will interact with the Azure OpenAI ChatGPT model using your u
 
 6. Expand **Parameters** from the left column. You can experiment with different parameter configurations to see how they affect the model's behavior.
 
-    ![Alt text](images/new/10.png)
+   ![Alt text](images/new/10.png)
 
 7. You can try the following query after adjusting the parameters session
 
