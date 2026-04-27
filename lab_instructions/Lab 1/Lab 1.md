@@ -30,9 +30,13 @@ In this task, we will create and configure a Document Intelligence resource in A
 
    ![Alt text](images/02-05-2024(1).png)
 
-   >**Note** : If the Document Intelligence option is not visible, click on the ellipsis (…) and select Document Intelligence.
+   >**Note:** If the Document Intelligence option is not visible, click on the ellipsis (…) and select Document Intelligence.
 
    ![](images/doc.png)
+
+   You can then click **Start with Document Intelligence** in one of the two options.
+
+   ![](images/swdi.png)
 
 3. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started**.
 
@@ -42,7 +46,7 @@ In this task, we will create and configure a Document Intelligence resource in A
 
 5. Under My Project, click on **+ Create a project**.
 
-   ![Alt text](../Lab%201/images/230625(07).png)
+   ![Alt text](images/npdoci.png)
 
 6. Enter the following details and click on **Continue**  **(3)**.
     
@@ -120,7 +124,7 @@ In this task, you will upload 6 training documents to train and 2 test documents
 
    ![Alt text](images/training-in-progress.png)
 
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+9. Wait until the model status shows **succeeded** **(1)**. Then, select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
 
      ![select-models](images/select-models1.png)
 
@@ -176,7 +180,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
    ![Pipeline Preview](images/done-pipeline.png)
 
-10. On the **Piplelines workshop** page, click on **Home**. 
+10. On the **Pipelines workshop** page, click on **Home**.
 
       ![home-pipeline](images/home-pipeline.png)
 
@@ -204,41 +208,32 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 
    ![Data source](images/02-05-2024(3).png)
 
+   Select **Azure Blob Storage** as the data source and click on **Keyword Search**.
+
+   ![](images/abs4.2.png)
+
 3. Enter the following details for **Connect to your data**.
 
-   - Data Source: Select **Azure Blob Storage** **(1)**
-   - Data Source Name: Enter **workshop** **(2)**.
-   - Parsing mode: Select **JSON** **(3)**.
-   - Click on **Choose an existing connection** **(4)** under Connection string.
+   - Subscription: Select **Existing Subscription** **(1)**
+   - Storage Account Name: Enter **bpa{suffix}** **(2)**.
+   - Blob Container: Select **results** **(3)**.
+   - Blob folder: **rename it to workshop** **(4)**.
+   - Skip optional **AI enrichments**
   
-     ![Connection to your data](images/connection-to-your-data.png)
+   ![Connection to your data](images/connection-to-your-data.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+   >Make sure to select the **Storage account** with a name similar to **bpass{suffix}**.
 
      ![Storage account](images/stoarge-account.png)
 
-5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
+4. Select each field (1) and click on **Configure field (2)** so that the **Retrievable (3)** and **Searchable (4)** options are enabled, and click on **Save (4)**.
 
-     ![Storage account](images/continers.png)   
-  
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
+   ![config](images/r-s-config-index.png)
 
-   ![Connection](images/connection-to-your-data-blob(1).png)
+5. On the **Create an index** page, enter the Index name as `azureblob-index` and make sure to have selected the **Indexer run schedule** to be **Once** and you can proceed to **Create**.
 
-7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
-
-8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
-
-      ![Connection](images/retrievable-searchable.png)
-
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
-
-      ![import-data](images/BPA5.png)
-
-7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   ![Create an index](images/create-new-index.png)
    
-   ![Create an indexer](images/create-an-indexer.png)
-
    <validation step="01aa843c-7b41-4133-8f44-2071cdb89936" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:

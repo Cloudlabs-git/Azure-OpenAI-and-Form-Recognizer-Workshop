@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab focuses on creating and utilizing a custom Document Intelligence solution in Azure to analyze and process documents effectively. The implementation includes resource setup, model training, pipeline integration, and search optimization.
+This lab focuses on creating and utilizing a custom Document Intelligence solution in Azure to analyze and process documents effectively. The implementation includes resource setup, model training, pipeline integration, and search optimization.
 
 ## Objective
 
@@ -40,7 +40,7 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises of the lab guide.
+1. Once the environment is provisioned, a virtual machine (JumpVM) and the lab guide will load in your browser. Use this virtual machine throughout the workshop to complete the lab. You can see the exercise number at the bottom of the lab guide to switch to different exercises.
 
    ![](../lab_instructions/images/Intro.png)
 
@@ -99,7 +99,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
 
-1. Now you can see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+1. Now, you can see the Azure portal dashboard. Click **Resource groups** from the navigation pane to view the resource groups.
 
    ![](../lab_instructions/images/select-rg.png)
  
