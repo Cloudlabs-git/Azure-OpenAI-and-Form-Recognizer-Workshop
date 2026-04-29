@@ -4,13 +4,13 @@
 
 ## Overview
 
-In this lab focuses navigating to the Azure OpenAI Playground, uploading your own data, and interacting with the Azure OpenAI ChatGPT Large Language Model (LLM) to process and analyze the uploaded data, enabling advanced AI-driven insights and responses.
+In this lab, you will focus on navigating to the Azure OpenAI Playground, uploading your own data, and interacting with the Azure OpenAI ChatGPT Large Language Model (LLM) to process and analyze the uploaded data, enabling advanced AI-driven insights and responses.
 
 ## Objective
 
 Understand how to navigate the Azure OpenAI Playground, upload custom data, and interact with the Azure OpenAI ChatGPT Large Language Model (LLM) to gain advanced AI-driven insights. By the end of this lab, you will be able to:
 
-- **Use Azure OpenAI with your own data:** Understand how to navigate the Azure OpenAI Playground, upload your own data, and interact with ChatGPT LLM to customize responses and gain insights from your data.
+- **Use Azure OpenAI with your own data:** Understand how to navigate the Azure OpenAI Playground, upload your own data, and interact with the ChatGPT LLM to customize responses and gain insights from your data.
 
 ## Pre-requisites
 
@@ -20,7 +20,7 @@ Understand how to navigate the Azure OpenAI Playground, upload custom data, and 
 
 ## Architecture
 
-The architecture leverages Azure's advanced data handling tools, using Azure OpenAI Large Language Models (LLM) alongside Azure AI Search to make your data searchable and accessible. This flow integrates these components to build intelligent systems that enhance productivity and deliver personalized experiences, showcasing the powerful capabilities of Azure's AI and data analysis technologies tailored to your business needs.
+The architecture leverages Azure data-handling capabilities, using Azure OpenAI Large Language Models (LLMs) alongside Azure AI Search to make your data searchable and accessible. This flow integrates these components to build intelligent systems that enhance productivity and deliver personalized experiences, showcasing the powerful capabilities of Azure's AI and data analysis technologies tailored to your business needs.
 
 ## Architecture Diagram
 
@@ -34,11 +34,11 @@ The architecture for this lab involves the following key components:
 
 - **Uploaded Data:** Allows users to upload their own datasets into the Azure OpenAI Playground, enabling personalized AI interactions based on the data provided.
 
-- **Azure OpenAI ChatGPT LLM:** Leverages large language models (LLM) to interact with the uploaded data, performing tasks such as data extraction, natural language understanding, and generating insights or responses from the data.
+- **Azure OpenAI ChatGPT LLM:** Leverages large language models (LLMs) to interact with the uploaded data, performing tasks such as data extraction, natural language understanding, and generating insights or responses from the data.
 
 ## Getting Started with Lab
 
-1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises of the lab guide.
+1. Once the environment is provisioned, a JumpVM virtual machine and the lab guide will load in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number at the bottom of the lab guide to switch to different exercises.
 
    ![](../lab_instructions/images/230625(11).png)
 
@@ -55,7 +55,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
 ![](../lab_instructions/Lab%201/images/230625(03).png)
 
 ## Lab Guide Zoom In/Zoom Out
- 
+
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
 ![](../lab_instructions/images/n21.png)  
