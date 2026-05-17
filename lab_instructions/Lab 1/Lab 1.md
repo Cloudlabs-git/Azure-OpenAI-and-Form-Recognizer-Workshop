@@ -90,9 +90,7 @@ In this task, you will upload 6 training documents to train and 2 test documents
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
-
-     ![train-upload](images/train-upload.png)
+2.  On the file explorer, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
