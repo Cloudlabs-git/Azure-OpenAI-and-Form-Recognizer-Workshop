@@ -236,7 +236,7 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 
      ![](images/upload5.png)
 
-8. Now Scroll up and Expand the aggregatedResults (1) > customFormRec (2) > documents (3) > fields (4) under it, expand Organization_sample (5). Make the three fields Facetable (type, valueString & content) (6) and click on Next.
+8. Now Scroll up and Expand the aggregatedResults (1) > customFormRec (2) > documents (3) > fields (4) under it, expand Organization_sample (5). Make the three fields Facetable (type, valueString & content) (6) by clicking on ellipses > configure field and click on Next.
 
    ![](images/upload6.png)
 
