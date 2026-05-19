@@ -213,7 +213,8 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
    - Blob Container: Select **results** **(3)**.
    - Blob folder: **Rename to workshop** **(4)**.
    - Parsing mode: **JSON (5)**.
-   - Click **Next (6)**. 
+   - Click **Next (6)**.
+     
      ![Connection to your data](images/upload2.png)
 
 5. Click next on **Apply AI enrichment** screen.
