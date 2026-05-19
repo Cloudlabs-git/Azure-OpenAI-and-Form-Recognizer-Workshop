@@ -42,19 +42,19 @@ The architecture for this lab involves the following key components:
 
 1. Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises of the lab guide.
 
-   ![](../lab_instructions/images/Intro.png)
+   ![](../lab_instructions/images/gs1.png)
 
 ## Exploring Your Lab Resources
 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-![](../lab_instructions/images/env-01.png)
+![](../lab_instructions/images/gs2.png)
 
 ## Utilizing the Split Window Feature
 
 For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the top right corner.
 
-![](../lab_instructions/images/split-01.png)
+![](../lab_instructions/images/gs4.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -66,7 +66,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-![](../lab_instructions/images/resourses.png)
+![](../lab_instructions/images/gs3.png)
     
     
 ## Login to Azure Portal and verify the pre-deployed resources
