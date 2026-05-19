@@ -1,10 +1,10 @@
 # Use Azure OpenAI with your own data
 
 ### Overview
-In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porche Owner's Manual pdf provided under the [Lab 2](/SampleInvoices/Lab%202/) folder.
+In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porche Owner's Manual pdf provided to you.
 
 ### Goal
-* How to leverage the ChatGPT LLM to extract a concise summary from your own document repository using OpenAI.
+How to leverage the ChatGPT LLM to extract a concise summary from your own document repository using OpenAI.
 
 ### Pre-requisites
 * Access to Azure OpenAI chat playground.
@@ -16,7 +16,7 @@ In this lab, you will be using your own data with Azure OpenAI Large Language Mo
 
 Access the Azure OpenAI Studio and navigate to the "Bring your own data" section.
 
-1. Navigate back to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
+1. Navigate to the Resource groups and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![OpenAI](images/rgg.png)
 
@@ -24,13 +24,13 @@ Access the Azure OpenAI Studio and navigate to the "Bring your own data" section
 
    ![OpenAI](images/eyhackday3img1.png)
 
-3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry Portal**.
+3. On the **Azure OpenAI** page, click on **Go to Foundry Portal**.
 
-   ![OpenAI Studio](images/L2T1S3.png)
+   ![OpenAI Studio](images/change1.png)
 
-4. On the **Azure AI Foundry Portal**, you should be able to see the Chat Playground service.
+4. On the **Microsoft Foundry Portal**, click **Chat** under Playgrounds section on left to see the Chat Playground service.
 
-   ![Azure OpenAI Studio](../Lab%202/images/230625(12).png)
+   ![Azure OpenAI Studio](../Lab%202/images/change2.png)
 
 5. On **Chat playground** pane, select **Add your data (1)** tab and click on **+ Add a data source (2)**.
 
@@ -54,7 +54,7 @@ In this task, we will be using Porche's owner manual for the Taycan, Panamera, a
 
       ![add-data](images/bring-your-owndata-datasource.png) 
 
-2. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
+2. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
    ![data-management](images/data-management.png)
 
