@@ -240,6 +240,8 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 
    ![](images/upload6.png)
 
+   ![](images/upload9.png)
+
   >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
 
 9. On Advanced settings screen leave all fields as default and click **Next**.
