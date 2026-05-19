@@ -208,15 +208,15 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 
 4. Enter the following details for **Connect to your data**.
 
-   - Subscription: Select **Existing Subscription** **(1)**
+   - Subscription: Select **Existing Subscription** **(1)**.
    - Storage Account: Select **bpa{suffix}** **(2)**.
    - Blob Container: Select **results** **(3)**.
-   - Blob folder: **rename to workshop** **(4)**.
-   - Parsing mode: **JSON** **5**
-     
+   - Blob folder: **Rename to workshop** **(4)**.
+   - Parsing mode: **JSON (5)**.
+   - Click **Next (6)**. 
      ![Connection to your data](images/upload2.png)
 
-5. Click on **Next** **6** and click next on **Apply AI enrichment** screen.
+5. Click next on **Apply AI enrichment** screen.
 
    ![](images/upload3.png)
    
@@ -233,13 +233,13 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
    - Configure attributes: Select **Retrievable (3)** and **Searchable (4)**
    - Click on **Save (5)**
 
-   ![](images/upload5.png)
+     ![](images/upload5.png)
 
 8. Now Scroll up and Expand the aggregatedResults (1) > customFormRec (2) > documents (3) > fields (4) under it, expand Organization_sample (5). Make the three fields Facetable (type, valueString & content) (6) and click on Next.
 
    ![](images/upload6.png)
 
- >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
+  >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
 
 9. On Advanced settings screen leave all fields as default and click **Next**.
     
