@@ -30,11 +30,11 @@ In this task, we will create and configure a Document Intelligence resource in A
 
    ![Alt text](images/02-05-2024(1).png)
 
-   >**Note** : If the Document Intelligence option is not visible, click on the ellipsis (…) and select Document Intelligence.
+   >**Note:** If the Document Intelligence option is not visible, click on the ellipsis (…) and select Document Intelligence.
 
    ![](images/doc.png)
 
-3. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started**.
+3. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started** from Custom extraction model.
 
    ![Alt text](images/02-05-2024(2).png)
 
@@ -55,7 +55,7 @@ In this task, we will create and configure a Document Intelligence resource in A
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Document Intelligence or Cognitive Service Resource: Select the available Cognitive Service Document Intelligence name similar to **cogservicesbpass{suffix}** **(3)**.
+   - Document Intelligence or Cognitive Service Resource: Select the available Cognitive Service Document Intelligence name similar to **cogservicesbpa{suffix}** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
      ![configuring service resource](images/L1T1S6.png)
@@ -126,7 +126,7 @@ In this task, you will upload 6 training documents to train and 2 test documents
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+11. On the file explorer, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
      ![test-file-upload](images/test-file-upload.png)
 
@@ -174,7 +174,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
    ![Pipeline Preview](images/done-pipeline.png)
 
-10. On the **Piplelines workshop** page, click on **Home**. 
+10. On the **Pipelines workshop** page, click on **Home**. 
 
       ![home-pipeline](images/home-pipeline.png)
 
@@ -186,7 +186,7 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
       ![Upload a document](images/upload-document-to-blob.png)
 
-13. For documents, enter the following `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+13. For documents, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
       ![Upload a document](images/pipeline-folder.png)
 
@@ -202,41 +202,56 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 
    ![Data source](images/02-05-2024(3).png)
 
-3. Enter the following details for **Connect to your data**.
-
-   - Data Source: Select **Azure Blob Storage** **(1)**
-   - Data Source Name: Enter **workshop** **(2)**.
-   - Parsing mode: Select **JSON** **(3)**.
-   - Click on **Choose an existing connection** **(4)** under Connection string.
+3. Select **Azure Blob Storage** as the data source and click on **Keyword Search**.
   
-     ![Connection to your data](images/connection-to-your-data.png)
+     ![Connection to your data](images/upload1.png)
 
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
+4. Enter the following details for **Connect to your data**.
 
-     ![Storage account](images/stoarge-account.png)
+   - Subscription: Select **Existing Subscription** **(1)**.
+   - Storage Account: Select **bpa{suffix}** **(2)**.
+   - Blob Container: Select **results** **(3)**.
+   - Blob folder: **Rename to workshop** **(4)**.
+   - Parsing mode: **JSON (5)**.
+   - Click **Next (6)**.
+     
+     ![Connection to your data](images/upload2.png)
 
-5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
+5. Click next on **Apply AI enrichment** screen.
 
-     ![Storage account](images/continers.png)   
-  
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
-
-   ![Connection](images/connection-to-your-data-blob(1).png)
-
-7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
-
-8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
-
-      ![Connection](images/retrievable-searchable.png)
-
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
-
-      ![import-data](images/BPA5.png)
-
-7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   ![](images/upload3.png)
    
-   ![Create an indexer](images/create-an-indexer.png)
+6. Click **Add field** on Preview mappings screen, scroll down and select index on source column now click on (...) **ellipses icon (1)** on right of the column and select **Configure field (2)**.
 
+   ![](images/upload4.png)
+
+   ![](images/upload5a.png)
+
+7. Enter the following details in the Configure field
+
+   - Field name: **azureblob_index (1)**
+   - Type: **Edm.String (2)**
+   - Configure attributes: Select **Retrievable (3)** and **Searchable (4)**
+   - Click on **Save (5)**
+
+     ![](images/upload5.png)
+
+8. Now Scroll up and Expand the aggregatedResults (1) > customFormRec (2) > documents (3) > fields (4) under it, expand Organization_sample (5). Make the three fields Facetable (type, valueString & content) (6) by clicking on ellipses > configure field and click on Next.
+
+   ![](images/upload6.png)
+
+   ![](images/upload9.png)
+
+  >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
+
+9. On Advanced settings screen leave all fields as default and click **Next**.
+    
+   ![](images/upload7.png)
+   
+10. On Review and create screen, enter Objects name prefix as **azureblob (1)** and click **Create (2)**.
+    
+    ![](images/upload8.png)
+    
    <validation step="01aa843c-7b41-4133-8f44-2071cdb89936" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
