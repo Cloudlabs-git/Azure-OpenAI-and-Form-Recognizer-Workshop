@@ -20,7 +20,7 @@ Access the Azure OpenAI Studio and navigate to the "Bring your own data" section
 
    ![OpenAI](images/rgg.png)
 
-2. On the Resource group, search, and select the **Azure OpenAI (1)** resource with the name prefix **(oai)** that was already created.
+2. On the Resource group, search, and select the **Azure OpenAI** resource with the name prefix **(oaibpa)** that was already created.
 
    ![OpenAI](images/change3.png)
 
