@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Lab Scenario
+
+Contoso Ltd. is modernizing its document processing and enterprise search system by using Azure AI services to automate the extraction, indexing, and analysis of business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build an intelligent business automation solution using Azure AI Document Intelligence, Azure AI Search, and Azure OpenAI. You will create and train a custom document processing model, build a BPA pipeline for automated document ingestion, configure Azure AI Search to index extracted data, and additionally configure Managed Identity access for the Azure AI Search service to securely connect with Azure Storage resources.
+
 ## Overview
 
 In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/tree/main/SampleInvoices/Custom%20Model%20Sample).
@@ -13,8 +17,9 @@ In this lab, you will complete the following tasks:
 * Task 1: Creating an Azure AI Document Intelligence Resource
 * Task 2: Train and Label data
 * Task 3: Build a new pipeline with the custom model module in BPA
-* Task 4: Configure Azure AI Search
-* Task 5: Use Sample Search Application [Read Only]
+* Task 4: Configure Managed Identity Access for Azure AI Search in the storage account
+* Task 5: Configure Azure AI Search
+* Task 6: Use Sample Search Application [Read Only]
 
 ## Task 1: Creating an Azure AI Document Intelligence Resource
 
@@ -34,17 +39,19 @@ In this task, you will create an Azure AI Document Intelligence project using Do
 
    ![Alt text](./images/L1T1S3.png)
 
-1. If you see **Sign in to Microsoft Azure** tab, Enter the following email/username, and click on **Next (2)**. 
+   > **Note**: If you have already signed in to the Azure Portal in the previous tasks, you can skip the below steps and proceed to step 6. Otherwise, follow these steps to sign in before proceeding further.
 
+1. If you see the **Sign in to Microsoft Azure** tab, enter the following email/username and click on **Next (2)**.
+   
    * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
 
-      ![Alt text](./images/GS3.png)
+   ![Azure sign in](./images/GS3.png)
 
 1. Now enter the following temporary password and click on **Sign in (2)**.
    
    * **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-      ![Alt text](./images/GS4.png)
+   ![Azure password](./images/GS4.png)
 
 1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence** section choose **Start with Document Intelligence**.
 
@@ -153,7 +160,7 @@ In this task, you will upload and label six training documents to define a custo
 
    ![select-models](images/9-7-25-l1-10.png)
 
-1. From the left-side menu, navigate to the **Test model** page and click **Browse for files**.
+1. From the left-side menu, navigate to the **Test model** **(1)** page and click **Browse for files (2)**.
 
    ![select-models](images/test-upload.png)
 
@@ -221,7 +228,41 @@ In this task, you will create a custom document processing pipeline using the Bu
 
    ![Upload a document](images/pipeline-folder.png)
 
-## Task 4: Configure Azure AI Search 
+## Task 4: Configure Managed Identity Access for Azure AI Search in the storage account
+
+In this task, you will configure Managed Identity access for the Azure AI Search service to securely access data stored in the Azure Storage Account. You will assign the **Storage Blob Data Reader** role to the Azure AI Search managed identity using Azure Role-Based Access Control (RBAC).
+
+1. On the Azure Portal, in the top search bar, search for **Storage accounts** **(1)** and select **Storage accounts** **(2)** from the search results.
+
+   ![Search storage account](images/task4-step1.png)
+
+1. On the **Storage accounts** page, select the storage account named similar to **bpa{suffix}**.
+
+   ![Select storage account](images/task4-step2.png)
+
+1. On the left-side navigation menu, select **Access control (IAM)** **(1)**. Then click on **+ Add** **(2)** and select **Add role assignment** **(3)**.
+
+   ![Access control IAM](images/task4-step3.png)
+
+1. On the **Add role assignment** page, search for **Storage Blob Data Reader** **(1)**, select the role **Storage Blob Data Reader** **(2)**, and click on **Next** **(3)**.
+
+   ![Select role](images/task4-step4.png)
+
+1. Under the **Members** tab, for **Assign access to**, select **Managed identity** **(1)**.Click on **+ Select members** **(2)**.On the **Select managed identities** pane, enter the following details:
+
+   - Subscription: Select your default subscription **(3)**.
+   - Managed identity: Select **Search service** **(4)**.
+   - Select the Azure AI Search service named similar to **bpa{suffix}** **(5)**.
+   - Click on **Select** **(6)**.
+   - Click on **Review + assign** **(7)**.
+
+      ![Review assign](images/task4-step5.png)
+
+1. On the **Review + assign** page, review the configuration settings and click on **Review + assign** to complete the role assignment.
+
+   ![Final assign](images/task4-step6.png)
+
+## Task 5: Configure Azure AI Search 
 
 In this task, you will configure Azure AI Search to index the extracted document data stored in Azure Blob Storage. You'll define a data source, customize indexing settings, and create an indexer to make the custom model output searchable.
 
@@ -229,51 +270,70 @@ In this task, you will configure Azure AI Search to index the extracted document
 
    ![search service](images/rg3.png)
 
-1. On the **Search service** page, click on **Import data**. From the **Data Source** dropdown, select **Azure Blob Storage**.
+1. On the **Search service** page, click on **Import data**.
 
    ![Data source](images/new/5.png)
 
-1. On the **Import data** page, under the **Connect to your data** tab, enter the following details:
-
-   - Data Source: Select **Azure Blob Storage** **(1)**
-
-   - Data source name: Enter **workshop** **(2)**.
-
-   - Parsing mode: Select **JSON** **(3)**.
-
-   - Subscription: Select the default Subscription. **(4)**
-
-   - Click on **Choose an existing connection** **(5)** under Connection string.
+1. Select **Azure Blob Storage (1)** as the data source and click on **Keyword Search (2)**.
   
-     ![Connection to your data](images/fill-details.png)
+   ![Connection to your data](images/upload-2.png)
 
-1. On the **Storage accounts** page, select the storage account named similar to **bpa{suffix}**. 
+   ![Connection to your data](images/upload-2-i.png)
 
-   ![Storage account](images/stoarge-account.png)
+1. Enter the following details for **Connect to your data**.
 
-1. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to the **Connect to your data** page.
+   - Subscription: Select **Existing Subscription** **(1)**.
+   - Storage Account: Select **bpa{suffix}** **(2)**.
+   - Blob Container: Select **results** **(3)**.
+   - Blob folder: **Rename to workshop** **(4)**.
+   - Parsing mode: **JSON (5)**.
+   - Click **Next (6)**.
+     
+      ![Connection to your data](images/upload2.png)
 
-   ![Storage account](images/continers.png)   
-  
-1. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next: Add cognitive skills (Optional) (2)**.
+1. Click **Next** on **Apply AI enrichment** screen.
 
-   ![Connection](images/fill-details1.png)
-
-1. On the **Add cognitive skills (Optional)** page, leave all settings as default and click **Skip to: Customize target index**.
-
-   ![Data source](images/9-7-25-l1-19.png)
-
-1. On the **Import data** page, enter **Index name** as **azureblob-index** **(1)**, select the check box of all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
-
-   ![Connection](images/9-7-25-l1-20.png)
-
-1. Expand the **aggregatedResult** **(1)** -> **customFormRec (2)** -> **documents** **(3)** -> **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
-
-   ![import-data](../images/aggregatedresult.png)
-
-1. On the **Create an indexer** page, enter the Name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   ![](images/upload3.png)
    
-   ![Create an indexer](images/create-an-indexer.png)
+1. Click **Add field (1)** on Preview mappings screen, scroll down and select index on source column now click on (...) **ellipses icon (2)** on right of the column and select **Configure field (3)**.
+
+   ![](images/upload-6-i.png)
+
+   ![](images/upload-6-ii.png)
+
+1. Enter the following details in the Configure field
+
+   - Field name: **azureblob_index (1)**
+   - Type: **Edm.String (2)**
+   - Configure attributes: Select **Retrievable (3)** and **Searchable (4)**
+   - Click on **Save (5)**
+
+     ![](images/upload-7.png)
+
+1. Now Scroll up and Expand the **aggregatedResults (1)** > **customFormRec (2)** > **documents (3)** > **fields (4)** under it, expand **Organization (5)**. Make the three fields Facetable (**type, valueString & content) (6)** by now click on **(...) ellipses icon (7)** on right of the column and select **Configure field (8)**.
+
+   ![](images/upload-8.png)
+
+   ![](images/upload-8-i.png)
+
+1. Enter the following details in the Configure field
+
+   - Field name: **type (1)**
+   - Type: **Edm.String (2)**
+   - Configure attributes: Select **Facetable (3)**
+   - Click on **Save (4)**
+
+      ![](images/upload-9.png)
+
+      >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
+
+1. On Advanced settings screen leave all fields as default and click **Next**.
+    
+   ![](images/upload-10.png)
+   
+1. On Review and create screen, enter Objects name prefix as **azureblob-indexer (1)** and click **Create (2)**.
+
+   ![](images/upload-11.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
@@ -282,7 +342,7 @@ In this task, you will configure Azure AI Search to index the extracted document
 
   <validation step="52b89379-3a35-4829-b65b-466fadb99e86" />
 
-## Task 5: Use Sample Search Application [Read Only]
+## Task 6: Use Sample Search Application [Read Only]
 
 In this task, you will explore the Sample Search Application to verify the results indexed by Azure AI Search. This allows you to view and validate searchable content extracted by your custom model.
 
@@ -303,6 +363,8 @@ In this lab, you have completed the following:
 - Trained and labeled data for a custom model.
 
 - Built a new pipeline using the custom model module in BPA.
+
+- Configured Managed Identity Access for Azure AI Search in the storage account
 
 - Configured Azure AI Search.
 

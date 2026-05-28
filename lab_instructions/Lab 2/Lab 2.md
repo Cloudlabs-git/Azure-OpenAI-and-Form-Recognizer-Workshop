@@ -2,6 +2,10 @@
 
 ### Estimated Duration: 120 Minutes
 
+## Lab Scenario
+
+Contoso Motors, a global automotive company, wants to improve customer support and knowledge accessibility by using Azure OpenAI with its own enterprise data. Employees and support teams often spend significant time searching through lengthy vehicle manuals and technical documents to answer customer queries. To streamline this process, Contoso plans to build an AI-powered conversational assistant using Azure OpenAI, Azure AI Search, and Azure Blob Storage. In this hands-on lab, you will act as a Cloud Consultant and help Contoso upload and index Porsche owner manual documents, integrate them with Azure OpenAI, and enable users to interact with the data using natural language queries through the Microsoft Foundry Chat Playground.
+
 ## Overview
 
 In this lab, you will be using your own data with Azure OpenAI Large Language Models (LLM), which will be made searchable using Azure AI Search. You will be using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.

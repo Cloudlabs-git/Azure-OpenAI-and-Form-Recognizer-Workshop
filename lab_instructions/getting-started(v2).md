@@ -2,6 +2,10 @@
  
 ### Overall Estimated Duration: 4 Hours
 
+## Lab Scenario
+
+Contoso Ltd. wants to modernize its document processing system by using Azure AI services to automate the extraction, search, and analysis of business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build an intelligent business automation solution using Azure AI Document Intelligence, Azure AI Search, and Azure OpenAI. You will create a custom document processing model, configure searchable data indexing, and enable users to interact with business data through an AI-powered conversational experience using Azure AI Foundry Chat Playground.
+
 ## Overview
 
 In this Hands-on lab, you will gain a comprehensive understanding of Azure's advanced data handling and analysis tools. You'll explore how to utilize Azure OpenAI Large Language Models (LLM) and Azure AI Search to make your data searchable. Additionally, you'll delve into creating custom models with Azure AI Document Intelligence, learning how to extract and analyze specific data from business forms and documents. This lab will showcase the potential of these technologies to build intelligent systems tailored to your business needs, enhancing productivity and delivering hyper-personalized experiences.
