@@ -20,7 +20,7 @@ In this lab, you will create (train) an Azure Document Intelligence custom model
 
 In this task, we will create and configure a Document Intelligence resource in Azure, set up a custom project, and connect it to a new storage account for training data.
 
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with a name similar to **cogservicesbpa{suffix}**.
+1. On the Azure portal, open the **business-process-<inject key="DeploymentID" enableCopy="false"/>** resource group, search for, and select the **Azure AI Services multi-service account** resource with a name similar to **cogservicesbpa{suffix}**.
 
    ![](../Lab%201/images/230625(06).png)
 
