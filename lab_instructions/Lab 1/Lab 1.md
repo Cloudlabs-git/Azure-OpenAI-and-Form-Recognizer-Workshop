@@ -1,4 +1,4 @@
-# Create and Deploy a Document Intelligence Custom Model
+# Lab 01: Create and Deploy a Document Intelligence Custom Model
 
 ### Overview
 In this lab, you will create (train) an Azure Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/Custom%20Model%20Sample/).
@@ -37,6 +37,8 @@ In this task, we will create and configure a Document Intelligence resource in A
 1. On the **Welcome to Azure Content Understanding** page, select the **Get started with Document Intelligence**.
 
    ![Alt text](images/image-101901.png)
+
+   >**Note:** Please make sure to sign in with the provided **Azure credentials**, if prompted, while proceeding through the lab.
 
 1. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started** from Custom extraction model.
 

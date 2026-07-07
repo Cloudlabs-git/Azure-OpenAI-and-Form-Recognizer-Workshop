@@ -1,4 +1,4 @@
-# Getting Started with Your Azure-OpenAI-and-Document-Intelligence-Workshop
+# Use Azure OpenAI with your own data
  
 Welcome to your Azure-OpenAI-and-Document-Intelligence-Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
