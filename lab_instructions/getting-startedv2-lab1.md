@@ -83,15 +83,9 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
 1. Now enter the following password and click on **Sign in**.
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject>
+   * **Temporary Access Pass**: <inject key="AzureAdUserPassword"></inject>
    
-     ![](../lab_instructions/images/user-pass.png "Enter Password")
-
-1. If you see the pop-up Action Required, click **Ask Later**.
-
-    ![](../lab_instructions/images/asklater%20(1).png)
-
-   >**NOTE:** Do not enable MFA, select **Ask Later**.
+     ![](../lab_instructions/images/password-1211.png "Enter Password")
 
 1. If you see the pop-up **Stay Signed in?**, click on **No**.
 
@@ -115,6 +109,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-  ![](../lab_instructions/images/n14.png)
+  ![](../lab_instructions/images/image-01901.png)
 
 ### Happy Learning!!
