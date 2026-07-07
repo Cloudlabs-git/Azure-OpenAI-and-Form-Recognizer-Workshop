@@ -26,7 +26,7 @@ In this task, we will create and configure a Document Intelligence resource in A
 
    ![Alt text](images/select-multi-service.png)
 
-2. Click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
+1. Click on the **Document Intelligence (1)** tab and select **Go to studio (2)**.
 
    ![Alt text](images/02-05-2024(1).png)
 
@@ -34,103 +34,108 @@ In this task, we will create and configure a Document Intelligence resource in A
 
    ![](images/doc.png)
 
-3. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started** from Custom extraction model.
+1. On the **Welcome to Azure Content Understanding** page, select the **Get started with Document Intelligence**.
+
+   ![Alt text](images/image-101901.png)
+
+1. In Document Intelligence Studio, scroll down to Custom Models and choose **Get started** from Custom extraction model.
 
    ![Alt text](images/02-05-2024(2).png)
 
    >**Note:** If a pop-up appears prompting you to sign in, please use the credentials provided on the environment details page.
 
-5. Under My Project, click on **+ Create a project**.
+1. Under My Project, click on **+ Create a project**.
 
    ![Alt text](../Lab%201/images/230625(07).png)
 
-6. Enter the following details and click on **Continue**  **(3)**.
+1. Enter the following details and click on **Continue**  **(3)**.
     
-   - Project name: **testproject** **(1)**.
-   - Description: **Custom model project** **(2)**.
+   - Project name: **testproject** **(1)**
+   - Description: **Custom model project** **(2)**
 
      ![Alt text](images/enter-project-details.png)
 
-7. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
+1. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
-   - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Document Intelligence or Cognitive Service Resource: Select the available Cognitive Service Document Intelligence name similar to **cogservicesbpa{suffix}** **(3)**.
-   - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
+   - Subscription: Select your **Default Subscription** **(1)**
+   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**
+   - Document Intelligence or Cognitive Service Resource: Select the available Cognitive Service Document Intelligence name similar to **cogservicesbpa{suffix}** **(3)**
+   - API version: **2024-11-30 (4.0 General Availability)** **(4)**
 
-     ![configuring service resource](images/L1T1S6.png)
+     ![configuring service resource](images/image-111.png)
 
-8. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
+1. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
-   - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Subscription: Select your **Default Subscription** **(1)**
+   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**
    - Check the box to **Create new storage account** **(3)**
-   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Location: **East US** **(5)**.
-   - Pricing tier: **Standard_LRS Standard** **(6)**.
-   - Blob container name: **custommoduletext** **(7)**.
+   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**
+   - Location: **East US** **(5)**
+   - Pricing tier: **Standard_LRS Standard** **(6)**
+   - Blob container name: **custommoduletext** **(7)**
    
      ![storage account](images/connect-training-data-source.png)
 
-9. Validate the information and choose **Create project**.
+1. Validate the information and choose **Create project**.
 
-     ![Alt text](images/create-project.png)
+     ![Alt text](images/image-112.png)
 
-   <validation step="df8ab28a-e899-4c86-8585-51126ee27662" />
+<validation step="df8ab28a-e899-4c86-8585-51126ee27662" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
 ### Task 2: Train and Label data
 
 In this task, you will upload 6 training documents to train and 2 test documents to test the model.
 
-1. Click on **Browse for files**.
+1. On the **Azure AI | Document Intelligence Studio** page, select the **Browse for files** option.
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+1. On the File Explorer, enter the following path: `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** and press **Enter**. Then, select all training JPEG files (**train1** through **train6**) **(2)**, and select **Open** **(3)**.
 
-3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
      ![train-upload](images/run-now.png)
 
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
+1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and select **enter**.
 
      ![run-now](images/add-field.png)
 
      ![run-now](images/add-field-name.png)
 
-5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+1. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
 
      ![train-module](images/train-module.png)
 
-6. Once all the documents are labeled, click on **Train** in the top right corner.
+1. Once all the documents are labeled, click on **Train** in the top right corner.
 
      ![Train](images/train-module1.png)
 
-7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+1. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
 
      ![Name](images/train-a-new-model.png)
 
-8. Click on **Go to Models**. 
+1. On the **Training in progress** pop-up, select the **Go to Models**. 
 
    ![Alt text](images/training-in-progress.png)
 
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+1. Wait until the model status shows **Succeeded** **(1)**. Once the status is **Succeeded**, select the **customfrs** model **(2)** that you created, and then select **Test** **(3)**.
 
      ![select-models](images/select-models1.png)
 
-10. On the Test model window, click on **Browse for files**. 
+1. On the Test model window, click on **Browse for files**. 
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. On the File Explorer, enter the following path: `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** and press **Enter**. Then, select both test JPEG files, **test1** and **test2** **(2)**, and select **Open** **(3)**.
 
      ![test-file-upload](images/test-file-upload.png)
 
-12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
+1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
      ![Alt text](images/result.png)
 
@@ -138,55 +143,55 @@ In this task, you will upload 6 training documents to train and 2 test documents
 
 After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
 
-1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. Navigate back to **Resource groups**, and then select the **business-process-<inject key="Deployment ID" enableCopy="false"/>** resource group.
 
     ![Alt text](images/rgg.png)
 
-2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+1. Go to the **Resource group**, search for the **Static Web App** resource, and then select the Static Web App with a name similar to **webappbpa{suffix}**.
 
    ![webappbpa](images/static-web-page.png)
 
-3. On the **Static Web App** page, click on **View app in browser**.
+1. On the **Static Web App** page, click on **View app in browser**.
 
       ![webappbpa](images/formm.png)
 
-4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
+1. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
 
    ![Web APP](images/select-create-pipeline.png)
 
-5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
+1. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
 
    ![workshop](images/create-pipeline.png)
 
-6. On the **Select a document type to get started** page, select **PDF Document**
+1. On the **Select a document type to get started** page, select **PDF Document**
 
    ![workshop](images/image-document.png)
 
-7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
+1. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
 
    ![workshop](images/form-recognizer-custom-model.png)
 
-8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
+1. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
 
    ![Model ID](images/pipeline-model-id.png)
 
-9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
+1. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
 
    ![Pipeline Preview](images/done-pipeline.png)
 
-10. On the **Pipelines workshop** page, click on **Home**. 
+1. On the **Pipelines workshop** page, click on **Home**. 
 
       ![home-pipeline](images/home-pipeline.png)
 
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
+1. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
 
       ![ingest-documents](images/ingest-documents.png)
 
-12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
+1. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
 
       ![Upload a document](images/upload-document-to-blob.png)
 
-13. For documents, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
+1. For documents, enter the following `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
 
       ![Upload a document](images/pipeline-folder.png)
 
@@ -194,70 +199,79 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 In this task, we will configure Azure AI Search to connect to an Azure Blob Storage data source, create an index, and set up an indexer to process and search the data.
 
-1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
+1. Navigate back to the **Resource group** window, search for the **Search Service** resource, and then select the Search Service with a name similar to **bpa{suffix}**.
 
    ![search service](images/rg3.png)
 
-2. On the **Search service** page, click on **Import data**.
+1. On the **Search service** page, click on **Import data**.
 
-   ![Data source](images/02-05-2024(3).png)
+   ![Data source](images/image-113.png)
 
-3. Select **Azure Blob Storage** as the data source and click on **Keyword Search**.
+1. Select **Azure Blob Storage** as the data source and click on **Keyword Search**.
   
      ![Connection to your data](images/upload1.png)
 
-4. Enter the following details for **Connect to your data**.
+1. Enter the following details for **Connect to your data**.
 
-   - Subscription: Select **Existing Subscription** **(1)**.
-   - Storage Account: Select **bpa{suffix}** **(2)**.
-   - Blob Container: Select **results** **(3)**.
-   - Blob folder: **Rename to workshop** **(4)**.
-   - Parsing mode: **JSON (5)**.
-   - Click **Next (6)**.
+   - Subscription: Select **Existing Subscription** **(1)**
+
+   - Storage Account: Select **bpa{suffix}** **(2)**
+   
+   - Blob Container: Select **results** **(3)**
+   
+   - Blob folder: **workshop** **(4)**
+   
+   - Parsing mode: **JSON (5)**
+   
+   - Select **Next (6)**
      
      ![Connection to your data](images/upload2.png)
 
-5. Click next on **Apply AI enrichment** screen.
+1. On the **Apply AI enrichment** page, select **Next**.
 
    ![](images/upload3.png)
    
-6. Click **Add field** on Preview mappings screen, scroll down and select index on source column now click on (...) **ellipses icon (1)** on right of the column and select **Configure field (2)**.
+1. On the **Preview mappings** screen, select **+ Add field**. In the **Source column**, scroll down and select **index**. Then, click the **ellipsis (...) icon** **(1)** on the right side of the column and select **Configure field** **(2)**.
 
    ![](images/upload4.png)
 
    ![](images/upload5a.png)
 
-7. Enter the following details in the Configure field
+1. Enter the following details in the Configure field:
 
    - Field name: **azureblob_index (1)**
+
    - Type: **Edm.String (2)**
+
    - Configure attributes: Select **Retrievable (3)** and **Searchable (4)**
+
    - Click on **Save (5)**
 
      ![](images/upload5.png)
 
-8. Now Scroll up and Expand the aggregatedResults (1) > customFormRec (2) > documents (3) > fields (4) under it, expand Organization_sample (5). Make the three fields Facetable (type, valueString & content) (6) by clicking on ellipses > configure field and click on Next.
+1. Now, scroll up and expand **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)**. Under **fields**, expand **Organization\_sample** **(5)**. For the **type**, **valueString**, and **content** fields, click the **ellipsis (...)** icon, select **Configure field**, and enable **Facetable** **(6)** for each field. Once completed, select **Next**.
 
    ![](images/upload6.png)
 
    ![](images/upload9.png)
 
-  >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
+      >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
 
-9. On Advanced settings screen leave all fields as default and click **Next**.
+1. On the **Advanced settings** screen, leave all settings at their default values, and then select **Next**.
     
    ![](images/upload7.png)
    
-10. On Review and create screen, enter Objects name prefix as **azureblob (1)** and click **Create (2)**.
+1. On the **Review and create** screen, enter **azureblob** as the **Objects name prefix** **(1)**, and then select **Create** **(2)**.
     
     ![](images/upload8.png)
     
-   <validation step="01aa843c-7b41-4133-8f44-2071cdb89936" />
+<validation step="01aa843c-7b41-4133-8f44-2071cdb89936" />
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help
+
 ## Review
 
 In this lab, you have accomplished the following:
@@ -276,3 +290,5 @@ In this lab, we created and configured a Document Intelligence resource in Azure
 **Getting Started with Document Intelligence Studio**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/form-recognizer-studio-overview?view=form-recog-3.0.0  
 
 **Document Intelligence Documentation**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/concept-invoice?view=form-recog-3.0.0
+
+### You have successfully completed the lab. Congratulations on successfully implementing and testing the solution.
