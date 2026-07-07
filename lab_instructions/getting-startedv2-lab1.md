@@ -54,7 +54,7 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the top right corner.
 
-![](../lab_instructions/images/gs4.png)
+![](../lab_instructions/images/image-117.png)
 
 ## Lab Guide Zoom In/Zoom Out
  

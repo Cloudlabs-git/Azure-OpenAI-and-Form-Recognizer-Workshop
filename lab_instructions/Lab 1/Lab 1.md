@@ -14,8 +14,6 @@ In this lab, you will create (train) an Azure Document Intelligence custom model
 * You have an Azure subscription and permission to create a Document Intelligence Resource.
 * You have access to the sample invoices folder with the invoices to upload.
 
-### Instructions
-
 ### Task 1: Creating a Document Intelligence Resource
 
 In this task, we will create and configure a Document Intelligence resource in Azure, set up a custom project, and connect it to a new storage account for training data.
