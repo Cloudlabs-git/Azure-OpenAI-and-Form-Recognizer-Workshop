@@ -46,14 +46,14 @@ In this task, we will create and configure a Document Intelligence resource in A
 
 1. Under My Project, click on **+ Create a project**.
 
-   ![Alt text](../Lab%201/images/230625(07).png)
+   ![Alt text](../Lab%201/images/new-0.png)
 
 1. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**
    - Description: **Custom model project** **(2)**
 
-     ![Alt text](images/enter-project-details.png)
+     ![Alt text](images/new-1.png)
 
 1. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
@@ -96,6 +96,8 @@ In this task, you will upload 6 training documents to train and 2 test documents
      ![Browse for files](images/browse-for-files.png)
 
 1. On the File Explorer, enter the following path: `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Custom Model Sample` **(1)** and press **Enter**. Then, select all training JPEG files (**train1** through **train6**) **(2)**, and select **Open** **(3)**.
+
+    ![Alt text](../Lab%201/images/new-2.png)
 
 1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
@@ -199,9 +201,33 @@ After you are satisfied with the custom model performance, you can retrieve the 
 
 In this task, we will configure Azure AI Search to connect to an Azure Blob Storage data source, create an index, and set up an indexer to process and search the data.
 
-1. Navigate back to the **Resource group** window, search for the **Search Service** resource, and then select the Search Service with a name similar to **bpa{suffix}**.
+1. Navigate back to the **Resource group** window, search for the **Storage account** resource, and then select the Azure Storage account with a name similar to **bpa{suffix}**.
 
-   ![search service](images/rg3.png)
+   ![search service](images/new-9.png)
+
+1. Navigate to **Access Control (IAM)** **(1)** from the left navigation pane, click **+ Add** **(2)**, and then select **Add role assignment** **(3)** to assign a role to a user, group, or managed identity.
+
+   ![search service](images/new-4.png)
+
+1. On the **Role** tab, search for **Storage Blob Data Reader** **(1)**, select the **Storage Blob Data Reader** role **(2)**, and then click **Next** **(3)** to continue configuring the role assignment.
+ 
+   ![search service](images/new-5.png)
+
+1. On the **Members** tab, select **Managed identity** **(1)**, click **+ Select members** **(2)**, choose **Search service (Foundry IQ)** as the managed identity type **(3)**, verify that the required managed identity is selected **(4)**, and then click **Select** **(5)** to add it to the role assignment.
+
+   ![search service](images/new-6.png)
+
+1. After verifying the selected managed identity, click **Review + assign** to review the role assignment configuration before assigning the **Storage Blob Data Reader** role.
+
+   ![search service](images/new-7.png)
+
+1. Review the role assignment details, verify that the **Storage Blob Data Reader** role, scope, and managed identity are correct, and then click **Review + assign** to complete the role assignment.
+ 
+   ![search service](images/new-8.png)
+
+1. Navigate back to the **Resource group** window, search for the **Search service (Foundry IQ)** resource, and then select the Search Service with a name similar to **bpa{suffix}**.
+
+   ![search service](images/new-10.png)
 
 1. On the **Search service** page, click on **Import data**.
 
@@ -210,6 +236,8 @@ In this task, we will configure Azure AI Search to connect to an Azure Blob Stor
 1. Select **Azure Blob Storage** as the data source and click on **Keyword Search**.
   
      ![Connection to your data](images/upload1.png)
+
+     ![search service](images/new-3.png)     
 
 1. Enter the following details for **Connect to your data**.
 
