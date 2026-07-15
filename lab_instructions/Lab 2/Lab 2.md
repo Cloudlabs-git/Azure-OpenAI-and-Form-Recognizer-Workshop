@@ -188,10 +188,6 @@ In this task, we will use Porsche's owner manuals for the Taycan, Panamera, and 
 
    ![](images/image-126.png)
 
-1. Scroll down on the **Knowledge (Foundry IQ)** page. For **Foundry IQ resource**, choose your Azure AI Search resource with prefix **bpa (2)** from the drop-down, and select **Connect (3)**.
-
-   ![](images/image-126.png)
-
 1. On the **Knowledge (Foundry IQ)** page, select **Create a knowledge base**.
 
    ![](images/image-127.png)
@@ -264,7 +260,7 @@ Test and interact with the **PorscheManualsAssistant** agent using your uploaded
 1. On the **Playground** tab **(1)**, click the **Parameters** (slider) icon **(2)** to open the agent configuration settings, where you can customize inference parameters such as reasoning effort, tool usage, and response format. Experiment with different values to see how they change the model's behavior.
 
    ![](images/new22.png)
-   
+
 ## Review
 
 In this lab, you have accomplished the following:
