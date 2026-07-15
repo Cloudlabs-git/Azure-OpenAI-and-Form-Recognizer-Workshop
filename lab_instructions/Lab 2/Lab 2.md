@@ -18,7 +18,31 @@ Access the Microsoft Foundry portal and upgrade the pre-deployed Azure OpenAI re
 
    ![OpenAI](images/rgg.png)
 
-1. On the **Resource group** page, search for and select the **Azure OpenAI** resource with the name prefix **oaibpa** that was provisioned during the deployment.
+1. Navigate back to the **Resource group** window, search for the **Storage account** resource, and then select the Azure Storage account with a name similar to **bpa{suffix}**.
+
+   ![search service](images/new-9.png)
+
+1. Navigate to **Access Control (IAM)** **(1)** from the left navigation pane, click **+ Add** **(2)**, and then select **Add role assignment** **(3)** to assign a role to a user, group, or managed identity.
+
+   ![search service](images/new-4.png)
+
+1. On the **Role** tab, search for **Storage Blob Data Reader** **(1)**, select the **Storage Blob Data Reader** role **(2)**, and then click **Next** **(3)** to continue configuring the role assignment.
+ 
+   ![search service](images/new-5.png)
+
+1. On the **Members** tab, select **Managed identity** **(1)**, click **+ Select members** **(2)**, choose **Search service (Foundry IQ)** as the managed identity type **(3)**, verify that the required managed identity is selected **(4)**, and then click **Select** **(5)** to add it to the role assignment.
+
+   ![search service](images/new-6.png)
+
+1. After verifying the selected managed identity, click **Review + assign** to review the role assignment configuration before assigning the **Storage Blob Data Reader** role.
+
+   ![search service](images/new-7.png)
+
+1. Review the role assignment details, verify that the **Storage Blob Data Reader** role, scope, and managed identity are correct, and then click **Review + assign** to complete the role assignment.
+ 
+   ![search service](images/new-8.png)
+
+1. Navigate back to **Resource group** page, search for and select the **Azure OpenAI** resource with the name prefix **oaibpa** that was provisioned during the deployment.
 
    ![OpenAI](images/change3.png)
 
@@ -34,11 +58,37 @@ Access the Microsoft Foundry portal and upgrade the pre-deployed Azure OpenAI re
 
    ![Azure OpenAI Studio](../Lab%202/images/banner.png)
 
-1. Review the upgrade details, and select **Next** to proceed.
+1. Review the upgrade details, and confirm **Confirm** to proceed.
 
-1. Confirm the upgrade by selecting **Upgrade** (or **Confirm**, depending on the current dialog).
+   ![Azure OpenAI Studio](../Lab%202/images/new2.png)
 
-1. Wait for the upgrade process to complete. Once finished, you'll be redirected to a new Foundry project associated with this resource.
+1. In the **Select a project name** step, keep project name as default, and then click **Next** to continue with the Azure AI Foundry project setup.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new3.png)
+
+1. In the **Upgrade** step, review the upgrade information, and then click **Upgrade** to convert the Azure OpenAI resource into an **Azure AI Foundry** resource and complete the upgrade process.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new4.png)
+
+1. In the **Foundry** resource, navigate to **Access control (IAM)** **(1)**, click **+ Add** **(2)**, and then select **Add role assignment** **(3)** to assign a role to a user, group, or managed identity for the Azure AI Foundry resource.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new8.png)
+
+1. On the **Role** tab, search for **Foundry User** **(1)**, select the **Foundry User** role **(2)**, and then click **Next** **(3)** to continue configuring the role assignment.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new9.png)
+
+1. On the **Members** tab, select **User, group, or service principal** **(1)**, click **+ Select members** **(2)**, search for the <inject key="AzureAdUserEmail"></inject> **(3)**, select the ODL user from the search results **(4)**, and then click **Select** **(5)** to add the user to the role assignment.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new10.png)
+
+1. After verifying that the correct user has been added under **Members**, then click **Review + assign** twice to assign the **Foundry User** role.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new11.png)
+
+1. On the **Overview** page of the **Foundry** resource, click **Go to Foundry portal** to open the resource in the Azure AI Foundry portal and continue with the configuration.
+
+   ![Azure OpenAI Studio](../Lab%202/images/new5.png)
 
 1. Navigate to the **Microsoft Foundry portal** and ensure the **New Foundry** toggle (top right) is switched **On**.
 
@@ -74,9 +124,17 @@ In this task, we will use Porsche's owner manuals for the Taycan, Panamera, and 
 
       ![](images/image-131.png)
 
-    c. Open the container, select **Upload**, and browse to `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 2` on the JumpVM.
+    c. In the **documents** container, click **Upload** **(1)**, and then select **Browse for files** **(2)** to choose the document that you want to upload to the Azure Blob Storage container.
 
-    d. Select **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual.pdf**, and select **Upload**.
+      ![](images/new12.png)
+
+    d. Browse to `C:\LabFiles\Azure-OpenAI-and-Form-Recognizer-Workshop\SampleInvoices\Lab 2` **(1)** on the JumpVM, select **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual.pdf** **(2)** and then **Select** **(3)**.
+
+      ![](images/new13.png)
+
+    d. After verifying that the required file is selected, click **Upload** to upload the document to the **documents** blob container.
+
+      ![](images/new14.png)
 
 1. Navigate to your **bpa**-prefixed **Search service** resource, and select **Import data** from the top menu.
 
@@ -102,19 +160,31 @@ In this task, we will use Porsche's owner manuals for the Taycan, Panamera, and 
     
       ![](images/image-134.png)
 
-1. On **Vectorize your text**, select an embedding model deployment (such as **text-embedding-ada-002**) from your Foundry resource, and select **Next**.
+1. On the **Vectorize your text** step, configure the embedding settings as follows:
 
-1. On **Vectorize and enrich your images**, leave this disabled/skipped (not needed for text-based manuals), and select **Next**.
+    - Verify that **Kind** is set to **Microsoft Foundry** **(1)**.
 
-1. On **Advanced settings**, enter the index name as **aoaiworkshop**, ensure semantic ranking/configuration is enabled, and select **Next**.
+    - Select the available **Subscription** **(2)**.
 
-1. On **Review and create**, review the configuration, and select **Create**.
+    - Choose the **Microsoft Foundry project** **proj-default** **(3)**.
+
+    - Select the **text-embedding-ada-002** model deployment **(4)**.
+
+    - Under **Authentication type**, select **API key** **(5)**.
+
+    - Select the acknowledgment checkbox to accept the additional cost notice **(6)**.
+
+    - Click **Next** **(7)** until you reach to the **Review and create** step.
+
+      ![](images/new15.png)
+
+1. On the **Review and create** step, verify that the **Objects name prefix** is set to **aoaiworkshop** **(1)**, review the configuration settings, and then click **Create** **(2)** to create the index, indexer, data source, and skillset for the RAG solution.
+
+    ![](images/new16.png)
 
 1. Wait for the indexer to finish running. You can check progress under **Indexers** in the left pane of the Search resource.
 
-1. Return to the **Microsoft Foundry portal**, open your **PorscheManualsAssistant** agent, and in the left pane, select **Knowledge (1)**.
-
-1. Scroll down on the **Knowledge (Foundry IQ)** page. For **Foundry IQ resource**, choose your Azure AI Search resource with prefix **bpa (2)** from the drop-down, and select **Connect (3)**.
+1. In the Microsoft Foundry portal, select **Knowledge** **(1)** from the left navigation pane,. Under **Foundry IQ resource**, select Search service resource starting with **bpa** **(2)**, and then click **Connect** **(3)** to connect the project to the Foundry IQ resource.
 
    ![](images/image-126.png)
 
@@ -126,21 +196,27 @@ In this task, we will use Porsche's owner manuals for the Taycan, Panamera, and 
 
    ![](images/image-128.png)
 
-1. In the **Create a knowledge source** dialog, enter a **Name** for the source (for example, **porsche-manuals-source**).
+1. In the **Create a knowledge source** pane, enter **`porsche-manuals-source`** in the **Name** field **(1)**. Under **Select search index**, choose **`aoaiworkshop`** **(2)**, and then click **Create** **(3)**.
 
-1. Under **Select search index**, select **aoaiworkshop** from the drop-down (it should now be listed, since the index was created with semantic configuration in the earlier steps).
+   ![](images/new17.png)
 
-1. Select **Create**.
+1. Verify that the **porsche-manuals-source** knowledge source shows an **Active** status **(1)**. Then, click **Save knowledge base** **(2)** to create the knowledge base.
 
-1. Back on the **Create a new knowledge base** page, select **Create** to finish creating the knowledge base.
+   ![](images/new18.png)
 
-1. Back on the **PorscheManualsAssistant** agent's **Knowledge** section, confirm the knowledge base is listed and connected.
+1. Click **Save** **(1)** to save the knowledge base configuration. Then, click **Use in an agent** **(2)** and select your agent (for example, **PorscheManualsAssistant**) to associate the knowledge base with the agent.
 
-1. Select **Save**.
+   ![](images/new19.png)
 
-1. In the chat pane on the right, test the agent by asking a question about the uploaded manual, for example: *"What does the Panamera owner's manual say about Porsche Connect setup?"*
+1. In the chat pane on the right, test the agent by asking a question about the uploaded manual, for example: 
+
+    ```
+    What does the Panamera owner's manual say about Porsche Connect setup?
+    ```
 
    Confirm the agent responds using content grounded in the uploaded document.
+
+    ![](images/new20.png)
 
 <validation step="8f37ff68-c140-4a17-8af7-92838fba1d91" />
 
@@ -153,31 +229,37 @@ In this task, we will use Porsche's owner manuals for the Taycan, Panamera, and 
 
 Test and interact with the **PorscheManualsAssistant** agent using your uploaded data to generate relevant responses.
 
-1. In the agent's chat pane, enter the following query:
+1. Click the **New conversation** (**+**) icon **(1)** to start a new chat session. Enter the following prompt **(2)**:
 
    ```
    how to operate Android Auto in Porsche Taycan? give step-by-step instructions
    ```
 
-1. Confirm the response is grounded in the uploaded manual content.
+1. Verify that the agent returns step-by-step guidance based on the uploaded Porsche manuals, demonstrating that it is successfully retrieving information from the configured knowledge base.
 
-1. You can also configure the agent's behavior by selecting the **Instructions** field in the agent's setup pane, and replacing the value with:
+   ![](images/new23.png)
+
+1. You can also configure the agent's behavior by selecting the **Instructions (1)** field in the agent's setup pane, and replacing the value with:
 
    ```
    Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information
    ```
 
-1. Select **Save** to apply the updated instructions.
+1. Select **Save (2)** to apply the updated instructions.
 
-1. In the chat pane, test the updated behavior by entering the query:
+   ![](images/new21.png)
+
+1. In the chat pane, click the **New conversation** (**+**) icon **(1)** to start a new chat session. Enter the following prompt **(2)** and verify that the agent responds as **Alice** confirming that the agent is following the configured instructions.
 
    ```
-   What is your name
+   What is your name?
    ```
 
-1. Confirm the agent responds as "Alice."
+   ![](images/new22.png)
 
-1. In the setup pane, select the **sliders/parameters icon** next to the model dropdown to view generation parameters (such as temperature and max tokens). Experiment with different values to see how they change the model's behavior.
+1. On the **Playground** tab **(1)**, click the **Parameters** (slider) icon **(2)** to open the agent configuration settings, where you can customize inference parameters such as reasoning effort, tool usage, and response format. Experiment with different values to see how they change the model's behavior.
+
+   ![](images/new22.png)
 
 ## Review
 
