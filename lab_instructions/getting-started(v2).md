@@ -111,7 +111,8 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    
 1. Verify the resources deployed in the resource group.
 
-   ![](./images/new/rg.png)
+   ![](./images/new/GS8.png)
+   
    
 > [!IMPORTANT]
 *For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.*

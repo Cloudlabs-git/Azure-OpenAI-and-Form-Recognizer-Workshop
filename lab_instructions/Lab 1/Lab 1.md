@@ -158,7 +158,7 @@ In this task, you will upload and label six training documents to define a custo
 
 1. On the **Models** page, wait until the **Status** of your model changes to **succeeded** **(1)**. Then, select the model **customfrs** **(2)** and click on **Test** **(3)** from the top menu.
 
-   ![select-models](images/9-7-25-l1-10.png)
+   ![select-models](images/L1T2S9.png)
 
 1. From the left-side menu, navigate to the **Test model** **(1)** page and click **Browse for files (2)**.
 
@@ -251,12 +251,12 @@ In this task, you will configure Managed Identity access for the Azure AI Search
 1. Under the **Members** tab, for **Assign access to**, select **Managed identity** **(1)**.Click on **+ Select members** **(2)**.On the **Select managed identities** pane, enter the following details:
 
    - Subscription: Select your default subscription **(3)**.
-   - Managed identity: Select **Search service** **(4)**.
+   - Managed identity: Select **Search service (Foundry IQ)** **(4)**.
    - Select the Azure AI Search service named similar to **bpa{suffix}** **(5)**.
    - Click on **Select** **(6)**.
    - Click on **Review + assign** **(7)**.
 
-      ![Review assign](images/task4-step5.png)
+      ![Review assign](images/L1T4S5.png)
 
 1. On the **Review + assign** page, review the configuration settings and click on **Review + assign** to complete the role assignment.
 
@@ -268,34 +268,34 @@ In this task, you will configure Azure AI Search to index the extracted document
 
 1. Navigate back to the resource group page, select **Search service** with a name similar to **bpa{suffix}**.
 
-   ![search service](images/rg3.png)
+   ![search service](images/L1T5S1.png)
 
 1. On the **Search service** page, click on **Import data**.
 
-   ![Data source](images/new/5.png)
+   ![Data source](images/L1T5S2.png)
 
 1. Select **Azure Blob Storage (1)** as the data source and click on **Keyword Search (2)**.
   
-   ![Connection to your data](images/upload-2.png)
+   ![Connection to your data](images/L1T5S3.png)
 
-   ![Connection to your data](images/upload-2-i.png)
+   ![Connection to your data](images/L1T5S3-1.png)
 
 1. Enter the following details for **Connect to your data**.
 
    - Subscription: Select **Existing Subscription** **(1)**.
    - Storage Account: Select **bpa{suffix}** **(2)**.
    - Blob Container: Select **results** **(3)**.
-   - Blob folder: **Rename to workshop** **(4)**.
+   - Blob folder: Provide namme as **workshop** **(4)**.
    - Parsing mode: **JSON (5)**.
    - Click **Next (6)**.
      
-      ![Connection to your data](images/upload2.png)
+      ![Connection to your data](images/L1T5S4.png)
 
 1. Click **Next** on **Apply AI enrichment** screen.
 
-   ![](images/upload3.png)
+   ![](images/L1T5S5.png)
    
-1. Click **Add field (1)** on Preview mappings screen, scroll down and select index on source column now click on (...) **ellipses icon (2)** on right of the column and select **Configure field (3)**.
+1. Click **Add field (1)** on Preview mappings screen, scroll down and select **index** on **source column** then, click on (...) **ellipses icon (2)** on right of the column and select **Configure field (3)**.
 
    ![](images/upload-6-i.png)
 
@@ -323,17 +323,17 @@ In this task, you will configure Azure AI Search to index the extracted document
    - Configure attributes: Select **Facetable (3)**
    - Click on **Save (4)**
 
-      ![](images/upload-9.png)
+      ![](images/L1T5S9.png)
 
       >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
 
 1. On Advanced settings screen leave all fields as default and click **Next**.
     
-   ![](images/upload-10.png)
+   ![](images/L1T5S10.png)
    
 1. On Review and create screen, enter Objects name prefix as **azureblob-indexer (1)** and click **Create (2)**.
 
-   ![](images/upload-11.png)
+   ![](images/L1T5S11.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
