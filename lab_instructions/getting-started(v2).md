@@ -2,15 +2,15 @@
  
 ### Overall Estimated Duration: 4 Hours
 
-## Lab Scenario
+## 📘 Lab Scenario
 
 Contoso Ltd. wants to modernize its document processing system by using Azure AI services to automate the extraction, search, and analysis of business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build an intelligent business automation solution using Azure AI Document Intelligence, Azure AI Search, and Azure OpenAI. You will create a custom document processing model, configure searchable data indexing, and enable users to interact with business data through an AI-powered conversational experience using Azure AI Foundry Chat Playground.
 
-## Overview
+## 📋 Overview
 
 In this Hands-on lab, you will gain a comprehensive understanding of Azure's advanced data handling and analysis tools. You'll explore how to utilize Azure OpenAI Large Language Models (LLM) and Azure AI Search to make your data searchable. Additionally, you'll delve into creating custom models with Azure AI Document Intelligence, learning how to extract and analyze specific data from business forms and documents. This lab will showcase the potential of these technologies to build intelligent systems tailored to your business needs, enhancing productivity and delivering hyper-personalized experiences.
 
-## Objective
+## 🎯 Objective
 
 Understand how to create and deploy an Azure AI Document Intelligence custom model in Azure, train data, and configure Azure AI Search. Gain skills in building custom model pipelines and streamlining document data extraction. By the end of this lab, you will be able to:
 
@@ -18,20 +18,20 @@ Understand how to create and deploy an Azure AI Document Intelligence custom mod
 
 - **Use Azure OpenAI with your own data:** Understand how to navigate the Azure OpenAI Playground, upload your own data, and interact with ChatGPT LLM to customize responses and gain insights from your data.
 
-## Pre-requisites
+## ⚙️ Pre-requisites
 
 - Familiarity with Azure’s suite of AI tools.
 - Basic knowledge of BPA and how to build and manage data processing pipelines.
 
-## Architecture
+## 🏗️ Architecture
 
 This architecture flow demonstrates how various Azure components work together to handle, process, analyze, and visualize data, providing a comprehensive and intelligent system tailored to business needs. In this lab, you'll first create custom models with Document Intelligence, focusing on extracting and analyzing specific data from business forms and documents. Next, you will leverage Azure's advanced data handling tools by using Azure OpenAI Large Language Models (LLM) in conjunction with Azure AI Search to make your data searchable and accessible. The architecture flow integrates these components to build intelligent systems that enhance productivity and deliver personalized experiences, demonstrating the powerful capabilities of Azure's AI and data analysis technologies tailored to your business needs.
 
-## Architecture Diagram
+## 🖼️ Architecture Diagram
 
  ![](./images/new/arch.png)
 
-## Explanation of Components
+## 🔍 Explanation of Components
 
 - **Data Sources:** Raw input files like PDFs, images, and text documents.
 - **Azure Blob Storage:** Central storage for training data and uploaded content.
@@ -119,7 +119,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 This hands-on lab will guide you in using Azure’s advanced tools, including OpenAI LLM, Azure AI Search, and Azure AI Document Intelligence, to create intelligent systems that enhance productivity and deliver personalized experiences.
 
-## Support Contact
+## 📞 Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
