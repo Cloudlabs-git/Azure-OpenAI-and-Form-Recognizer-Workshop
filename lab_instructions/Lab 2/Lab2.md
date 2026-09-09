@@ -2,19 +2,19 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Lab Scenario
+## 📘 Lab Scenario
 
 Contoso Motors, a global automotive company, wants to improve customer support and knowledge accessibility by using generative AI with its enterprise data. Employees and support teams often spend significant time searching through lengthy vehicle manuals and technical documents to answer customer queries. To streamline this process, Contoso plans to build an AI-powered conversational assistant using Microsoft Foundry, Foundry IQ, Azure AI Search, and Azure OpenAI models.
 
 In this hands-on lab, you will act as a Cloud Consultant and help Contoso upload a Porsche owner's manual, create a knowledge base using the uploaded document, connect the knowledge base to an AI agent, and enable users to interact with the document using natural language queries through the Microsoft Foundry Agent playground.
 
-## Overview
+## 📖 Overview
 
 In this lab, you will use your own data with a generative AI model in Microsoft Foundry. You will create a **File knowledge source** using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
 
 The uploaded document will be processed and made available through a **Foundry IQ knowledge base**. You will then connect the knowledge base to a **Foundry Agent** and use the agent playground to ask questions about the Porsche owner's manual.
 
-## Lab Objectives
+## 🎯 Lab Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -156,7 +156,7 @@ In this task, you will use the Foundry Agent playground to ask questions about t
 
    ![chat-session-two](images/L2T4S5.png)
    
-## Summary
+## 🧾 Summary
 
 In this lab, you have completed the following:
 
