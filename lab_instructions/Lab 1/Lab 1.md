@@ -2,15 +2,15 @@
 
 ### Estimated Duration: 120 Minutes
 
-## Lab Scenario
+## 📘 Lab Scenario
 
 Contoso Ltd. is modernizing its document processing and enterprise search system by using Azure AI services to automate the extraction, indexing, and analysis of business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build an intelligent business automation solution using Azure AI Document Intelligence, Azure AI Search, and Azure OpenAI. You will create and train a custom document processing model, build a BPA pipeline for automated document ingestion, configure Azure AI Search to index extracted data, and additionally configure Managed Identity access for the Azure AI Search service to securely connect with Azure Storage resources.
 
-## Overview
+## 📖 Overview
 
 In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/tree/main/SampleInvoices/Custom%20Model%20Sample).
 
-## Lab Objectives
+## 🎯 Lab Objectives
 
 In this lab, you will complete the following tasks:
 
@@ -354,7 +354,7 @@ In this task, you will explore the Sample Search Application to verify the resul
 
    ![output](images/output.png)
 
-## Summary
+## 🧾 Summary
 
 In this lab, you have completed the following:
 
