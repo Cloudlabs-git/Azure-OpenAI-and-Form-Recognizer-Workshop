@@ -31,7 +31,7 @@ This architecture flow demonstrates how various Azure components work together t
 
 ## 🖼️ Architecture Diagram
 
- ![](./images/new/arch.png)
+ ![](./images/arch-diag-new-bpa.png)
 
 ## 🔍 Explanation of Components
 
