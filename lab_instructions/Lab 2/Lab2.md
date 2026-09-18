@@ -4,7 +4,7 @@
 
 ## 📘 Lab Scenario
 
-Contoso Motors, a global automotive company, wants to improve customer support and knowledge accessibility by using generative AI with its enterprise data. Employees and support teams often spend significant time searching through lengthy vehicle manuals and technical documents to answer customer queries. To streamline this process, Contoso plans to build an AI-powered conversational assistant using Microsoft Foundry, Foundry IQ, Azure AI Search, and Azure OpenAI models.
+Contoso Motors, a global automotive company, wants to improve customer support and knowledge accessibility by using generative AI with its enterprise data. Employees and support teams often spend significant time searching through lengthy vehicle manuals and technical documents to answer customer queries. To streamline this process, Contoso plans to build an AI-powered conversational assistant using Microsoft Foundry, Foundry IQ, Azure AI Search, and Microsoft Foundry Models.
 
 In this hands-on lab, you will act as a Cloud Consultant and help Contoso upload a Porsche owner's manual, create a knowledge base using the uploaded document, connect the knowledge base to an AI agent, and enable users to interact with the document using natural language queries through the Microsoft Foundry Agent playground.
 
@@ -18,20 +18,20 @@ The uploaded document will be processed and made available through a **Foundry I
 
 In this lab, you will complete the following tasks:
 
-* Task 1: Navigate to Microsoft Foundry
-* Task 2: Create a File knowledge source and knowledge base
-* Task 3: Create and configure a Foundry Agent
-* Task 4: Interact with the Foundry Agent using your own data
+- Task 1: Navigate to Microsoft Foundry
+- Task 2: Create a File knowledge source and knowledge base
+- Task 3: Create and configure a Foundry Agent
+- Task 4: Interact with the Foundry Agent using your own data
 
 ## Task 1: Navigate to Microsoft Foundry
 
-In this task, you will access the Microsoft Foundry portal through the provisioned Azure OpenAI resource and open the provisioned Foundry project.
+In this task, you will access the Microsoft Foundry portal through the provisioned Microsoft Foundry resource and open the provisioned Foundry project.
 
 1. Navigate back to the **Resource groups** and select the resource group **business-process-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![Resource group](images/L2T1S1.png)
 
-2. On the Resource group page, search for and select the **Foundry** resource with a name similar to **oaibpa{suffix}**.
+2. On the Resource group page, search for and select the **Microsoft Foundry** resource with a name similar to **oaibpa{suffix}**.
 
    ![Azure OpenAI](images/L2T1S2.png)
 
@@ -53,7 +53,7 @@ In this task, you will create a File knowledge source and upload the Porsche own
 
    ![Knowledge](images/L2T2S1.png)
 
-1. On the **Knowledge** page, select **Create a Knowledge base** to create a new knowledge source.
+1. On the **Knowledge bases** page, select **Create a knowledge base** to create a new knowledge source.
 
    ![Create knowledge source](images/L2T2S2.png)
 
@@ -168,6 +168,4 @@ In this lab, you have completed the following:
 
 - Interacted with the Foundry Agent using your own data to generate relevant responses.
 
-## You have successfully completed this Hands-on lab.
-
-By completing this lab **Business Automation using Azure OpenAI and Document Intelligence**, you configured an intelligent, AI-driven document interaction workflow using **Microsoft Foundry**. You created a **File knowledge source** using the Porsche manual, configured a **knowledge base** through **Foundry IQ**, and connected it to a **Foundry Agent**. You then configured the agent's instructions and parameters and interacted with the agent using your own data, enabling more relevant and context-specific responses based on the uploaded document.
+### 🎉 You have successfully completed this Hands-on lab!
