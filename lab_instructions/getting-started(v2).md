@@ -14,7 +14,7 @@ In this hands-on lab, you will explore how **Azure Document Intelligence**, **Az
 
 Understand how to build an intelligent business automation solution using Azure Document Intelligence, Azure AI Search, and Microsoft Foundry. Gain hands-on experience in training a custom document model, indexing and searching business data, creating a knowledge source and knowledge base, and configuring a Foundry Agent to interact with your data. By the end of this lab, you will be able to:
 
-- **Create and Deploy an Azure Document Intelligence Custom Model:** Understand how to create an Azure Document Intelligence resource, label and train data, build a custom model pipeline in BPA, configure managed identity access and Azure AI Search, and use a sample search application to retrieve document information.
+- **Create and Deploy an Azure Document Intelligence Custom Model:** Understand how to create an Azure Document Intelligence resource, label and train data, build a custom model pipeline in BPA, configure managed identity access and Azure AI Search and query the search index. 
 
 - **Use Microsoft Foundry with your own data:** Understand how to navigate Microsoft Foundry, create a file-based knowledge source and knowledge base, configure a Foundry Agent, and interact with the agent using your own data to retrieve relevant information and gain insights.
 
