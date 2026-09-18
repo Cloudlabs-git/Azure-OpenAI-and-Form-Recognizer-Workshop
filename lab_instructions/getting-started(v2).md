@@ -53,7 +53,7 @@ Welcome to you **Business Automation using Document Intelligence and Microsoft F
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
- ![](./images/new/vm2.png)
+ ![](./images/lab-guide-new.png)
 
 ## Virtual Machine & Lab Guide
 
@@ -63,13 +63,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get the lab environment details, you can select the **Environment** tab. Additionally, the credentials will also be emailed to your registered email address.
 
- ![](./images/GS7.png)
+ ![](./images/lab-env-new.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![](./images/GS7i.png)
+ ![](./images/lab-split-new.png)
  
 ## Managing Your Virtual Machine
  
