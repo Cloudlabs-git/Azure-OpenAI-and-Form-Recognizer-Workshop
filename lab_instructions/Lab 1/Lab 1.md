@@ -1,29 +1,29 @@
-# Lab 01: Create and Deploy an Azure AI Document Intelligence Custom Model
+# Lab 01: Create and Deploy an Azure Document Intelligence Custom Model
 
 ### Estimated Duration: 120 Minutes
 
-## 📘 Lab Scenario
+## 📘 Scenario
 
-Contoso Ltd. is modernizing its document processing and enterprise search system by using Azure AI services to automate the extraction, indexing, and analysis of business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build an intelligent business automation solution using Azure AI Document Intelligence, Azure AI Search, and Azure OpenAI. You will create and train a custom document processing model, build a BPA pipeline for automated document ingestion, configure Azure AI Search to index extracted data, and additionally configure Managed Identity access for the Azure AI Search service to securely connect with Azure Storage resources.
+Contoso Ltd. wants to modernize its document processing and enterprise search capabilities by automating the extraction and indexing of information from business documents such as invoices, contracts, and forms. In this hands-on lab, you will act as a Cloud Consultant and help Contoso build a document processing and search solution using Azure Document Intelligence, BPA, Azure Storage, and Azure AI Search. You will train a custom Document Intelligence model, build a BPA pipeline to process documents, configure secure Managed Identity access between Azure AI Search and Azure Storage, and configure Azure AI Search to index and retrieve the extracted document data.
 
 ## 📖 Overview
 
-In this lab, you will create (train) an Azure AI Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/tree/main/SampleInvoices/Custom%20Model%20Sample).
+In this lab, you will create (train) an Azure Document Intelligence custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](https://github.com/MSUSAzureAccelerators/Azure-OpenAI-and-Form-Recognizer-Workshop/tree/main/SampleInvoices/Custom%20Model%20Sample).
 
-## 🎯 Lab Objectives
+## 🎯 Objectives
 
 In this lab, you will complete the following tasks:
 
-* Task 1: Creating an Azure AI Document Intelligence Resource
+* Task 1: Creating an Azure Document Intelligence Resource
 * Task 2: Train and Label data
 * Task 3: Build a new pipeline with the custom model module in BPA
 * Task 4: Configure Managed Identity Access for Azure AI Search in the storage account
 * Task 5: Configure Azure AI Search
 * Task 6: Use Sample Search Application [Read Only]
 
-## Task 1: Creating an Azure AI Document Intelligence Resource
+## Task 1: Creating an Azure Document Intelligence Resource
 
-In this task, you will create an Azure AI Document Intelligence project using Document Intelligence Studio. You’ll configure the project by selecting a Cognitive Services resource and creating a Storage Account to prepare the environment for custom model training.
+In this task, you will create and configure a custom extraction project in Document Intelligence Studio. You will select the required Azure AI resource, configure the project details, and create a Storage Account and blob container to store the training data for your custom model.
 
 1. Open a new tab and navigate to **Document Intelligence Studio** using the provided link.
 
