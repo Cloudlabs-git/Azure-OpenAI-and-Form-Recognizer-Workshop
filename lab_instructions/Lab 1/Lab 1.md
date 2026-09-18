@@ -14,12 +14,11 @@ In this lab, you will create (train) an Azure Document Intelligence custom model
 
 In this lab, you will complete the following tasks:
 
-* Task 1: Creating an Azure Document Intelligence Resource
-* Task 2: Train and Label data
-* Task 3: Build a new pipeline with the custom model module in BPA
-* Task 4: Configure Managed Identity Access for Azure AI Search in the storage account
-* Task 5: Configure Azure AI Search
-* Task 6: Use Sample Search Application [Read Only]
+- Task 1: Creating an Azure Document Intelligence Resource
+- Task 2: Train and Label data
+- Task 3: Build a new pipeline with the custom model module in BPA
+- Task 4: Configure Managed Identity Access for Azure AI Search in the storage account
+- Task 5: Configure Azure AI Search and Query the Index
 
 ## Task 1: Creating an Azure Document Intelligence Resource
 
@@ -33,7 +32,7 @@ In this task, you will create and configure a custom extraction project in Docum
 
 1. You will be navigated to **Content Understanding Studio** page, select **Sign In** option from the top right corner.
 
-   ![Alt text](./images/L1T1S2.png)
+   ![Alt text](./images/L1T1S2-new.png)
 
 1. Select your already signed in **ODL_User <inject key="Deployment ID" enableCopy="false"/>** account.
 
@@ -53,9 +52,9 @@ In this task, you will create and configure a custom extraction project in Docum
 
    ![Azure password](./images/GS4.png)
 
-1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence** section choose **Start with Document Intelligence**.
+1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence** section choose **Get started with Document Intelligence**.
 
-   ![Alt text](../images/dec25-business-lab1-2.png)
+   ![Alt text](../images/dec25-business-lab1-2-new.png)
 
 1. In Document Intelligence Studio, scroll down to **Custom Models**, under **Custom extraction model**, choose **Get started**.
 
@@ -83,7 +82,7 @@ In this task, you will create and configure a custom extraction project in Docum
 
    - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
 
-   - Document Intelligence or Cognitive Service Resource: Select the available Azure AI Search (Cognitive Service) **cogservicesbpass{suffix}** **(3)**.
+   - Document Intelligence or Cognitive Service Resource: Select the available Azure AI services multi-service account: **cogservicesbpa{suffix}** **(3)**.
 
    - API version: **2024-11-30 (4.0 General Availability)** **(4)**.
 
@@ -220,7 +219,7 @@ In this task, you will create a custom document processing pipeline using the Bu
 
    ![ingest-documents](images/9-7-25-l1-16.png)
 
-1. On the **Upload a document to Blob Storage** page, from the drop-down, **Select a Pipeline** with the name **workshop** **(1)**, and click on **Upload or drop a file right here (2)**.
+1. On the **Upload a document to Blob Storage** page, from the drop-down, **Select A Pipeline** with the name **workshop** **(1)**, and click on **Upload or drop a file right here (2)**.
 
    ![Upload a document](images/9-7-25-l1-17.png)
 
@@ -250,11 +249,11 @@ In this task, you will configure Managed Identity access for the Azure AI Search
 
 1. Under the **Members** tab, for **Assign access to**, select **Managed identity** **(1)**.Click on **+ Select members** **(2)**.On the **Select managed identities** pane, enter the following details:
 
-   - Subscription: Select your default subscription **(3)**.
-   - Managed identity: Select **Search service (Foundry IQ)** **(4)**.
-   - Select the Azure AI Search service named similar to **bpa{suffix}** **(5)**.
-   - Click on **Select** **(6)**.
-   - Click on **Review + assign** **(7)**.
+   - Subscription: Select your default subscription.
+   - Managed identity: Select **Search service (Foundry IQ)** **(3)**.
+   - Select the Azure AI Search service named similar to **bpa{suffix}** **(4)**.
+   - Click on **Select** **(5)**.
+   - Click on **Review + assign** **(6)**.
 
       ![Review assign](images/L1T4S5.png)
 
@@ -262,9 +261,9 @@ In this task, you will configure Managed Identity access for the Azure AI Search
 
    ![Final assign](images/task4-step6.png)
 
-## Task 5: Configure Azure AI Search 
+## Task 5: Configure Azure AI Search and Query the Index
 
-In this task, you will configure Azure AI Search to index the extracted document data stored in Azure Blob Storage. You'll define a data source, customize indexing settings, and create an indexer to make the custom model output searchable.
+In this task, you will configure Azure AI Search to index the extracted document data stored in Azure Blob Storage. You'll define a data source, customize indexing settings, and create an indexer to make the custom model output searchable and query the index.
 
 1. Navigate back to the resource group page, select **Search service** with a name similar to **bpa{suffix}**.
 
@@ -335,6 +334,30 @@ In this task, you will configure Azure AI Search to index the extracted document
 
    ![](images/L1T5S11.png)
 
+1. Once the search index is created successfully, click **Go to Search explorer**.
+
+   ![](images/LTS235.png)
+
+1. In the query box, type **`*` (1)**, and select **Search (2)**. This returns every document in the index. In the results, look for the **@odata.count (3)** field near the top - this shows the total number of matching documents.
+
+   ![](images/data-count-total.png)
+
+1. Near the query box, select **View (1)** (or the toggle) and switch to **JSON view (2)**.
+
+   ![](images/query-json-view.png)
+
+1. In the JSON view box, replace the query with below **(1)**. Select **Search (2)**. This returns the first 2 indexed documents in JSON format.
+
+   ```
+   {
+     "search": "*",
+     "count": true,
+     "top": 2
+   }
+   ```
+
+   ![](images/query-json-view-results.png)
+
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next  task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -342,31 +365,19 @@ In this task, you will configure Azure AI Search to index the extracted document
 
   <validation step="52b89379-3a35-4829-b65b-466fadb99e86" />
 
-## Task 6: Use Sample Search Application [Read Only]
-
-In this task, you will explore the Sample Search Application to verify the results indexed by Azure AI Search. This allows you to view and validate searchable content extracted by your custom model.
-
-1. Navigate back to the **Business Process Automation Accelerator** home page, under the section **What would you like to do?**, click on **Sample Search Application**.
-
-   ![Sample Search Applicationt](images/9-7-25-l1-22.png)
-
-1. On the **Sample Search Application** page, in the search bar, enter **invoice1** **(1)** and click on **Search** **(2)** to view results.
-
-   ![output](images/output.png)
-
 ## 🧾 Summary
 
 In this lab, you have completed the following:
 
-- Created an Azure AI Document Intelligence resource.
+- Created an Azure Document Intelligence resource.
 
 - Trained and labeled data for a custom model.
 
 - Built a new pipeline using the custom model module in BPA.
 
-- Configured Managed Identity Access for Azure AI Search in the storage account
+- Configured Managed Identity Access for Azure AI Search in the storage account.
 
-- Configured Azure AI Search.
+- Configured Azure AI Search and queried the search index.
 
 ### Now, click on **Next >>** from the lower right corner to move on to the next lab.
 
