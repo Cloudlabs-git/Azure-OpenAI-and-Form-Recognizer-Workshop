@@ -290,7 +290,6 @@ In this task, you will configure Azure AI Search to index the extracted document
 
        ![Connection to your data](images/L1T5S4.png)
 
-
 1. Click **Next** on **Apply AI enrichment** screen.
 
    ![](images/L1T5S5.png)
