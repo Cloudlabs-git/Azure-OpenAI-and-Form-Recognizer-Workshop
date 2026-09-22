@@ -54,7 +54,7 @@ In this task, you will create and configure a custom extraction project in Docum
 
 1. In the **Content Understanding Studio** page, scroll down and from **Document Intelligence** section choose **Get started with Document Intelligence**.
 
-   ![Alt text](../images/dec25-business-lab1-2-new.png)
+   ![Alt text](./images/new-image.png) 
 
 1. In Document Intelligence Studio, scroll down to **Custom Models**, under **Custom extraction model**, choose **Get started**.
 
@@ -287,8 +287,9 @@ In this task, you will configure Azure AI Search to index the extracted document
    - Blob folder: Provide namme as **workshop** **(4)**.
    - Parsing mode: **JSON (5)**.
    - Click **Next (6)**.
-     
-      ![Connection to your data](images/L1T5S4.png)
+
+       ![Connection to your data](images/L1T5S4.png)
+
 
 1. Click **Next** on **Apply AI enrichment** screen.
 
