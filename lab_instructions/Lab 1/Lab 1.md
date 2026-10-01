@@ -376,11 +376,11 @@ In this task you index the eight JSON result files in Azure AI Search, then make
 
    >**Note:** If any field with values as id is giving error, delete that field by clicking (...) ellipses icon  on the right side.
 
-1. On Advanced settings screen leave all fields as default and click **Next**.
+1. On the Advanced settings screen, leave all fields as default and click **Next**.
     
    ![](images/L1T5S10.png)
    
-1. On Review and create screen, enter Objects name prefix as **azureblob-indexer (1)** and click **Create (2)**.
+1. On the Review and create screen, enter the object name prefix as **azureblob-indexer (1)** and click **Create (2)**.
 
    ![](images/L1T5S11.png)
 
