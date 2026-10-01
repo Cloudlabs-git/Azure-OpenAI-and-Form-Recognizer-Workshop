@@ -67,7 +67,7 @@ In this task you connect Foundry to the lab's Azure AI Search service and create
 
          ![Azure AI Search](images/L2T2S3-0110.png)
 
-      > **Why Extractive data:** the knowledge base returns the matching invoice text itself, and the agent writes the answer. This keeps answers traceable to the source invoice.
+      > **Why Extractive data:** The knowledge base returns the matching invoice text itself, and the agent writes the answer. This keeps answers traceable to the source invoice.
 
 1. Under **Knowledge sources (Foundry IQ)**, select **Add sources (1)**, then **Azure AI Search Index (2)**.
 
@@ -89,7 +89,7 @@ In this task you connect Foundry to the lab's Azure AI Search service and create
 
 ### Task 3: Configure Knowledge Source Fields
 
-In this task you tell the knowledge source which fields to search, which to return, and which semantic configuration to use. These settings are set in the Azure portal, because the Foundry screen does not show them.
+In this task, you tell the knowledge source which fields to search, which to return, and which semantic configuration to use. These settings are set in the Azure portal, because the Foundry screen does not show them.
  
 > **Why:** without these settings, the knowledge source finds the right invoice but returns only its document ID. The agent then knows a matching invoice exists but cannot read what is on it.
  
@@ -105,7 +105,7 @@ In this task you tell the knowledge source which fields to search, which to retu
     - **Search fields:** `content` **(2)**. This is the field the question is matched against.
     - **Semantic configuration:** azureblob-indexer-semantic-configuration **(3)**. This ranks results by meaning.
 
-      ![Advanced configurations](images/L2T3S3-0111.png)
+      ![Advanced configurations](images/L2T3S3-0110.png)
 
 ### Task 4: Create a Foundry agent and connect the knowledge base
 
