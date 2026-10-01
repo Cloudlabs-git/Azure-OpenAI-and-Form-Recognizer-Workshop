@@ -1,4 +1,4 @@
-# Lab 02: Use Microsoft Foundry with your own data
+# Lab 02: Ask an AI agent about the processed invoices
 
 ### Estimated Duration: 120 Minutes
 
