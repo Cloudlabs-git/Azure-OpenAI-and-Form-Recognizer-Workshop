@@ -1,29 +1,28 @@
-# Lab 02: Use Microsoft Foundry with your own data
+# Lab 02: Ask an AI agent about the processed invoices
 
 ### Estimated Duration: 120 Minutes
 
 ## 📘 Lab Scenario
 
-Contoso Motors, a global automotive company, wants to improve customer support and knowledge accessibility by using generative AI with its enterprise data. Employees and support teams often spend significant time searching through lengthy vehicle manuals and technical documents to answer customer queries. To streamline this process, Contoso plans to build an AI-powered conversational assistant using Microsoft Foundry, Foundry IQ, Azure AI Search, and Microsoft Foundry Models.
-
-In this hands-on lab, you will act as a Cloud Consultant and help Contoso upload a Porsche owner's manual, create a knowledge base using the uploaded document, connect the knowledge base to an AI agent, and enable users to interact with the document using natural language queries through the Microsoft Foundry Agent playground.
+Contoso's invoices are now processed and indexed, but the finance team still has to search the index themselves. In this lab you give them an AI assistant: a Microsoft Foundry agent that uses the Lab 1 search index as its knowledge and answers questions about the invoices in plain language.
 
 ## 📖 Overview
 
-In this lab, you will use your own data with a generative AI model in Microsoft Foundry. You will create a **File knowledge source** using the Porsche Owner's Manual PDF provided under the `C:\Users\Public\Desktop\Data\Lab 2` folder.
-
-The uploaded document will be processed and made available through a **Foundry IQ knowledge base**. You will then connect the knowledge base to a **Foundry Agent** and use the agent playground to ask questions about the Porsche owner's manual.
+You create a Foundry IQ knowledge base with the Lab 1 index as its knowledge source, tune which fields the knowledge source searches and returns, connect the knowledge base to a Foundry agent, and test the agent in the playground.
+ 
+> **Why ground the agent:** A language model on its own knows nothing about Contoso's invoices and may invent an answer. Grounding makes the agent retrieve the relevant invoices first and answer only from them.
 
 ## 🎯 Lab Objectives
 
 In this lab, you will complete the following tasks:
 
 - Task 1: Navigate to Microsoft Foundry
-- Task 2: Create a File knowledge source and knowledge base
-- Task 3: Create and configure a Foundry Agent
-- Task 4: Interact with the Foundry Agent using your own data
+- Task 2: Create a knowledge base from the Lab 1 search index
+- Task 3: Configure the knowledge source fields
+- Task 4: Create a Foundry agent and connect the knowledge base
+- Task 5: Ask the agent about the invoices
 
-## Task 1: Navigate to Microsoft Foundry
+### Task 1: Navigate to Microsoft Foundry
 
 In this task, you will access the Microsoft Foundry portal through the provisioned Microsoft Foundry resource and open the provisioned Foundry project.
 
@@ -45,9 +44,11 @@ In this task, you will access the Microsoft Foundry portal through the provision
 
    > **Note:** Ensure that you are working in the Foundry project provisioned for this lab.
 
-## Task 2: Create a File Knowledge Source and Knowledge Base
+### Task 2: Create a knowledge base from the Lab 1 search index
 
-In this task, you will create a File knowledge source and upload the Porsche owner's manual. You will then create a knowledge base using the uploaded document.
+In this task you connect Foundry to the lab's Azure AI Search service and create a knowledge base whose knowledge source is the **azureblob-indexer** index from Lab 1.
+ 
+> **Why:** a knowledge base is what the agent queries. It sends the question to its knowledge sources, ranks what comes back, and returns the most relevant content. The Lab 1 index is its only source here.
 
 1. From the left navigation pane, select **Knowledge (1)**, select the provisioned **Azure AI Search** resource from the **Foundry IQ resource** drop-down **(2)**, select **API Key  (3)** as the **Auth Type**, and then select **Connect (4)**.
 
@@ -63,109 +64,134 @@ In this task, you will create a File knowledge source and upload the Porsche own
       * For **Chat completions model**, select **gpt-5.4-mini (2)**.
       * For **Retrieval reasoning effort**, select **Minimal (3)**.
       * For **Output mode**, select **Extractive data (4)**.
-      * Under **Knowledge sources (Foundry IQ)**, select **Upload files (5)**.
 
-         ![Azure AI Search](images/L2T2S3.png)
+         ![Azure AI Search](images/L2T2S3-0110.png)
 
-1. On the **Upload files** page, enter the following `C:\Users\Public\Desktop\Data\Lab 2` **(1)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(2)** pdf  file and click on **Open** **(3)**.
+      > **Why Extractive data:** The knowledge base returns the matching invoice text itself, and the agent writes the answer. This keeps answers traceable to the source invoice.
 
-   ![Knowledge source configuration](images/L2T2S4.png)
+1. Under **Knowledge sources (Foundry IQ)**, select **Add sources (1)**, then **Azure AI Search Index (2)**.
 
-1. On the **Create a knowledge source** page, enter the following details:
+   ![Add knowledge source](images/L2T2S4-0110.png)
 
-   * In the **Name** field, enter `porsche-manual-source`**(1)**.
-   * Verify that **text-embedding-ada-002 (2)** is selected as the **Embedding model**.
-   * Verify that the uploaded file **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual.pdf (3)** is listed under **Files to upload**. 
-   * Select **Create (4)**.
+1. On the knowledge source page, enter **Name** `invoice-index-source` **(1)**, select the search index **azureblob-indexer (2)**, and select **Create (3)**.
 
-      ![Azure AI Search](images/L2T2S5.png)
+   ![Save knowledge source](images/L2T2S5-0110.png)
 
-1. On the **Create a new knowledge base** page, verify that the **porsche-manual-source** knowledge source is listed with **File** as the type and **Active** as the status, and then select **Save knowledge base**.
+    > **Note:** the page says the index must have a semantic configuration. You set it up in Lab 1, Task 5.
 
-      ![](images/L2T2S6.png)
+1. Check that **invoice-index-source** is listed with type **Azure AI Search Index** and status **Active**, then select **Save knowledge base**.
 
-1. Wait for the knowledge base to be created.
+   ![Save knowledge base](images/L2T2S6-0110.png)
 
-1. Go back and verify that the knowledge base status is displayed as **Active**.
+1. Click on **Save**.
 
-   ![Knowledge base](images/L2T2S8.png)
+   ![Save knowledge base](images/L2T2S7-0110.png)
 
-## Task 3: Create and Configure a Foundry Agent
+### Task 3: Configure Knowledge Source Fields
 
-In this task, you will create a Foundry Agent and connect it to the Porsche knowledge base. The agent will use the knowledge base to retrieve relevant information from the Porsche owner's manual and generate responses.
+In this task, you tell the knowledge source which fields to search, which to return, and which semantic configuration to use. These settings are set in the Azure portal, because the Foundry screen does not show them.
+ 
+> **Why:** without these settings, the knowledge source finds the right invoice but returns only its document ID. The agent then knows a matching invoice exists but cannot read what is on it.
+ 
+1. In the Azure portal, open the search service **bpa{suffix}**.
 
-1. From the **Build** page, select **Agents (1)**. Cilck **+ New agent (2)** then, **Build an agent (3)**.
+1. In the left menu, select **Knowledge sources (1)** and open **invoice-index-source (2)**.
 
-   ![Agents](images/L2T3S1.png) 
+   ![Knowledge source](images/L2T3S2-0110.png)
+
+1. Expand **Advanced configurations** and set the following and click on **Save (4)**:
+
+    - **Source data fields:** `content` and `title` **(1)**. These are the fields returned to the agent.
+    - **Search fields:** `content` **(2)**. This is the field the question is matched against.
+    - **Semantic configuration:** azureblob-indexer-semantic-configuration **(3)**. This ranks results by meaning.
+
+      ![Advanced configurations](images/L2T3S3-0110.png)
+
+### Task 4: Create a Foundry agent and connect the knowledge base
+
+In this task you create an agent and give it the knowledge base, so it retrieves invoice content before it answers.
+ 
+1. Back to the Foundry portal, from the **Build (1)** page, select **Agents (2)**. Cilck **+ New agent (3)** then, **Build an agent (4)**.
+
+   ![Agents](images/L2T4S1-0110.png) 
 
    
-3. Enter the following detail and select **Create and open playground (2)**.
+1. Enter **Name** `invoice-assistant` **(1)** and select **Create and open playground (2)**.
 
-   - **Name:** Enter `porsche-assistant` **(1)**.
+      ![Agents](images/L2T4S2-0110.png) 
 
-      ![Agents](images/L2T3S2.png) 
-
-2. In the agent configuration, scroll down to the **Tools** section and locate **Knowledge** option to add a knowledge source or tool. Select **Add (1)**, and then select **Connect to Foundry IQ (2)**.
-
-   ![Agent configuration](images/L2T3S3.png)
-
-3. On the **Connect to Foundry IQ** page, verify that the provisioned **Azure AI Search** connection is selected **(1)**, verify that **porsche-manual-source (2)** is selected as the **Knowledge base**, and then select **Connect (3)**.
-
-   ![Select knowledge base](images/L2T3S4.png)
-
-4. Verify that the **porsche-knowledge-base** knowledge base is connected to the agent. Then, **Save** the agent configuration.
-
-   ![Connected knowledge base](images/L2T3S5.png)
-
-
-## Task 4: Interact with the Foundry Agent Using Your Own Data
-
-In this task, you will use the Foundry Agent playground to ask questions about the Porsche owner's manual. You will verify that the agent can use the connected knowledge base to provide relevant responses.
-
-1. Open the **Playground** for the **porsche-assistant** agent. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
-
-    ```
-    How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
-    ```
-
-   ![Agent playground](images/L2T4S1.png)
-
-1. You can configure the responses of your agent by updating the **Instructions**. Replace the existing text with `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information.` **(1)**. Then **Save (2)** the agent. 
-
-   ![Agent playground](images/L2T4S2-1.png)
-
-   ![Agent playground](images/L2T4S2-2.png)
-
-1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
-
-    ```
-    What are the available functions in the Discover menu item?
-    ```
-   
-   ![chat-session-two](images/L2T4S3.png)
-
-1. In the **Parameters (1)** section, set **Max output tokens** to `2000` **(2)**. You can experiment with different parameter configurations to see how they affect the model's behavior.
-
-   ![chat-session-two](images/L2T4S4.png)
-
-1. You can try the following query after adjusting the parameters session.
+1. In **Instructions**, replace the existing text with:
 
    ```
-   How can one navigate lists via voice control?
+   You are an assistant for the Contoso finance team. Answer questions about Contoso invoices using only the connected knowledge base. Quote invoice numbers, dates and amounts exactly as they appear on the invoice. If the knowledge base has no matching invoice, say so and do not guess.
+   ```
+ 
+   ![Instructions](images/L2T4S3-0110.png)
+
+    > **Why:** instructions shape every answer. Telling the agent to use only the knowledge base, and to say when it finds nothing, stops it from inventing invoice numbers or totals.
+
+1. Scroll to **Tools**. If **Web search** is listed, select its ellipsis **(…)** and remove it.
+
+   ![Remove web search](images/L2T4S4-0110.png)
+
+   > **Why:** web search would let the agent answer from the internet. For this lab, every answer should come from Contoso's invoices.
+
+1. In the **Knowledge** section, select **Add (1)**, then **Connect to Foundry IQ (2)**.
+
+   ![Add knowledge source](images/L2T4S5-0110.png)
+
+1. On **Connect to Foundry IQ**, check that the provisioned Azure AI Search connection is selected **(1)**, select **contoso-invoices-kb (2)** as the knowledge base, and select **Connect (3)**.
+
+   ![Connect to Foundry IQ](images/L2T4S6-0110.png)
+
+1. Check that **contoso-invoices-kb** appears under **Knowledge**, then select **Save**.
+
+   ![Save knowledge source](images/L2T4S7-0110.png)
+
+
+### Task 5: Interact with the Foundry Agent Using Your Own Data
+
+In this task you ask the agent questions in the playground and check its answers against the invoices.
+ 
+1. In the **Chat** pane of the **invoice-assistant** playground, enter:
+
+   ```
+   What is the invoice total for invoice INV-2058?
    ```
 
-   ![chat-session-two](images/L2T4S5.png)
-   
+1. Check the answer and select its citation. The citation links to the invoice in the search index that the answer came from.
+
+   ![Check citation](images/L2T5S2-0110.png)
+
+1. Try the following questions and compare the answers with the expected results:
+
+    | Prompt | Expected answer |
+    | --- | --- |
+    | What was ordered on invoice DE-2026-1193? | Holzdiele ×12 and Montage ×6; total 1.035,30 EURO |
+    | Who is the customer on invoice IT-26-0042, and when is it dated? | Giulia Bianchi, 14-01-2026 |
+    | How much is the VAT on the Portuguese invoice? | 103,50 € (23%) |
+    | What is the amount due on INV-2041, and why is it higher than the total? | $1,779.00; it adds a $250.00 previous unpaid balance to the $1,529.00 total |
+    | Summarise the French invoice in English. | Contoso (Paris) to Pierre Lambert, Lyon: potting soil, gravel and fertiliser; total 132,00 € |
+    | What is the total on invoice INV-9999? | Not found; the agent should not invent a value |
+
+   > **Note:** The expected answer may or may not match the exact wording of the invoice, but it should be factually correct based on the invoice data.
+
+   > **Why the last prompt:** a grounded agent should admit when the data has no answer. If it invents a total, check that its instructions were saved.
+
+1. Under an answer, select **Traces**, then open the **knowledge_base_retrieve** step. Its output shows the invoice text the knowledge base returned for that question.
+
+    > **Why:** traces show what the agent retrieved before it answered. They are the first place to look when an answer is wrong or empty.
+ 
 ## 🧾 Summary
 
-In this lab, you have completed the following:
+In this lab you:
+ 
+- Opened the Microsoft Foundry portal.
+- Created a knowledge base with the Lab 1 search index as its knowledge source.
+- Configured the fields the knowledge source searches and returns.
+- Created a Foundry agent grounded in the knowledge base.
+- Asked the agent about the invoices and checked its answers and traces.
 
-- Navigated to the **Microsoft Foundry** portal.
-
-- Created a **File knowledge source** and **knowledge base** using your own data.
-
-- Created and configured a **Foundry Agent** with the knowledge base.
-
-- Interacted with the Foundry Agent using your own data to generate relevant responses.
+Together, the two labs form one pipeline: invoice images are read by Document Intelligence, indexed by Azure AI Search, and answered by a Foundry agent.
 
 ### 🎉 You have successfully completed this Hands-on lab!
