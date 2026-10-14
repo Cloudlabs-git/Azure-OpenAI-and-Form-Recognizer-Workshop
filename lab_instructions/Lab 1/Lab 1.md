@@ -323,7 +323,7 @@ In this task you index the eight JSON result files in Azure AI Search, then make
    - Subscription: Select **Existing Subscription** **(1)**.
    - Storage Account: Select **bpa{suffix}** **(2)**.
    - Blob Container: Select **results** **(3)**.
-   - Blob folder: Provide namme as **workshop** **(4)**.
+   - Blob folder: Provide name as **workshop** **(4)**.
    - Parsing mode: **JSON (5)**.
    - Click **Next (6)**.
 
@@ -348,7 +348,7 @@ In this task you index the eight JSON result files in Azure AI Search, then make
 
      ![](images/upload-7.png)
 
-1. Now scroll up, and expand **aggregatedResults (1)** → **customFormRec (2)**. Select the ellipsis **(…) (2)** next to **pages** and select **Delete (4)**.
+1. Now scroll up, and expand **aggregatedResults (1)** → **customFormRec (2)**. Select the ellipsis **(…) (3)** next to **pages** and select **Delete (4)**.
 
    ![](images/L1T5S8-0110.png)
 
