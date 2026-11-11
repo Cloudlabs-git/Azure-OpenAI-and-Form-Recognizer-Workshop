@@ -315,7 +315,7 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
    ![Data source](images/s6.png)
 
 1. Select **Azure Blob Storage (1)** as the data source and click on **Keyword Search (2)**.
-  
+
    ![Connection to your data](images/L1T5S3.png)
 
    ![Connection to your data](images/L1T5S3-1.png)
@@ -329,13 +329,13 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
    - Parsing mode: **JSON (5)**.
    - Click **Next (6)**.
 
-       ![Connection to your data](images/s7.png)
+      ![Connection to your data](images/s7.png)
 
-1. Click **Next** on **Apply AI enrichment** screen.
+1. Click **Next** on **Apply AI enrichment** screen without changing anything.
 
    ![](images/L1T5S5.png)
    
-1. Click **Add field (1)** on Preview mappings screen, scroll down and select **index (2)** on **source column** then, click on (...) **ellipses icon (3)** on right of the column and select **Configure field (4)**.
+1. On the **Preview mappings** screen, click **Add field (1)**. In the new row, select **index (2)** as the **source column**, then click the **ellipsis (...) (3)** on the right of that row and select **Configure field (4)**.
 
    ![](images/upload-6-i.png)
 
@@ -350,39 +350,62 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
 
      ![](images/upload-7.png)
 
-1. Now scroll up, and expand **aggregatedResults (1)** → **customFormRec (2)**. Select the ellipsis **(…) (3)** next to **pages** and select **Delete (4)**.
+1. Now scroll up, and expand **aggregatedResults (1)** → **customFormRec (2)**. Select the ellipsis **(...) (3)** next to **pages** and select **Delete (4)**.
 
    ![](images/L1T5S8-0110.png)
 
-    > **Why:** `pages` holds layout details (word positions, page angle) that search does not need. It can also stop an invoice from indexing: if one page reports a decimal angle such as -0.04, that invoice fails with a data type error.
 
-1. Expand **aggregatedResults (1)** → **customFormRec (2)** → **documents (3)** → **fields (4)** → **Organization_sample (5)**. For **valueString**, type, and valueString & content, select the ellipsis **(…) (6)**, then **Configure field (7)**.
+     > **Why:** `pages` holds layout details (word positions, page angle) that search does not need. It can also stop an invoice from indexing: if one page reports a decimal angle such as -0.04, that invoice fails with a data type error.
+
+1. Expand **aggregatedResults (1)** → **customFormRec (2)** → **documents (3)** → **fields (4)** → **Organization (5)**. Under **Organization_sample** you will see three fields: **type**, **valueString** and **content**. You will rename and configure each one in the next three steps.
 
    ![](images/upload-8.png)
 
-   ![](images/upload-8-i.png)
+   > **Note:** Every field in the index must have a **unique name**. If two fields share the same name (for example, all three called `type`), the **id** column shows an error and you cannot proceed. Use the exact names given below.
 
-    > **Why facetable:** Facets let you group and count results by a value, for example, how many invoices each organization issued.
+1. For **type**, select the ellipsis **(...) (1)** → **Configure field (2)**, enter the following details, and click **Save (6)**.
 
+   - Field name: **type (3)**
+   - Type: **Edm.String (4)**
+   - Configure attributes: Select **Facetable (5)**
 
-1. Enter the following details in the Configure field
+      ![](images/new.png)
 
-   - Field name: **type (1)**
-   - Type: **Edm.String (2)**
-   - Configure attributes: Select **Facetable (3)**
-   - Click on **Save (4)**
+      ![](images/n1.png)
 
-      ![](images/L1T5S9.png)
+      > **Why facetable:** Facets let you group and count results by a value, for example, how many invoices each organization issued.
+
+1. For **valueString**, select the ellipsis **(...) (1)** → **Configure field (2)**, enter the following details, and click **Save (6)**.
+
+   - Field name: **valueString (3)**
+   - Type: **Edm.String(4)**
+   - Configure attributes: Select **Facetable(5)**
+
+      ![](images/n2.png)
+
+      ![](images/n3.png)
+
+1. For **content**, select the ellipsis **(...) (1)** → **Configure field (2)**, enter the following details, and click **Save (6)**.
+
+   - Field name: **content (3)**
+   - Type: **Edm.String (4)**
+   - Configure attributes: Select **Facetable (5)**
+
+      ![](images/n4.png)
+
+      ![](images/n5.png)
 
 1. Scroll down and click on **Next**.
 
-   >**Note:** If any field with values as id is giving an error, delete that field by clicking the (...) ellipses icon  on the right side.
+   > **Note:** If a field with the value **id** shows an error, delete that field by clicking the ellipsis **(...)** on its right side, then click **Next** again.
 
-1. On the Advanced settings screen, leave all fields as default and click **Next**.
+   ![](images/n6.png)
+
+1. On the **Advanced settings** screen, leave all fields as default and click **Next**.
     
    ![](images/L1T5S10.png)
    
-1. On the Review and create screen, enter the object name prefix as **azureblob-indexer (1)** and click **Create (2)**.
+1. On the **Review and create** screen, enter the object name prefix as **azureblob-indexer (1)** and click **Create (2)**.
 
    ![](images/L1T5S11.png)
 
@@ -392,7 +415,7 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
 
 ### Add a top-level field for the invoice text
  
-1. Select the **Fields (1)** tab and select **Add field (2)**. Enter the following and select **Save (6)**:
+1. Select the **Fields (1)** tab and select **Add field (2)**. Enter the following select **Save (6)** and Click on **Save (7)**:
 
     - **Field name:** `content` **(3)**
     - **Type:** Edm.String **(4)**
@@ -402,7 +425,9 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
 
       ![](images/toplevel-step1a.png)
 
-    > **Why:** This field will hold each invoice's full text at the top level of the index, where the knowledge base can read it.
+      ![](images/n7.png)
+
+      > **Why:** This field will hold each invoice's full text at the top level of the index, where the knowledge base can read it.
 
 1. In the search service, select **Indexers (1)** and open **azureblob-indexer-indexer (2)**. Select **Edit JSON (3)**.
 
@@ -410,7 +435,7 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
 
    ![](images/s9.png)
 
-1. Find the existing `"fieldMappings"` **(1)** list and add this entry inside it, before the first existing mapping and select **Save (3**):
+1. Find the existing `"fieldMappings"` **(1)** list and add this entry inside it, before the first existing mapping **(2)**, and select **Save (3)**:
 
    ```json
     { "sourceFieldName": "/aggregatedResults/customFormRec/content", "targetFieldName": "content" },
@@ -442,7 +467,7 @@ In this task you index the eight JSON result files in Azure AI Search (Foundry I
 
    ![](images/semantic-configuration2.png)
 
-1. Set the **Title field** to `title` **(1)** and **Content fields** to `content` **(2)** only. Remove any other content fields, then select **Save (3)** and **Save (4)** again.
+1. Set the **Title field** to `title` **(1)** and **Content fields** to `content` **(2)** only. Remove any other content fields (for example, `content`), then select **Save (3)** and **Save (4)** again.
 
    ![](images/semantic-configuration3.png)
 

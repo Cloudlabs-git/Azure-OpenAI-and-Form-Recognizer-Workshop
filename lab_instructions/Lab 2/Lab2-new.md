@@ -40,7 +40,7 @@ In this task, you will access the Microsoft Foundry portal through the provision
 
 4. On the **Microsoft Foundry** page, verify that the provisioned Foundry project is selected **(1)**. From the top navigation bar, select **Build (2)**.
 
-   ![Microsoft Foundry](images/L2T1S4.png)
+   ![Microsoft Foundry](images/o1.png)
 
    > **Note:** Ensure that you are working in the Foundry project provisioned for this lab, and that the **New Foundry** toggle is on. This lab uses the new Foundry portal (Foundry classic is being retired), so the menus and Foundry IQ options match the steps below.
 
@@ -65,9 +65,8 @@ In this task you connect Foundry to the lab's Azure AI Search (Foundry IQ) servi
       * In the **Name** field, enter `contoso-invoices-kb` **(1)**.
       * For **Chat completions model**, select **gpt-5.4-mini (2)**.
       * For **Retrieval reasoning effort**, select **Minimal (3)**.
-      * For **Output mode**, select **Extractive data (4)**.
-
-         ![Azure AI Search](images/L2T2S3-0110.png)
+      
+         ![Azure AI Search](images/o3.png)
 
       > **Why Extractive data:** The knowledge base returns the matching invoice text itself, and the agent writes the answer. This keeps answers traceable to the source invoice.
 
@@ -83,11 +82,11 @@ In this task you connect Foundry to the lab's Azure AI Search (Foundry IQ) servi
 
 1. Check that **invoice-index-source** is listed with type **Azure AI Search Index** and status **Active**, then select **Save knowledge base**.
 
-   ![Save knowledge base](images/L2T2S6-0110.png)
+   ![Save knowledge base](images/04.png)
 
 1. Click on **Save**.
 
-   ![Save knowledge base](images/L2T2S7-0110.png)
+   ![Save knowledge base](images/o5.png)
 
 ### Task 3: Configure Knowledge Source Fields
 
@@ -115,7 +114,7 @@ In this task you create an agent and give it the knowledge base, so it retrieves
  
 1. Back to the Foundry portal, from the **Build (1)** page, select **Agents (2)**. Click **+ New agent (3)** then, **Build an agent (4)**.
 
-   ![Agents](images/a6.png) 
+   ![Agents](images/o7.png) 
 
    
 1. Enter **Name** `invoice-assistant` **(1)** and select **Create and open playground (2)**.
@@ -134,7 +133,7 @@ In this task you create an agent and give it the knowledge base, so it retrieves
 
 1. Scroll to **Tools**. If **Web search** is listed, select its ellipsis **(…)** and remove it.
 
-   ![Remove web search](images/L2T4S4-0110.png)
+   ![Remove web search](images/o8.png)
 
    > **Why:** Web search would let the agent answer from the internet. For this lab, every answer should come from Contoso's invoices.
 
